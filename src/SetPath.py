@@ -8,7 +8,7 @@ def SetPathLoadAndSave (Geometry):
         case "Box":
             urdf_path ="./models/humanModelTemplate/humanModelTemplate_shoulder_Box.urdf"
     
-    output_file = "./models/humanModelTemplate/humanModel_test1.urdf"
+    output_file = "./models/humanModelTemplate/humanModelGenerated.urdf"
     dummy_file = 'no_gazebo_plugins.urdf'
 
     return urdf_path, output_file ,dummy_file

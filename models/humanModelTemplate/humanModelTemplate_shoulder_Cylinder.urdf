@@ -1,0 +1,1392 @@
+<robot name="HumanModel">
+
+    <material name="color">
+        <color rgba="0.9922 00.8667 0.7922 1"/>
+    </material>
+
+    <!--LINKS-->
+
+##############################################################################
+# PELVI  ORIGIN
+##############################################################################
+	<!--Link base (1)-->
+	<link name="Pelvis">
+        <inertial>
+            <mass value="4.976"/>
+			<!--COM origin wrt pHipOrigin-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <inertia ixx="0.029678" iyy="0.011854" izz="0.033653" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt pHipOrigin-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15     0.25    0.1"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt pHipOrigin-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15     0.25    0.1"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# PELVI - MIDDLETRUNK
+##############################################################################
+    <!--Chain from (2) to (7)-->
+	<link name="MiddleTrunk_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="MiddleTrunk_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# MIDDLETRUNK
+##############################################################################
+	<link name="MiddleTrunk">
+        <inertial>
+            <mass value="6.3444"/>
+			<!--COM origin wrt jL5S1-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <inertia ixx="0.018868" iyy="0.014872" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin origin wrt jL5S1-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15    0.25    0.2"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin origin wrt jL5S1-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15    0.25    0.2"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# MIDDLETRUNK - UPPERTRUNK_MIDDLE
+##############################################################################
+	<link name="UpperTrunk_Middle_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="UpperTrunk_Middle_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# UPPERTRUNK_MIDDLE
+##############################################################################
+	<link name="UpperTrunk_Middle">
+        <inertial>
+            <mass value="6.3444"/>
+			<!--COM origin wrt jL4L3-->
+            <origin xyz="0       0    0.05" rpy="0 0 0" />
+            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0       0    0.05" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15   0.1  0.1"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0       0    0.05" rpy="0 0 0" />
+            <geometry>
+                <box size="0.15  0.1  0.1"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# UPPERTRUNK_MIDDLE - UPPERTRUNK_RIGHT
+##############################################################################
+	<link name="UpperTrunk_Right_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="UpperTrunk_Right_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# UPPERTRUNK_RIGHT
+##############################################################################
+	<link name="UpperTrunk_Right">
+        <inertial>
+            <mass value="6.3444"/>
+			<!--COM origin wrt jL4L3-->
+            <origin xyz="0       -0.05    0" rpy="1.5708 0 0" />
+            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0    -0.05   0 " rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.1" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0    -0.05    0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.1" radius="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# UPPERTRUNK_MIDDLE - UPPERTRUNK_LEFT
+##############################################################################
+	<link name="UpperTrunk_Left_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="UpperTrunk_Left_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>    
+##############################################################################
+# UPPERTRUNK_LEFT
+##############################################################################
+	<link name="UpperTrunk_Left">
+        <inertial>
+            <mass value="6.3444"/>
+			<!--COM origin wrt jL4L3-->
+            <origin xyz="0       0.05    0" rpy="0 0 0" />
+            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0    0.05    0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.1" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin origin wrt jL4L3-->
+            <origin xyz="0    0.05    0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.1" radius="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# UPPERTRUNK - NECK
+##############################################################################	
+	<link name="Neck_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="Neck_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# NECK
+##############################################################################	
+	<link name="Neck">
+        <inertial>
+            <mass value="0.7464"/>
+			<!--COM origin wrt jT1C7-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <inertia ixx="0.0006461" iyy="0.0006461" izz="0.00030124" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jT1C7-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <geometry>
+		<cylinder length="0.1" radius="0.02"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jT1C7-->
+            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.1" radius="0.02"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# NECK - HEAD
+##############################################################################	
+	<link name="Head_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="Head_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# HEAD
+##############################################################################	
+	<link name="Head">
+        <inertial>
+            <mass value="2.2392"/>
+			<!--COM origin wrt jC1Head-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <inertia ixx="0.0070955" iyy="0.0070955" izz="0.0070955" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--boc origin wrt jC1Head-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.1"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jC1Head-->
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <geometry>
+                <sphere radius="0.1"/>
+            </geometry>
+        </collision>
+    </link>
+
+
+##############################################################################
+# RIGHT SHOULDER
+##############################################################################
+
+	<!--Chain from (8) to (11)-->
+	<link name="RightShoulder_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightShoulder_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT UPPERARM
+##############################################################################
+    <link name="RightUpperArm">
+        <inertial>
+            <mass value="1.866"/>
+			<!--COM origin wrt jRightShoulder-->
+            <origin xyz="0    -0.1           0" rpy="0 0 0" />
+            <inertia ixx="0.011736" iyy="0.00080917" izz="0.011736" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
+            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
+            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# RIGHT ELBOW
+##############################################################################
+	<link name="RightForeArm_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightForeArm_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT FOREARM
+##############################################################################
+	<link name="RightForeArm">
+        <inertial>
+            <mass value="1.244"/>
+			<!--COM origin wrt jRightElbow-->
+            <origin xyz="0    -0.1           0" rpy="0 0 0" />
+            <inertia ixx="0.0052508" iyy="0.00023975" izz="0.0052508" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
+            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.02"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
+            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.02"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# RIGHT WRIST
+##############################################################################
+	<link name="RightHand_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightHand_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT HAND
+##############################################################################
+	<link name="RightHand">
+        <inertial>
+            <mass value="0.3732"/>
+			<!--COM origin wrt jRightWrist-->
+            <origin xyz="0   -0.05           0" rpy="0 0 0" />
+            <inertia ixx="0.00091713" iyy="0.00043425" izz="0.0012555" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightWrist-->
+            <origin xyz="0   -0.05           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.075     0.1    0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightWrist-->
+            <origin xyz="0   -0.05           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.075     0.1   0.03"/>
+            </geometry>
+        </collision>
+    </link>
+
+
+
+##############################################################################
+# LEFT SHOULDER
+##############################################################################
+	<!--Chain from (12) to (15)-->
+	<link name="LeftShoulder_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftShoulder_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT UPPERARM
+##############################################################################
+
+	<link name="LeftUpperArm">
+        <inertial>
+            <mass value="1.866"/>
+			<!--COM origin wrt jLeftShoulder-->
+            <origin xyz="0     0.13          0" rpy="0 0 0" />
+            <inertia ixx="0.011736" iyy="0.00080917" izz="0.011736" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
+            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
+            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# LEFT ELBOW
+##############################################################################
+	<link name="LeftForeArm_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftForeArm_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT FOREARM
+##############################################################################
+	<link name="LeftForeArm">
+        <inertial>
+            <mass value="1.244"/>
+			<!--COM origin wrt jLeftElbow-->
+            <origin xyz="0     0.1           0" rpy="0 0 0" />
+            <inertia ixx="0.0052508" iyy="0.00023975" izz="0.0052508" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
+            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.02"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
+            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <geometry>
+                <cylinder length="0.2" radius="0.02"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# LEFT WRIST
+##############################################################################
+	<link name="LeftHand_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftHand_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT HAND
+##############################################################################
+	<link name="LeftHand">
+        <inertial>
+            <mass value="0.3732"/>
+			<!--COM origin wrt jLeftWrist-->
+            <origin xyz="0    0.05           0" rpy="0 0 0" />
+            <inertia ixx="0.00091713" iyy="0.00043425" izz="0.0012555" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--COM origin wrt jLeftWrist-->
+            <origin xyz="0    0.05           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.075     0.1    0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--COM origin wrt jLeftWrist-->
+            <origin xyz="0    0.05           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.075     0.1    0.03"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+
+##############################################################################
+# RIGHT HIP
+##############################################################################
+	<!--Chain from (16) to (19)-->
+	<link name="RightUpperLeg_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightUpperLeg_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT UPPERLEG
+##############################################################################
+    <link name="RightUpperLeg">
+        <inertial>
+            <mass value="7.775"/>
+			<!--COM origin wrt jRightHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <inertia ixx="0.13681" iyy="0.13681" izz="0.01241" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.05"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.05"/>
+            </geometry>
+        </collision>
+     </link>
+##############################################################################
+# RIGHT KNEE
+##############################################################################
+
+	<link name="RightLowerLeg_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightLowerLeg_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT LOWERLEG
+##############################################################################
+    <link name="RightLowerLeg">
+        <inertial>
+            <mass value="2.2703"/>
+			<!--COM origin wrt jRightKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <inertia ixx="0.031992" iyy="0.031992" izz="0.0015867" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.03"/>
+            </geometry>
+        </collision>
+    </link>
+##############################################################################
+# RIGHT ANKLE
+############################################################################## 
+	<link name="RightFoot_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="RightFoot_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT FOOT
+##############################################################################
+    <link name="RightFoot">
+        <inertial>
+            <mass value="0.8086"/>
+			<!--COM origin wrt jRightAnkle-->
+            <origin xyz="0.067     0   -0.025" rpy="0 0 0" />
+            <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jRightAnkle-->
+	    	<origin xyz="0.067     0   -0.025" rpy="0 0 0" />
+            <geometry>
+                <box size="0.2    0.05    0.05"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jRightAnkle-->
+		    <origin xyz="0.067     0   -0.025" rpy="0 0 0" />
+	            <geometry>
+	                <box size="0.2    0.05    0.05"/>
+	            </geometry>
+        </collision>
+
+    </link>
+
+
+
+##############################################################################
+# LEFT HIP
+##############################################################################	
+	<!--Chain from (20) to (23)-->
+	<link name="LeftUpperLeg_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftUpperLeg_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT UPPERLEG
+##############################################################################
+    <link name="LeftUpperLeg">
+        <inertial>
+            <mass value="7.775"/>
+			<!--COM origin wrt jLeftHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <inertia ixx="0.13681" iyy="0.13681" izz="0.01241" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jLeftHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.05"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jLeftHip-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+                <cylinder length="0.4" radius="0.05"/>
+            </geometry>
+        </collision>
+##############################################################################
+# LEFT KNEE
+##############################################################################
+    </link>
+	<link name="LeftLowerLeg_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftLowerLeg_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT LOWERLEG
+##############################################################################
+	<link name="LeftLowerLeg">
+        <inertial>
+            <mass value="2.2703"/>
+			<!--COM origin wrt jLeftKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <inertia ixx="0.031992" iyy="0.031992" izz="0.0015867" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jLeftKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+		        <cylinder length="0.4" radius="0.03"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jLeftKnee-->
+            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <geometry>
+		        <cylinder length="0.4" radius="0.03"/>
+            </geometry>
+        </collision>
+
+    </link>
+##############################################################################
+# LEFT ANKLE
+##############################################################################
+	<link name="LeftFoot_f1">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+	<link name="LeftFoot_f2">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT FOOT
+##############################################################################
+    <link name="LeftFoot">
+        <inertial>
+            <mass value="0.8086"/>
+			<!--COM origin wrt jLeftAnkle-->
+            <origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+            <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+
+        <visual>
+			<!--box origin wrt jLeftAnkle-->
+	   	 	<origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+            <geometry>
+                <box size="0.2    0.05    0.05"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+
+        <collision>
+			<!--box origin wrt jLeftAnkle-->
+		    <origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+	            <geometry>
+	                <box size="0.2    0.05    0.05"/>
+	            </geometry>
+        </collision>
+
+    </link>
+
+
+
+<!--JOINTS-->
+
+
+
+##############################################################################
+# PELVI - MIDDLETRUNK
+##############################################################################
+	
+	<!--Chain from (2) to (7)-->
+	<joint name="jL5S1_rotx" type="revolute">
+        <origin xyz="0          0    0.1" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="MiddleTrunk_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jL5S1_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="MiddleTrunk_f1"/>
+        <child link="MiddleTrunk_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jL5S1_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="MiddleTrunk_f2"/>
+        <child link="MiddleTrunk"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# MIDDLETRUNK - UPPERTRUNK_MIDDLE
+##############################################################################
+
+	<joint name="jL4L3_rotx" type="revolute">
+        <origin xyz="0      0    0.2" rpy="0 0 0"/>
+        <parent link="MiddleTrunk"/>
+        <child link="UpperTrunk_Middle_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jL4L3_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Middle_f1"/>
+        <child link="UpperTrunk_Middle_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jL4L3_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Middle_f2"/>
+        <child link="UpperTrunk_Middle"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# UPPERTRUNK_MIDDLE - UPPERTRUNK_RIGHT
+##############################################################################
+
+	<!--Chain from (8) to (11)-->
+	<joint name="jT1C7_Right_rotx" type="revolute">
+        <origin xyz="0   -0.05    0.07" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Middle"/>
+        <child link="UpperTrunk_Right_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jT1C7_Right_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Right_f1"/>
+        <child link="UpperTrunk_Right_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jT1C7_Right_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Right_f2"/>
+        <child link="UpperTrunk_Right"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+##############################################################################
+# UPPERTRUNK_MIDDLE - UPPERTRUNK_LEFT
+##############################################################################
+
+	<!--Chain from (8) to (11)-->
+	<joint name="jT1C7_Left_rotx" type="revolute">
+        <origin xyz="0   0.05    0.07" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Middle"/>
+        <child link="UpperTrunk_Left_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jT1C7_Left_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Left_f1"/>
+        <child link="UpperTrunk_Left_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jT1C7_Left_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Left_f2"/>
+        <child link="UpperTrunk_Left"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# UPPERTRUNK_MIDDLE - NECK
+##############################################################################
+
+	<joint name="jT1C7_rotx" type="revolute">
+        <origin xyz="0        0     0.1" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Middle"/>
+        <child link="Neck_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jT1C7_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="Neck_f1"/>
+        <child link="Neck_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jT1C7_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="Neck_f2"/>
+        <child link="Neck"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# NECK - HEAD
+##############################################################################  
+	<joint name="jC1Head_rotx" type="revolute">
+        <origin xyz="0           0    0.1" rpy="0 0 0"/>
+        <parent link="Neck"/>
+        <child link="Head_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jC1Head_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="Head_f1"/>
+        <child link="Head_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jC1Head_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="Head_f2"/>
+        <child link="Head"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+
+##############################################################################
+# RIGHT SHOULDER
+##############################################################################
+
+	<!--Chain from (8) to (11)-->
+	<joint name="jRightC7Shoulder_rotx" type="revolute">
+        <origin xyz="0   -0.1    0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Right"/>
+        <child link="RightShoulder_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightC7Shoulder_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightShoulder_f1"/>
+        <child link="RightShoulder_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightC7Shoulder_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightShoulder_f2"/>
+        <child link="RightUpperArm"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# RIGHT ELBOW
+##############################################################################
+	<joint name="jRightElbow_rotx" type="revolute">
+        <origin xyz="0    -0.2   0" rpy="0 0 0"/>
+        <parent link="RightUpperArm"/>
+        <child link="RightForeArm_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightElbow_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightForeArm_f1"/>
+        <child link="RightForeArm_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightElbow_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightForeArm_f2"/>
+        <child link="RightForeArm"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# RIGHT WRIST
+##############################################################################
+	<joint name="jRightWrist_rotx" type="revolute">
+        <origin xyz="0    -0.2           0" rpy="0 0 0"/>
+        <parent link="RightForeArm"/>
+        <child link="RightHand_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightWrist_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightHand_f1"/>
+        <child link="RightHand_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightWrist_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightHand_f2"/>
+        <child link="RightHand"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+
+
+##############################################################################
+# LEFT SHOULDER
+##############################################################################
+	<!--Chain from (12) to (15)-->
+	<joint name="jLeftC7Shoulder_rotx" type="revolute">
+        <origin xyz="0    0.1    0" rpy="0 0 0"/>
+        <parent link="UpperTrunk_Left"/>
+        <child link="LeftShoulder_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftC7Shoulder_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftShoulder_f1"/>
+        <child link="LeftShoulder_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftC7Shoulder_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftShoulder_f2"/>
+        <child link="LeftUpperArm"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# LEFT ELBOW
+##############################################################################
+    <joint name="jLeftElbow_rotx" type="revolute">
+        <origin xyz="0     0.2           0" rpy="0 0 0"/>
+        <parent link="LeftUpperArm"/>
+        <child link="LeftForeArm_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftElbow_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftForeArm_f1"/>
+        <child link="LeftForeArm_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftElbow_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftForeArm_f2"/>
+        <child link="LeftForeArm"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# LEFT WRIST
+##############################################################################
+	<joint name="jLeftWrist_rotx" type="revolute">
+        <origin xyz="0     0.2         0" rpy="0 0 0"/>
+        <parent link="LeftForeArm"/>
+        <child link="LeftHand_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftWrist_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftHand_f1"/>
+        <child link="LeftHand_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftWrist_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftHand_f2"/>
+        <child link="LeftHand"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+
+
+
+##############################################################################
+# RIGHT HIP
+##############################################################################
+	<!--Chain from (16) to (19)-->
+	<joint name="jRightHip_rotx" type="revolute">
+        <origin xyz="0   -0.075    0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="RightUpperLeg_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightHip_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightUpperLeg_f1"/>
+        <child link="RightUpperLeg_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightHip_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightUpperLeg_f2"/>
+        <child link="RightUpperLeg"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# RIGHT KNEE
+##############################################################################
+	<joint name="jRightKnee_rotx" type="revolute">
+        <origin xyz="0    0    -0.4" rpy="0 0 0"/>
+        <parent link="RightUpperLeg"/>
+        <child link="RightLowerLeg_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightKnee_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightLowerLeg_f1"/>
+        <child link="RightLowerLeg_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightKnee_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightLowerLeg_f2"/>
+        <child link="RightLowerLeg"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# RIGHT ANKLE
+##############################################################################
+	<joint name="jRightAnkle_rotx" type="revolute">
+        <origin xyz="0      0    -0.4" rpy="0 0 0"/>
+        <parent link="RightLowerLeg"/>
+        <child link="RightFoot_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jRightAnkle_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightFoot_f1"/>
+        <child link="RightFoot_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jRightAnkle_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightFoot_f2"/>
+        <child link="RightFoot"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+
+
+
+##############################################################################
+# LEFT HIP
+##############################################################################
+	<!--Chain from (20) to (23)-->
+	<joint name="jLeftHip_rotx" type="revolute">
+        <origin xyz="0   0.075    0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="LeftUpperLeg_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftHip_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg_f1"/>
+        <child link="LeftUpperLeg_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftHip_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg_f2"/>
+        <child link="LeftUpperLeg"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# LEFT KNEE
+##############################################################################
+	<joint name="jLeftKnee_rotx" type="revolute">
+        <origin xyz=" 0      0    -0.4" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg"/>
+        <child link="LeftLowerLeg_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftKnee_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg_f1"/>
+        <child link="LeftLowerLeg_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftKnee_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg_f2"/>
+        <child link="LeftLowerLeg"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# LEFT ANKLE
+##############################################################################
+	<joint name="jLeftAnkle_rotx" type="revolute">
+        <origin xyz="0          0    -0.4" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg"/>
+        <child link="LeftFoot_f1"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="1 0 0" />
+    </joint>
+	<joint name="jLeftAnkle_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftFoot_f1"/>
+        <child link="LeftFoot_f2"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="jLeftAnkle_rotz" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftFoot_f2"/>
+        <child link="LeftFoot"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <axis xyz="0 0 1" />
+    </joint>
+
+
+</robot>

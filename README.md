@@ -1,7 +1,8 @@
 # human-model-generator
-Software tool for generating and scaling human models.
+Software tool for generating and scaling human models. The aim is to generate a model that implements scalable musculoskeletal informations for each subject.
 ##
-<img src= https://github.com/ami-iit/human-model-generator/assets/116801366/eec1af3b-7253-4397-ab9e-e60e51eaa4d0 width ="600" height="500">
+<img src= https://github.com/ami-iit/human-model-generator/assets/116801366/ffb6bbd9-632a-4201-b7ee-dcb99a23fda2 width ="600" height="500">
+
 
 
 # Dependencies

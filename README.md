@@ -18,11 +18,11 @@ Software tool for generating and scaling human models.
 	- `Box`(default)
 	- `Cylinder`
 
-- Height
-        - `H` (1.8 m default)
+- Height:
+	- `H` (1.8 m default)
 
-- Mass
-        - `m` (105 Kg default)
+- Mass:
+	- `m` (105 Kg default)
 
 #### Model Generator ####
 

@@ -1,5 +1,8 @@
 # human-model-generator
 Software tool for generating and scaling human models.
+##
+<img src= https://github.com/ami-iit/human-model-generator/assets/116801366/eec1af3b-7253-4397-ab9e-e60e51eaa4d0 width ="600" height="500">
+
 
 # Dependencies
 - [`python3`](https://wiki.python.org/moin/BeginnersGuide)

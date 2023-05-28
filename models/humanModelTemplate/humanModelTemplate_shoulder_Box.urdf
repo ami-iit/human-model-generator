@@ -4,7 +4,7 @@
         <color rgba="0.9922 00.8667 0.7922 1"/>
     </material>
 
-    <!--LINKS-->
+<!--LINKS-->
 
 ##############################################################################
 # PELVI  ORIGIN
@@ -306,6 +306,8 @@
             </geometry>
         </collision>
     </link>
+
+
 ##############################################################################
 # RIGHT SHOULDER
 ##############################################################################
@@ -581,6 +583,8 @@
         </collision>
 
     </link>
+
+
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
@@ -697,13 +701,13 @@
         <inertial>
             <mass value="0.8086"/>
 			<!--COM origin wrt jRightAnkle-->
-            <origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+            <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
             <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightAnkle-->
-	    	<origin xyz="0.067            0   -0.025" rpy="0 0 0" />
+	    	<origin xyz="0.1      0   -0.025" rpy="0 0 0" />
             <geometry>
                 <box size="0.2    0.05    0.05"/>
             </geometry>
@@ -712,14 +716,13 @@
 
         <collision>
 			<!--box origin wrt jRightAnkle-->
-		    <origin xyz="0.067           0   -0.025" rpy="0 0 0" />
+		    <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
 	            <geometry>
 	                <box size="0.2    0.05    0.05"/>
 	            </geometry>
         </collision>
 
     </link>
-
 
 
 ##############################################################################
@@ -838,13 +841,13 @@
         <inertial>
             <mass value="0.8086"/>
 			<!--COM origin wrt jLeftAnkle-->
-            <origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+            <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
             <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftAnkle-->
-	   	 	<origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+	   	 	<origin xyz="0.1      0   -0.025" rpy="0 0 0" />
             <geometry>
                 <box size="0.2    0.05    0.05"/>
             </geometry>
@@ -853,7 +856,7 @@
 
         <collision>
 			<!--box origin wrt jLeftAnkle-->
-		    <origin xyz="0.067         0   -0.025" rpy="0 0 0" />
+		    <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
 	            <geometry>
 	                <box size="0.2    0.05    0.05"/>
 	            </geometry>
@@ -1267,7 +1270,7 @@
 # RIGHT ANKLE
 ##############################################################################
 	<joint name="jRightAnkle_rotx" type="revolute">
-        <origin xyz="0      0    -0.4" rpy="0 0 0"/>
+        <origin xyz="-0.05      0    -0.4" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="RightFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
@@ -1351,7 +1354,7 @@
 # LEFT ANKLE
 ##############################################################################
 	<joint name="jLeftAnkle_rotx" type="revolute">
-        <origin xyz="0          0    -0.4" rpy="0 0 0"/>
+        <origin xyz="-0.05       0    -0.4" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="LeftFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
@@ -1374,6 +1377,8 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
+
+
 
 
 </robot>

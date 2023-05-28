@@ -1,12 +1,20 @@
+import math
+
 def ScalingAnthroPar (H,Model,Geometry):
 
     #Empirically based constants on Lorenzo Flowers
 
-    Neck_W = 0.04
-    Upper_Arm_W = 0.05
-    Fore_Arm_W = 0.03
-    Thigh_W = 0.07
-    LowerLimb_W = 0.04
+    Neck_W = 0.08
+    Upper_Arm_W = 0.1
+    Fore_Arm_W = 0.06
+    Thigh_W = 0.14
+    LowerLimb_W = 0.8
+
+    Neck_D = 0.08
+    Upper_Arm_D = 0.1
+    Fore_Arm_D = 0.06
+    Thigh_D = 0.14
+    LowerLimb_D = 0.8
 
     # Links' length and width modification
 
@@ -66,7 +74,18 @@ def ScalingAnthroPar (H,Model,Geometry):
     Foot_W = 0.055*H
     Foot_L = 0.152*H 
 
-    # Joints' position modification
+
+
+    return Head_L,Neck_L,Neck_W,Neck_D,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Right_L,UpperTrunk_Right_W,\
+    UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,MiddleTrunk_W,Pelvi_L,Pelvi_W,\
+    Upper_Arm_L,Upper_Arm_W,Upper_Arm_D,Fore_Arm_L,Fore_Arm_W,Fore_Arm_D,Hand_L,\
+    Thigh_L,Thigh_W,Thigh_D,LowerLimb_L,LowerLimb_W,LowerLimb_D,Foot_H,Foot_W,Foot_L
+
+def ScalingJoint (Neck_L,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Right_L,UpperTrunk_Right_W,\
+    UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,Pelvi_L,Pelvi_W,\
+    Upper_Arm_L,Upper_Arm_W,Fore_Arm_L, Thigh_L,Thigh_W,LowerLimb_L,Foot_L, Geometry ):
+
+        # Joints' position modification
 
     J_Pelvi_MiddleTrunk_Z = Pelvi_L
 
@@ -75,6 +94,7 @@ def ScalingAnthroPar (H,Model,Geometry):
     J_UpperTrunk_Middle_UpperTrunk_Right_Y = -UpperTrunk_Middle_W/2 
 
     match Geometry:
+
         case "Cylinder":
             J_UpperTrunk_Middle_UpperTrunk_Right_Z = UpperTrunk_Middle_L-UpperTrunk_Right_L
         case "Box":
@@ -119,21 +139,18 @@ def ScalingAnthroPar (H,Model,Geometry):
     J_Right_Hip_Y = -((Pelvi_W/2)-Thigh_W) 
     J_Right_Knee_Z = -Thigh_L 
     J_Right_Ankle_Z = -LowerLimb_L 
-
+    J_Right_Ankle_X = -(5/6)* Foot_L 
 
     J_Left_Hip_Y = ((Pelvi_W/2)-Thigh_W) 
     J_Left_Knee_Z = -Thigh_L 
     J_Left_Ankle_Z = -LowerLimb_L 
+    J_Left_Ankle_X = -(5/6)* Foot_L 
 
-    return Head_L,Neck_L,Neck_W,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Right_L,UpperTrunk_Right_W,\
-    UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,MiddleTrunk_W,Pelvi_L,Pelvi_W,\
-    Upper_Arm_L,Upper_Arm_W,Fore_Arm_L,Fore_Arm_W,Hand_L,\
-    Thigh_L,Thigh_W,LowerLimb_L,LowerLimb_W,Foot_H,Foot_W,Foot_L,J_Pelvi_MiddleTrunk_Z,J_MiddleTrunk_UpperTrunk_Middle_Z,\
-    J_UpperTrunk_Middle_UpperTrunk_Right_Y,J_UpperTrunk_Middle_UpperTrunk_Right_Z,J_UpperTrunk_Middle_UpperTrunk_Left_Y,J_UpperTrunk_Middle_UpperTrunk_Left_Z,\
+
+    return J_UpperTrunk_Middle_UpperTrunk_Right_Y,J_UpperTrunk_Middle_UpperTrunk_Right_Z,J_UpperTrunk_Middle_UpperTrunk_Left_Y,J_UpperTrunk_Middle_UpperTrunk_Left_Z,\
     J_UpperTrunk_Middle_Neck,J_Neck_Head,J_Right_Shoulder_Y,J_Right_Shoulder_Z,J_Right_Elbow_Y,J_Right_Wrist_Y,\
     J_Left_Shoulder_Y,J_Left_Shoulder_Z,J_Left_Elbow_Y,J_Left_Wrist_Y,J_Right_Hip_Y,J_Right_Knee_Z,J_Right_Ankle_Z,J_Left_Hip_Y,\
-    J_Left_Knee_Z,J_Left_Ankle_Z
-        
+    J_Left_Knee_Z,J_Left_Ankle_Z,J_Pelvi_MiddleTrunk_Z,J_MiddleTrunk_UpperTrunk_Middle_Z,J_Right_Ankle_X,J_Left_Ankle_X
 
 def ScalingMassPar (m,Model):
     
@@ -149,7 +166,7 @@ def ScalingMassPar (m,Model):
             UpperTrunk_Right_m= 0.0945*m
             UpperTrunk_Left_m = 0.0945*m
             MiddleTrunk_m = 0.035*m
-            Pelvi_m = 0.0144*m
+            Pelvi_m = 0.144*m
             Upper_Arm_m = 0.023*m
             Fore_Arm_m = 0.015*m
             Hand_m = 0.0055*m
@@ -177,3 +194,4 @@ def ScalingMassPar (m,Model):
     
     return Head_m,Neck_m,UpperTrunk_Middle_m,UpperTrunk_Right_m,UpperTrunk_Left_m,MiddleTrunk_m,\
     Pelvi_m,Upper_Arm_m,Fore_Arm_m,Hand_m,Thigh_m,LowerLimb_m,Foot_m
+

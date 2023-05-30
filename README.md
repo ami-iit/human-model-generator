@@ -3,10 +3,12 @@
 Dynamics is a significant aspect in the study of human movement. The generation of movement is possible due to the synergetic action of the nervous system and muscles, which is then implemented through the connection of the skeletal system with the muscles. The skeletal models used to date, such as the URDF model, are a good approximation of real human models; however, the inertial parameters of the body segment, as well as other anthropometric data required for customizing the model to individual subjects, and muscle modeling must be added to these.
 
 #
-#
+
+<p align="center">
 <img src= https://github.com/ami-iit/human-model-generator/assets/116801366/ffb6bbd9-632a-4201-b7ee-dcb99a23fda2 width ="600" height="500">
+</p>
 
-
+#
 
 # Dependencies
 
@@ -26,18 +28,18 @@ Dynamics is a significant aspect in the study of human movement. The generation 
 | Model      | type of model to be used based on different theoretical approaches: `DeLeva` (see De Leva, et. al 1996) or `Dumas` (see Dumas, et. al 2007) |      
 | Model      | the type of geometry to model the shoulder: `Cylinder` or  `Box`.                                                                           | 
 | FileName   | name of the file with which the .urdf model will be saved.                                                                                  |
-| Control    | generates a table with estimated anthropometric measurements for each body segment.                                                         |
+| Control    | generates a table with estimated anthropometric measurements for each body segment: `On` or `Off`.                                          |
 
 
 #### Default configuration: ####
 
 ```
-H=1.70
-m=105
-Model = 'DeLeva'# or 'Dumas'
-Geometry = "Cylinder" # or 'Box'
-FileName='Subject_Name'
-Control="On" # or "Off"
+H        = 1.70
+m        = 105
+Model    = 'DeLeva'
+Geometry = "Cylinder"
+FileName = 'Subject_Name'
+Control  = "On"
 ```
 
 ### Model Generator ###

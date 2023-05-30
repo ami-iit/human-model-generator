@@ -1,34 +1,46 @@
 # human-model-generator
-In this repository, we will store code, discussions, and material related to the software tool for generating and scaling human models. The aim is to generate a model that implements scalable musculoskeletal informations for each subject.
-##
+
+Dynamics is a significant aspect in the study of human movement. The generation of movement is possible due to the synergetic action of the nervous system and muscles, which is then implemented through the connection of the skeletal system with the muscles. The skeletal models used to date, such as the URDF model, are a good approximation of real human models; however, the inertial parameters of the body segment, as well as other anthropometric data required for customizing the model to individual subjects, and muscle modeling must be added to these.
+
+#
+#
 <img src= https://github.com/ami-iit/human-model-generator/assets/116801366/ffb6bbd9-632a-4201-b7ee-dcb99a23fda2 width ="600" height="500">
 
 
 
 # Dependencies
+
 - [`python3`](https://wiki.python.org/moin/BeginnersGuide)
 - [`urdf-modifiers`](https://github.com/icub-tech-iit/urdf-modifiers)
 
 # Usage
-#### Configuration ####
+
+### Configuration ###
 
  Into `GenerateModel.py` you can modify the following parameters:
+ 
+| Parameters | The function of the parameter                                                                                                               |  
+|:----------:|---------------------------------------------------------------------------------------------------------------------------------------------|
+| H          | height of the subject to be modelled.                                                                                                       |
+| m          | mass of the subject to be modelled.                                                                                                         |
+| Model      | type of model to be used based on different theoretical approaches: `DeLeva` (see De Leva, et. al 1996) or `Dumas` (see Dumas, et. al 2007) |      
+| Model      | the type of geometry to model the shoulder: `Cylinder` or  `Box`.                                                                           | 
+| FileName   | name of the file with which the .urdf model will be saved.                                                                                  |
+| Control    | generates a table with estimated anthropometric measurements for each body segment.                                                         |
 
-- Model:
-	- `Dumas` see [Dumas, et. al 2007](https://www.sciencedirect.com/science/article/pii/S0021929006000728?via%3Dihub) (default)
-	- `DeLeva` see [De Leva, et. al 1996](https://www.sciencedirect.com/science/article/pii/0021929095001786)
 
-- Geometry:
-	- `Box`(default)
-	- `Cylinder`
+#### Default configuration: ####
 
-- Height:
-	- `H` (1.8 m default)
+```
+H=1.70
+m=105
+Model = 'DeLeva'# or 'Dumas'
+Geometry = "Cylinder" # or 'Box'
+FileName='Subject_Name'
+Control="On" # or "Off"
+```
 
-- Mass:
-	- `m` (105 Kg default)
-
-#### Model Generator ####
+### Model Generator ###
 
 In order to generate the model launch:
 

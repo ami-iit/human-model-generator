@@ -76,7 +76,7 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
             ##UPPERTRUNK_RIGHT
             Scaling_lenght ('UpperTrunk_Right',None,UpperTrunk_Right_L,None,"Z",'CYLINDER',robot) #length
             Scaling_lenght ('UpperTrunk_Right',UpperTrunk_Right_W,None,-UpperTrunk_Right_W/2,"Y",'CYLINDER',robot) #width
-            Scaling_Percentage_Mass ('UpperTrunk_Left',UpperTrunk_Right_m,'Z',robot)
+            Scaling_Percentage_Mass ('UpperTrunk_Right',UpperTrunk_Right_m,'Z',robot)
             ##UPPERTRUNK_LEFT
             Scaling_lenght ('UpperTrunk_Left',None,UpperTrunk_Left_L,None,"Z",'CYLINDER',robot) #length
             Scaling_lenght ('UpperTrunk_Left',UpperTrunk_Left_W,None,UpperTrunk_Left_W/2,"Y",'CYLINDER',robot) #width

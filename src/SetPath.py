@@ -1,5 +1,6 @@
+import os
 
-def SetPathLoadAndSave (Geometry):
+def SetPathLoadAndSave (Geometry,NameFile):
 
 
     match Geometry:
@@ -8,7 +9,9 @@ def SetPathLoadAndSave (Geometry):
         case "Box":
             urdf_path ="./models/humanModelTemplate/humanModelTemplate_shoulder_Box.urdf"
     
-    output_file = "./models/humanModelTemplate/humanModelGenerated.urdf"
+    dirPathSave = "./models/humanModels/"
+    os.makedirs(dirPathSave,exist_ok=True)    
+    output_file = dirPathSave + NameFile + '_humanModel.urdf'
     dummy_file = 'no_gazebo_plugins.urdf'
 
     return urdf_path, output_file ,dummy_file

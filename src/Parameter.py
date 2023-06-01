@@ -166,7 +166,7 @@ def ScalingMassPar (m,Model):
             UpperTrunk_Right_m= 0.0945*m
             UpperTrunk_Left_m = 0.0945*m
             MiddleTrunk_m = 0.035*m
-            Pelvi_m = 0.144*m
+            Pelvi_m = 0.1435*m
             Upper_Arm_m = 0.023*m
             Fore_Arm_m = 0.015*m
             Hand_m = 0.0055*m
@@ -183,7 +183,7 @@ def ScalingMassPar (m,Model):
             UpperTrunk_Right_m= 0.0523*m
             UpperTrunk_Left_m = 0.0523*m
             MiddleTrunk_m = 0.1549*m
-            Pelvi_m = 0.1182*m
+            Pelvi_m = 0.1183*m
             Upper_Arm_m = 0.0263*m
             Fore_Arm_m = 0.015*m
             Hand_m = 0.0059*m

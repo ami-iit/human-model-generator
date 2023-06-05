@@ -4,17 +4,17 @@ def ScalingAnthroPar (H,Model,Geometry):
 
     #Empirically based constants on Lorenzo Flowers
 
-    Neck_W = 0.08
-    Upper_Arm_W = 0.1
-    Fore_Arm_W = 0.06
-    Thigh_W = 0.14
-    LowerLimb_W = 0.8
+    Neck_W = 0.04
+    Upper_Arm_W = 0.05
+    Fore_Arm_W = 0.03
+    Thigh_W = 0.07
+    LowerLimb_W = 0.04
 
-    Neck_D = 0.08
-    Upper_Arm_D = 0.1
-    Fore_Arm_D = 0.06
-    Thigh_D = 0.14
-    LowerLimb_D = 0.8
+    Neck_D = 0.04
+    Upper_Arm_D = 0.05
+    Fore_Arm_D = 0.03
+    Thigh_D = 0.07
+    LowerLimb_D = 0.04
 
     # Links' length and width modification
 

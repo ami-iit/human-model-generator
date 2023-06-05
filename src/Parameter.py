@@ -83,7 +83,7 @@ def ScalingAnthroPar (H,Model,Geometry):
 
 def ScalingJoint (Neck_L,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Right_L,UpperTrunk_Right_W,\
     UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,Pelvi_L,Pelvi_W,\
-    Upper_Arm_L,Upper_Arm_W,Fore_Arm_L, Thigh_L,Thigh_W,LowerLimb_L,Foot_L, Geometry ):
+    Upper_Arm_L,Upper_Arm_W,Fore_Arm_L, Thigh_L,Thigh_W,LowerLimb_L,LowerLimb_W, Geometry ):
 
         # Joints' position modification
 
@@ -137,14 +137,14 @@ def ScalingJoint (Neck_L,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Righ
     J_Left_Wrist_Y = Fore_Arm_L
 
     J_Right_Hip_Y = -((Pelvi_W/2)-Thigh_W) 
-    J_Right_Knee_Z = -Thigh_L 
-    J_Right_Ankle_Z = -LowerLimb_L 
-    J_Right_Ankle_X = -(5/6)* Foot_L 
+    J_Right_Knee_Z = - Thigh_L 
+    J_Right_Ankle_Z = - LowerLimb_L 
+    J_Right_Ankle_X = -LowerLimb_W 
 
     J_Left_Hip_Y = ((Pelvi_W/2)-Thigh_W) 
-    J_Left_Knee_Z = -Thigh_L 
-    J_Left_Ankle_Z = -LowerLimb_L 
-    J_Left_Ankle_X = -(5/6)* Foot_L 
+    J_Left_Knee_Z = - Thigh_L 
+    J_Left_Ankle_Z = - LowerLimb_L 
+    J_Left_Ankle_X =  -LowerLimb_W
 
 
     return J_UpperTrunk_Middle_UpperTrunk_Right_Y,J_UpperTrunk_Middle_UpperTrunk_Right_Z,J_UpperTrunk_Middle_UpperTrunk_Left_Y,J_UpperTrunk_Middle_UpperTrunk_Left_Z,\

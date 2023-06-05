@@ -30,7 +30,7 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
         J_UpperTrunk_Middle_Neck,J_Neck_Head,J_Right_Shoulder_Y,J_Right_Shoulder_Z,J_Right_Elbow_Y,J_Right_Wrist_Y,\
         J_Left_Shoulder_Y,J_Left_Shoulder_Z,J_Left_Elbow_Y,J_Left_Wrist_Y,J_Right_Hip_Y,J_Right_Knee_Z,J_Right_Ankle_Z,J_Left_Hip_Y,\
         J_Left_Knee_Z,J_Left_Ankle_Z,J_Pelvi_MiddleTrunk_Z,J_MiddleTrunk_UpperTrunk_Middle_Z,J_Right_Ankle_X,J_Left_Ankle_X = ScalingJoint (Neck_L,UpperTrunk_Middle_L,UpperTrunk_Middle_W,UpperTrunk_Right_L,UpperTrunk_Right_W,\
-        UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,Pelvi_L,Pelvi_W,Upper_Arm_L,Upper_Arm_W,Fore_Arm_L, Thigh_L,Thigh_W,LowerLimb_L,Foot_L, Geometry )
+        UpperTrunk_Left_L,UpperTrunk_Left_W,MiddleTrunk_L,Pelvi_L,Pelvi_W,Upper_Arm_L,Upper_Arm_W,Fore_Arm_L, Thigh_L,Thigh_W,LowerLimb_L,LowerLimb_W, Geometry )
 
 
 
@@ -120,7 +120,7 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
     ##RIGHT FOOT
     Scaling_lenght ('RightFoot',Foot_H,None,-Foot_H/2,"Z",'BOX',robot) #length
     Scaling_lenght ('RightFoot',Foot_W,None,None,"Y",'BOX',robot) #width
-    Scaling_lenght ('RightFoot',Foot_L,None,Foot_L/3,"X",'BOX',robot) #deep
+    Scaling_lenght ('RightFoot',Foot_L,None,Foot_L/2,"X",'BOX',robot) #deep
     Scaling_Percentage_Mass ('RightFoot',Foot_m,'Z',robot)
 
     ##LEFT THIGH
@@ -132,7 +132,7 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
     ##LEFT FOOT
     Scaling_lenght ('LeftFoot',Foot_H,None,-Foot_H/2,"Z",'BOX',robot) #length
     Scaling_lenght ('LeftFoot',Foot_W,None,None,"Y",'BOX',robot) #width
-    Scaling_lenght ('LeftFoot',Foot_L,None,Foot_L/3,"X",'BOX',robot) #deep
+    Scaling_lenght ('LeftFoot',Foot_L,None,Foot_L/2,"X",'BOX',robot) #deep
     Scaling_Percentage_Mass ('LeftFoot',Foot_m,'Z',robot)
 
 

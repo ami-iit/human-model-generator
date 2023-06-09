@@ -36,17 +36,17 @@
         </collision>
     </link>
 ##############################################################################
-# PELVI - MIDDLETRUNK
+# PELVI - LOWERTRUNK
 ##############################################################################
     <!--Chain from (2) to (7)-->
-	<link name="MiddleTrunk_f1">
+	<link name="LowerTrunk_f1">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
     </link>
-	<link name="MiddleTrunk_f2">
+	<link name="LowerTrunk_f2">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -54,13 +54,13 @@
         </inertial>
     </link>
 ##############################################################################
-# MIDDLETRUNK
+# LOWERTRUNK
 ##############################################################################
-	<link name="MiddleTrunk">
+	<link name="LowerTrunk">
         <inertial>
             <mass value="6.3444"/>
 			<!--COM origin wrt jL5S1-->
-            <origin xyz="0      0    0.1" rpy="0 0 0" />
+            <origin xyz="0           0    0.1" rpy="0 0 0" />
             <inertia ixx="0.018868" iyy="0.014872" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
@@ -82,16 +82,16 @@
         </collision>
     </link>
 ##############################################################################
-# MIDDLETRUNK - UPPERTRUNK_MIDDLE
+# LOWERTRUNK - UPPERTRUNK
 ##############################################################################
-	<link name="UpperTrunk_Middle_f1">
+	<link name="UpperTrunk_f1">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
     </link>
-	<link name="UpperTrunk_Middle_f2">
+	<link name="UpperTrunk_f2">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -99,9 +99,9 @@
         </inertial>
     </link>
 ##############################################################################
-# UPPERTRUNK_MIDDLE
+# UPPERTRUNK
 ##############################################################################
-	<link name="UpperTrunk_Middle">
+	<link name="UpperTrunk">
         <inertial>
             <mass value="6.3444"/>
 			<!--COM origin wrt jL4L3-->
@@ -127,16 +127,16 @@
         </collision>
     </link>
 ##############################################################################
-# UPPERTRUNK_MIDDLE - UPPERTRUNK_RIGHT
+# UPPERTRUNK - RIGHTSHOULDER
 ##############################################################################
-	<link name="UpperTrunk_Right_f1">
+	<link name="RightC7Shoulder_f1">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
     </link>
-	<link name="UpperTrunk_Right_f2">
+	<link name="RightC7Shoulder_f2">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -144,9 +144,9 @@
         </inertial>
     </link>
 ##############################################################################
-# UPPERTRUNK_RIGHT
+# RIGHTSHOULDER
 ##############################################################################
-	<link name="UpperTrunk_Right">
+	<link name="RightShoulder">
         <inertial>
             <mass value="6.3444"/>
 			<!--COM origin wrt jL4L3-->
@@ -172,16 +172,16 @@
         </collision>
     </link>
 ##############################################################################
-# UPPERTRUNK_MIDDLE - UPPERTRUNK_LEFT
+# UPPERTRUNK - LEFTSHOULDER
 ##############################################################################
-	<link name="UpperTrunk_Left_f1">
+	<link name="LeftC7Shoulder_f1">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
     </link>
-	<link name="UpperTrunk_Left_f2">
+	<link name="LeftC7Shoulder_f2">
         <inertial>
             <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -189,9 +189,9 @@
         </inertial>
     </link>    
 ##############################################################################
-# UPPERTRUNK_LEFT
+# LEFTSHOULDER
 ##############################################################################
-	<link name="UpperTrunk_Left">
+	<link name="LeftShoulder">
         <inertial>
             <mass value="6.3444"/>
 			<!--COM origin wrt jL4L3-->
@@ -212,7 +212,7 @@
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0    0.05    0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15   0.1  0.1"/>
+                <box size="0.15  0.1  0.1"/>
             </geometry>
         </collision>
     </link>
@@ -446,6 +446,26 @@
         </collision>
     </link>
 ##############################################################################
+# RIGHT HAND COM
+##############################################################################
+    <link name="RightHandCOM">
+        <inertial>
+            <mass value="0.00001"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jRightWrist-->
+            <origin xyz="0   0           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0     0    0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
+
+
+##############################################################################
 # LEFT SHOULDER
 ##############################################################################
 	<!--Chain from (12) to (15)-->
@@ -471,7 +491,7 @@
         <inertial>
             <mass value="1.866"/>
 			<!--COM origin wrt jLeftShoulder-->
-            <origin xyz="0     0.1          0" rpy="0 0 0" />
+            <origin xyz="0     0.13          0" rpy="0 0 0" />
             <inertia ixx="0.011736" iyy="0.00080917" izz="0.011736" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
@@ -582,6 +602,24 @@
             </geometry>
         </collision>
 
+    </link>
+##############################################################################
+# LEFT HAND COM
+##############################################################################
+    <link name="LeftHandCOM">
+        <inertial>
+            <mass value="0.00001"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <!--COM origin wrt jLeftWrist-->
+            <origin xyz="0    0           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0     0    0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
     </link>
 
 
@@ -701,13 +739,13 @@
         <inertial>
             <mass value="0.8086"/>
 			<!--COM origin wrt jRightAnkle-->
-            <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+            <origin xyz="0.1    0   -0.025" rpy="0 0 0" />
             <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightAnkle-->
-	    	<origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+	    	<origin xyz="0.1     0   -0.025" rpy="0 0 0" />
             <geometry>
                 <box size="0.2    0.05    0.05"/>
             </geometry>
@@ -716,14 +754,31 @@
 
         <collision>
 			<!--box origin wrt jRightAnkle-->
-		    <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+		    <origin xyz="0.1     0   -0.025" rpy="0 0 0" />
 	            <geometry>
 	                <box size="0.2    0.05    0.05"/>
 	            </geometry>
         </collision>
 
     </link>
-
+##############################################################################
+# RIGHT TOE
+##############################################################################
+    <link name="RightToe">
+        <inertial>
+            <mass value="0.00001"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jRightAnkle-->
+            <origin xyz="0   0           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0     0    0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
 
 ##############################################################################
 # LEFT HIP
@@ -841,13 +896,13 @@
         <inertial>
             <mass value="0.8086"/>
 			<!--COM origin wrt jLeftAnkle-->
-            <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+            <origin xyz="0.1         0   -0.025" rpy="0 0 0" />
             <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftAnkle-->
-	   	 	<origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+	   	 	<origin xyz="0.1         0   -0.025" rpy="0 0 0" />
             <geometry>
                 <box size="0.2    0.05    0.05"/>
             </geometry>
@@ -856,14 +911,31 @@
 
         <collision>
 			<!--box origin wrt jLeftAnkle-->
-		    <origin xyz="0.1      0   -0.025" rpy="0 0 0" />
+		    <origin xyz="0.1         0   -0.025" rpy="0 0 0" />
 	            <geometry>
 	                <box size="0.2    0.05    0.05"/>
 	            </geometry>
         </collision>
 
     </link>
-
+##############################################################################
+# LEFT TOE
+##############################################################################
+    <link name="LeftToe">
+        <inertial>
+            <mass value="0.00001"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jLeftAnkle-->
+            <origin xyz="0   0           0" rpy="0 0 0" />
+            <geometry>
+                <box size="0     0    0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
 
 
 <!--JOINTS-->
@@ -871,127 +943,122 @@
 
 
 ##############################################################################
-# PELVI - MIDDLETRUNK
+# PELVI - LOWERTRUNK
 ##############################################################################
 	
-	<!--Chain from (2) to (7)-->
 	<joint name="jL5S1_rotx" type="revolute">
         <origin xyz="0          0    0.1" rpy="0 0 0"/>
         <parent link="Pelvis"/>
-        <child link="MiddleTrunk_f1"/>
+        <child link="LowerTrunk_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jL5S1_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="MiddleTrunk_f1"/>
-        <child link="MiddleTrunk_f2"/>
+        <parent link="LowerTrunk_f1"/>
+        <child link="LowerTrunk_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jL5S1_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="MiddleTrunk_f2"/>
-        <child link="MiddleTrunk"/>
+        <parent link="LowerTrunk_f2"/>
+        <child link="LowerTrunk"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
-# MIDDLETRUNK - UPPERTRUNK_MIDDLE
+# LOWERTRUNK - UPPERTRUNK
 ##############################################################################
 
-	<joint name="jL4L3_rotx" type="revolute">
+	<joint name="jT9T8_rotx" type="revolute">
         <origin xyz="0      0    0.2" rpy="0 0 0"/>
-        <parent link="MiddleTrunk"/>
-        <child link="UpperTrunk_Middle_f1"/>
+        <parent link="LowerTrunk"/>
+        <child link="UpperTrunk_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jL4L3_roty" type="revolute">
+	<joint name="jT9T8_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Middle_f1"/>
-        <child link="UpperTrunk_Middle_f2"/>
+        <parent link="UpperTrunk_f1"/>
+        <child link="UpperTrunk_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
-    <joint name="jL4L3_rotz" type="revolute">
+    <joint name="jT9T8_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Middle_f2"/>
-        <child link="UpperTrunk_Middle"/>
+        <parent link="UpperTrunk_f2"/>
+        <child link="UpperTrunk"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
-# UPPERTRUNK_MIDDLE - UPPERTRUNK_RIGHT
+# UPPERTRUNK - RIGHTSHOULDER
 ##############################################################################
-
-	<!--Chain from (8) to (11)-->
-	<joint name="jT1C7_Right_rotx" type="revolute">
+	<joint name="jC7RightShoulder_rotx" type="revolute">
         <origin xyz="0   -0.05    0.05" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Middle"/>
-        <child link="UpperTrunk_Right_f1"/>
+        <parent link="UpperTrunk"/>
+        <child link="RightC7Shoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jT1C7_Right_roty" type="revolute">
+	<joint name="jC7RightShoulder_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Right_f1"/>
-        <child link="UpperTrunk_Right_f2"/>
+        <parent link="RightC7Shoulder_f1"/>
+        <child link="RightC7Shoulder_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
-    <joint name="jT1C7_Right_rotz" type="revolute">
+    <joint name="jC7RightShoulder_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Right_f2"/>
-        <child link="UpperTrunk_Right"/>
+        <parent link="RightC7Shoulder_f2"/>
+        <child link="RightShoulder"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
-# UPPERTRUNK_MIDDLE - UPPERTRUNK_LEFT
+# UPPERTRUNK - LEFTSHOULDER
 ##############################################################################
-
-	<!--Chain from (8) to (11)-->
-	<joint name="jT1C7_Left_rotx" type="revolute">
+	<joint name="jC7LeftShoulder_rotx" type="revolute">
         <origin xyz="0   0.05    0.05" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Middle"/>
-        <child link="UpperTrunk_Left_f1"/>
+        <parent link="UpperTrunk"/>
+        <child link="LeftC7Shoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jT1C7_Left_roty" type="revolute">
+	<joint name="jC7LeftShoulder_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Left_f1"/>
-        <child link="UpperTrunk_Left_f2"/>
+        <parent link="LeftC7Shoulder_f1"/>
+        <child link="LeftC7Shoulder_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
-    <joint name="jT1C7_Left_rotz" type="revolute">
+    <joint name="jC7LeftShoulder_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Left_f2"/>
-        <child link="UpperTrunk_Left"/>
+        <parent link="LeftC7Shoulder_f2"/>
+        <child link="LeftShoulder"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
-# UPPERTRUNK_MIDDLE - NECK
+# UPPERTRUNK - NECK
 ##############################################################################
 
 	<joint name="jT1C7_rotx" type="revolute">
         <origin xyz="0        0     0.1" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Middle"/>
+        <parent link="UpperTrunk"/>
         <child link="Neck_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
@@ -1046,16 +1113,16 @@
 # RIGHT SHOULDER
 ##############################################################################
 
-	<!--Chain from (8) to (11)-->
-	<joint name="jRightC7Shoulder_rotx" type="revolute">
+
+	<joint name="jRightShoulder_rotx" type="revolute">
         <origin xyz="0   -0.1    0.02" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Right"/>
+        <parent link="RightShoulder"/>
         <child link="RightShoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jRightC7Shoulder_roty" type="revolute">
+	<joint name="jRightShoulder_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightShoulder_f1"/>
         <child link="RightShoulder_f2"/>
@@ -1063,7 +1130,7 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
-    <joint name="jRightC7Shoulder_rotz" type="revolute">
+    <joint name="jRightShoulder_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightShoulder_f2"/>
         <child link="RightUpperArm"/>
@@ -1125,21 +1192,29 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
-
+##############################################################################
+# RIGHT HAND COM
+##############################################################################   
+    <joint name="jRightHandCOM" type="fixed">
+        <origin xyz="0 -0.05 0" rpy="0 0 0"/>
+        <parent link="RightHand"/>
+        <child link="RightHandCOM"/>
+        <axis xyz="0 0 0" />
+    </joint>
 
 ##############################################################################
 # LEFT SHOULDER
 ##############################################################################
-	<!--Chain from (12) to (15)-->
-	<joint name="jLeftC7Shoulder_rotx" type="revolute">
+
+	<joint name="jLeftShoulder_rotx" type="revolute">
         <origin xyz="0    0.1    0.02" rpy="0 0 0"/>
-        <parent link="UpperTrunk_Left"/>
+        <parent link="LeftShoulder"/>
         <child link="LeftShoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="1 0 0" />
     </joint>
-	<joint name="jLeftC7Shoulder_roty" type="revolute">
+	<joint name="jLeftShoulder_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftShoulder_f1"/>
         <child link="LeftShoulder_f2"/>
@@ -1147,7 +1222,7 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 1 0" />
     </joint>
-    <joint name="jLeftC7Shoulder_rotz" type="revolute">
+    <joint name="jLeftShoulder_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftShoulder_f2"/>
         <child link="LeftUpperArm"/>
@@ -1209,12 +1284,20 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
-
+##############################################################################
+# LEFT HAND COM
+############################################################################## 
+    <joint name="jLeftHandCOM" type="fixed">
+        <origin xyz="0 0.05 0" rpy="0 0 0"/>
+        <parent link="LeftHand"/>
+        <child link="LeftHandCOM"/>
+        <axis xyz="0 0 0" />
+    </joint>
 
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
-	<!--Chain from (16) to (19)-->
+
 	<joint name="jRightHip_rotx" type="revolute">
         <origin xyz="0   -0.075    0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
@@ -1270,7 +1353,7 @@
 # RIGHT ANKLE
 ##############################################################################
 	<joint name="jRightAnkle_rotx" type="revolute">
-        <origin xyz="-0.03      0    -0.4" rpy="0 0 0"/>
+        <origin xyz="-0.03       0    -0.4" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="RightFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
@@ -1293,12 +1376,20 @@
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
     </joint>
-
+##############################################################################
+# RIGHT TOE
+##############################################################################   
+    <joint name="jRightBallFoot_roty" type="fixed">
+        <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
+        <parent link="RightFoot"/>
+        <child link="RightToe"/>
+        <axis xyz="0 0 0" />
+    </joint>
 
 ##############################################################################
 # LEFT HIP
 ##############################################################################
-	<!--Chain from (20) to (23)-->
+
 	<joint name="jLeftHip_rotx" type="revolute">
         <origin xyz="0   0.075    0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
@@ -1354,7 +1445,7 @@
 # LEFT ANKLE
 ##############################################################################
 	<joint name="jLeftAnkle_rotx" type="revolute">
-        <origin xyz="-0.03       0    -0.4" rpy="0 0 0"/>
+        <origin xyz="-0.03       0    -0.4"  rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="LeftFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
@@ -1376,6 +1467,893 @@
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
         <axis xyz="0 0 1" />
+    </joint>
+##############################################################################
+# LEFT TOE
+##############################################################################   
+    <joint name="jLeftBallFoot_roty" type="fixed">
+        <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
+        <parent link="LeftFoot"/>
+        <child link="LeftToe"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+<!--MUSCLE LINKS-->  
+
+
+
+##############################################################################
+# RIGHT BICBRAC ORIGIN
+##############################################################################
+    <link name="BicBrac_RUA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT BICBRAC INSERTION
+##############################################################################
+    <link name="BicBrac_RFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT TRICBRAC ORIGIN
+##############################################################################
+    <link name="TricBrac_RUA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT TRICBRAC INSERTION
+##############################################################################
+    <link name="TricBrac_RFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT FLEXCARP ORIGIN
+##############################################################################
+    <link name="FlexCarp_RFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT FLEXCARP INSERTION
+##############################################################################
+    <link name="FlexCarp_RH">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT EXTCARP ORIGIN
+##############################################################################
+    <link name="ExtCarp_RFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT EXTCARP INSERTION
+##############################################################################
+    <link name="ExtCarp_RH">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+##############################################################################
+# LEFT BICBRAC ORIGIN
+##############################################################################
+    <link name="BicBrac_LUA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT BICBRAC INSERTION
+##############################################################################
+    <link name="BicBrac_LFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT TRICBRAC ORIGIN
+##############################################################################
+    <link name="TricBrac_LUA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT TRICBRAC INSERTION
+##############################################################################
+    <link name="TricBrac_LFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT FLEXCARP ORIGIN
+##############################################################################
+    <link name="FlexCarp_LFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT FLEXCARP INSERTION
+##############################################################################
+    <link name="FlexCarp_LH">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT EXTCARP ORIGIN
+##############################################################################
+    <link name="ExtCarp_LFA">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT EXTCARP INSERTION
+##############################################################################
+    <link name="ExtCarp_LH">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+##############################################################################
+# RIGHT RECABD ORIGIN
+##############################################################################
+    <link name="RecAbd_RUT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT RECABD INSERTION
+##############################################################################
+    <link name="RecAbd_RP">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+ RIGHT ERSPIN ORIGIN
+##############################################################################
+    <link name="ErSpin_RUT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT ERSPIN INSERTION
+##############################################################################
+    <link name="ErSpin_RP">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+##############################################################################
+ LEFT RECABD ORIGIN
+##############################################################################
+    <link name="RecAbd_LUT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT RECABD INSERTION
+##############################################################################
+    <link name="RecAbd_LP">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+ LEFT ERSPIN ORIGIN
+##############################################################################
+    <link name="ErSpin_LUT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT ERSPIN INSERTION
+##############################################################################
+    <link name="ErSpin_LP">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+##############################################################################
+# RIGHT RECFEM ORIGIN
+##############################################################################
+    <link name="RecFem_RLT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT RECFEM INSERTION
+##############################################################################
+    <link name="RecFem_RLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT BICFEM ORIGIN
+##############################################################################
+    <link name="BicFem_RUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT BICFEM INSERTION
+##############################################################################
+    <link name="BicFem_RLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+
+##############################################################################
+# LEFT RECFEM ORIGIN
+##############################################################################
+    <link name="RecFem_LLT">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT RECFEM INSERTION
+##############################################################################
+    <link name="RecFem_LLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT BICFEM ORIGIN
+##############################################################################
+    <link name="BicFem_LUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT BICFEM INSERTION
+##############################################################################
+    <link name="BicFem_LLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+
+##############################################################################
+# RIGHT TIBANT ORIGIN
+##############################################################################
+    <link name="TibAnt_RLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT TIBANT INSERTION
+##############################################################################
+    <link name="TibAnt_RF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT GASLAT ORIGIN
+##############################################################################
+    <link name="GasLat_RUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT GASLAT INSERTION
+##############################################################################
+    <link name="GasLat_RF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT GASMED ORIGIN
+##############################################################################
+    <link name="GasMed_RUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# RIGHT GASMED INSERTION
+##############################################################################
+    <link name="GasMed_RF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+##############################################################################
+# LEFT TIBANT ORIGIN
+##############################################################################
+    <link name="TibAnt_LLL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT TIBANT INSERTION
+##############################################################################
+    <link name="TibAnt_LF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT GASLAT ORIGIN
+##############################################################################
+    <link name="GasLat_LUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT GASLAT INSERTION
+##############################################################################
+    <link name="GasLat_LF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT GASMED ORIGIN
+##############################################################################
+    <link name="GasMed_LUL">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+##############################################################################
+# LEFT GASMED INSERTION
+##############################################################################
+    <link name="GasMed_LF">
+        <inertial>
+            <mass value="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+
+
+<!--MUSCLE JOINT-->  
+
+
+##############################################################################
+# RIGHT BICBRAC ORIGIN
+##############################################################################
+    <joint name="jRightBicBrac_RUA" type="fixed">
+        <origin xyz="0    0   0.03" rpy="0 0 0"/>
+        <parent link="RightUpperArm"/>
+        <child link="BicBrac_RUA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT BICBRAC INSERTION
+##############################################################################
+    <joint name="jRightBicBrac_RFA" type="fixed">
+        <origin xyz="0.02    0   0" rpy="0 0 0"/>
+        <parent link="RightForeArm"/>
+        <child link="BicBrac_RFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT TRICBRAC ORIGIN
+##############################################################################
+    <joint name="jRightTricBrac_RUA" type="fixed">
+        <origin xyz="-0.03    0   0" rpy="0 0 0"/>
+        <parent link="RightUpperArm"/>
+        <child link="TricBrac_RUA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT TRICBRAC INSERTION
+##############################################################################
+    <joint name="jRightTricBrac_RFA" type="fixed">
+        <origin xyz="-0.02    0   0" rpy="0 0 0"/>
+        <parent link="RightForeArm"/>
+        <child link="TricBrac_RFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT FLEXCARP ORIGIN
+##############################################################################
+    <joint name="jRightFlexCarp_RFA" type="fixed">
+        <origin xyz="-0.02   0    0" rpy="0 0 0"/>
+        <parent link="RightForeArm"/>
+        <child link="FlexCarp_RFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT FLEXCARP INSERTION
+##############################################################################
+    <joint name="jRightFlexCarp_RH" type="fixed">
+        <origin xyz="0.015    -0.05   0.015" rpy="0 0 0"/>
+        <parent link="RightHand"/>
+        <child link="FlexCarp_RH"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT EXTCARP ORIGIN
+##############################################################################
+    <joint name="jRightExtCarp_RFA" type="fixed">
+        <origin xyz="0.02   0    0" rpy="0 0 0"/>
+        <parent link="RightForeArm"/>
+        <child link="ExtCarp_RFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT EXTCARP INSERTION
+##############################################################################
+    <joint name="jRightExtCarp_RH" type="fixed">
+        <origin xyz="0.015    -0.05   -0.015" rpy="0 0 0"/>
+        <parent link="RightHand"/>
+        <child link="ExtCarp_RH"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# LEFT BICBRAC ORIGIN
+##############################################################################
+    <joint name="jLeftBicBrac_LUA" type="fixed">
+        <origin xyz="0    0   0.03" rpy="0 0 0"/>
+        <parent link="LeftUpperArm"/>
+        <child link="BicBrac_LUA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT BICBRAC INSERTION
+##############################################################################
+    <joint name="jLeftBicBrac_LFA" type="fixed">
+        <origin xyz="0.02    0   0" rpy="0 0 0"/>
+        <parent link="LeftForeArm"/>
+        <child link="BicBrac_LFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT TRICBRAC ORIGIN
+##############################################################################
+    <joint name="jLeftTricBrac_LUA" type="fixed">
+        <origin xyz="-0.03    0   0" rpy="0 0 0"/>
+        <parent link="LeftUpperArm"/>
+        <child link="TricBrac_LUA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT TRICBRAC INSERTION
+##############################################################################
+    <joint name="jLeftTricBrac_LFA" type="fixed">
+        <origin xyz="-0.02    0   0" rpy="0 0 0"/>
+        <parent link="LeftForeArm"/>
+        <child link="TricBrac_LFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT FLEXCARP ORIGIN
+##############################################################################
+    <joint name="jRightFlexCarp_LFA" type="fixed">
+        <origin xyz="-0.02   0    0" rpy="0 0 0"/>
+        <parent link="LeftForeArm"/>
+        <child link="FlexCarp_LFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT FLEXCARP INSERTION
+##############################################################################
+    <joint name="jLeftFlexCarp_LH" type="fixed">
+        <origin xyz="0.015    0.05   0.015" rpy="0 0 0"/>
+        <parent link="LeftHand"/>
+        <child link="FlexCarp_LH"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT EXTCARP ORIGIN
+##############################################################################
+    <joint name="jLeftExtCarp_LFA" type="fixed">
+        <origin xyz="0.02   0    0" rpy="0 0 0"/>
+        <parent link="LeftForeArm"/>
+        <child link="ExtCarp_LFA"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT EXTCARP INSERTION
+##############################################################################
+    <joint name="jLeftExtCarp_LH" type="fixed">
+        <origin xyz="0.015    0.05   -0.015" rpy="0 0 0"/>
+        <parent link="LeftHand"/>
+        <child link="ExtCarp_LH"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# RIGHT RECABD ORIGIN
+##############################################################################
+    <joint name="jRightRecAbd_RUT" type="fixed">
+        <origin xyz="0.075    -0.05   0" rpy="0 0 0"/>
+        <parent link="UpperTrunk"/>
+        <child link="RecAbd_RUT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT RECABD INSERTION
+##############################################################################
+    <joint name="jRightRecAbd_RP" type="fixed">
+        <origin xyz="0.075    0   0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="RecAbd_RP"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT ERSPIN ORIGIN
+##############################################################################
+    <joint name="jRightErSpin_RUT" type="fixed">
+        <origin xyz="-0.075    -0.05   0.1" rpy="0 0 0"/>
+        <parent link="UpperTrunk"/>
+        <child link="ErSpin_RUT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT ERSPIN INSERTION
+##############################################################################
+    <joint name="jRightErSpin_RP" type="fixed">
+        <origin xyz="-0.075    0   0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="ErSpin_RP"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# LEFT RECABD ORIGIN
+##############################################################################
+    <joint name="jLeftRecAbd_RUT" type="fixed">
+        <origin xyz="0.075    0.05   0" rpy="0 0 0"/>
+        <parent link="UpperTrunk"/>
+        <child link="RecAbd_LUT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT RECABD INSERTION
+##############################################################################
+    <joint name="jLeftRecAbd_RP" type="fixed">
+        <origin xyz="0.075    0   0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="RecAbd_LP"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT ERSPIN ORIGIN
+##############################################################################
+    <joint name="jLeftErSpin_LUT" type="fixed">
+        <origin xyz="-0.075    0.05   0.1" rpy="0 0 0"/>
+        <parent link="UpperTrunk"/>
+        <child link="ErSpin_LUT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT ERSPIN INSERTION
+##############################################################################
+    <joint name="jLeftErSpin_LP" type="fixed">
+        <origin xyz="-0.075    0   0" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="ErSpin_LP"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# RIGHT RECFEM ORIGIN
+##############################################################################
+    <joint name="jRightRecFem_RLT" type="fixed">
+        <origin xyz="0.075    -0.083    0.05" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="RecFem_RLT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT RECFEM INSERTION
+##############################################################################
+    <joint name="jRightRecFem_RLL" type="fixed">
+        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <parent link="RightLowerLeg"/>
+        <child link="RecFem_RLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT BICFEM ORIGIN
+##############################################################################
+    <joint name="jRightBicFem_RUL" type="fixed">
+        <origin xyz="-0.05    0    0" rpy="0 0 0"/>
+        <parent link="RightUpperLeg"/>
+        <child link="BicFem_RUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT BICFEM INSERTION
+##############################################################################
+    <joint name="jRightBicFem_RLL" type="fixed">
+        <origin xyz="0    -0.03    0" rpy="0 0 0"/>
+        <parent link="RightLowerLeg"/>
+        <child link="BicFem_RLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# LEFT RECFEM ORIGIN
+##############################################################################
+    <joint name="jRightRecFem_LLT" type="fixed">
+        <origin xyz="0.075    0.083    0.05" rpy="0 0 0"/>
+        <parent link="Pelvis"/>
+        <child link="RecFem_LLT"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT RECFEM INSERTION
+##############################################################################
+    <joint name="jRightRecFem_LLL" type="fixed">
+        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg"/>
+        <child link="RecFem_LLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT BICFEM ORIGIN
+##############################################################################
+    <joint name="jRightBicFem_LUL" type="fixed">
+        <origin xyz="-0.05    0    0" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg"/>
+        <child link="BicFem_LUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT BICFEM INSERTION
+##############################################################################
+    <joint name="jRightBicFem_LLL" type="fixed">
+        <origin xyz="0    0.03    0" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg"/>
+        <child link="BicFem_LLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+############################################################################## 
+# RIGHT TIBANT ORIGIN
+##############################################################################
+    <joint name="jRightTibAnt_RLL" type="fixed">
+        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <parent link="RightLowerLeg"/>
+        <child link="TibAnt_RLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT TIBANT INSERTION
+##############################################################################
+    <joint name="jRightTibAnt_RF" type="fixed">
+        <origin xyz="0.1    0.025    0" rpy="0 0 0"/>
+        <parent link="RightFoot"/>
+        <child link="TibAnt_RF"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT GASLAT ORIGIN
+##############################################################################
+    <joint name="jRightGasLat_RUL" type="fixed">
+        <origin xyz="-0.043    -0.025    -0.4" rpy="0 0 0"/>
+        <parent link="RightUpperLeg"/>
+        <child link="GasLat_RUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT GASLAT INSERTION
+##############################################################################
+    <joint name="jRightGasLat_RF" type="fixed">
+        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <parent link="RightFoot"/>
+        <child link="GasLat_RF"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################  
+# RIGHT GASMED ORIGIN
+##############################################################################
+    <joint name="jRightGasMed_RUL" type="fixed">
+        <origin xyz="-0.0433    0.025    -0.4" rpy="0 0 0"/>
+        <parent link="RightUpperLeg"/>
+        <child link="GasMed_RUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# RIGHT GASMED INSERTION
+##############################################################################
+    <joint name="jRightGasMed_RF" type="fixed">
+        <origin xyz="0     0    -0.025" rpy="0 0 0"/>
+        <parent link="RightFoot"/>
+        <child link="GasMed_RF"/>
+        <axis xyz="0 0 0" />
+    </joint>
+
+
+##############################################################################
+# LEFT TIBANT ORIGIN
+##############################################################################
+    <joint name="jLeftTibAnt_LLL" type="fixed">
+        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <parent link="LeftLowerLeg"/>
+        <child link="TibAnt_LLL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+############################################################################## 
+# LEFT TIBANT INSERTION
+##############################################################################
+    <joint name="jLeftTibAnt_LF" type="fixed">
+        <origin xyz="0.1    -0.025    0" rpy="0 0 0"/>
+        <parent link="LeftFoot"/>
+        <child link="TibAnt_LF"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT GASLAT ORIGIN
+##############################################################################
+    <joint name="jLeftGasLat_LUL" type="fixed">
+        <origin xyz="-0.0433    0.025    -0.4" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg"/>
+        <child link="GasLat_LUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT GASLAT INSERTION
+##############################################################################
+    <joint name="jLeftGasLat_LF" type="fixed">
+        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <parent link="LeftFoot"/>
+        <child link="GasLat_LF"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################  
+# LEFT GASMED ORIGIN
+##############################################################################
+    <joint name="jLeftGasMed_LUL" type="fixed">
+        <origin xyz="-0.0433    -0.025    -0.4" rpy="0 0 0"/>
+        <parent link="LeftUpperLeg"/>
+        <child link="GasMed_LUL"/>
+        <axis xyz="0 0 0" />
+    </joint>
+##############################################################################
+# LEFT GASMED INSERTION
+##############################################################################
+    <joint name="jLeftGasMed_LF" type="fixed">
+        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <parent link="LeftFoot"/>
+        <child link="GasMed_LF"/>
+        <axis xyz="0 0 0" />  
     </joint>
 
 

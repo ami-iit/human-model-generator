@@ -21,8 +21,10 @@ from Modifier import*
 H=1.70
 m=105
 Model = 'DeLeva'# or 'Dumas'
-Geometry = "Cylinder" # or 'Box'
+Geometry = "Box" # or 'Box'
 FileName='Subject_Name'
 Control="On" # or "Off"
 
 ModelModifier (H,m,Model,Geometry,FileName,Control)
+
+

@@ -766,7 +766,7 @@
 ##############################################################################
     <link name="RightToe">
         <inertial>
-            <mass value="0.00001"/>
+            <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
@@ -923,7 +923,7 @@
 ##############################################################################
     <link name="LeftToe">
         <inertial>
-            <mass value="0.00001"/>
+            <mass value="0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
@@ -1379,11 +1379,13 @@
 ##############################################################################
 # RIGHT TOE
 ##############################################################################   
-    <joint name="jRightBallFoot_roty" type="fixed">
+    <joint name="jRightBallFoot_roty" type="revolute">
         <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
         <parent link="RightFoot"/>
         <child link="RightToe"/>
-        <axis xyz="0 0 0" />
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
     </joint>
 
 ##############################################################################
@@ -1471,11 +1473,13 @@
 ##############################################################################
 # LEFT TOE
 ##############################################################################   
-    <joint name="jLeftBallFoot_roty" type="fixed">
+    <joint name="jLeftBallFoot_roty" type="revolute">
         <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
         <parent link="LeftFoot"/>
         <child link="LeftToe"/>
-        <axis xyz="0 0 0" />
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
     </joint>
 
 
@@ -1773,7 +1777,6 @@
     </link>
 
 
-
 ##############################################################################
 # LEFT RECFEM ORIGIN
 ##############################################################################
@@ -1814,7 +1817,6 @@
             <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
         </inertial>
     </link>
-
 
 
 ##############################################################################
@@ -2058,7 +2060,7 @@
 ##############################################################################
 # LEFT FLEXCARP ORIGIN
 ##############################################################################
-    <joint name="jRightFlexCarp_LFA" type="fixed">
+    <joint name="jLeftFlexCarp_LFA" type="fixed">
         <origin xyz="-0.02   0    0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="FlexCarp_LFA"/>
@@ -2134,7 +2136,7 @@
 ##############################################################################
 # LEFT RECABD ORIGIN
 ##############################################################################
-    <joint name="jLeftRecAbd_RUT" type="fixed">
+    <joint name="jLeftRecAbd_LUT" type="fixed">
         <origin xyz="0.075    0.05   0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="RecAbd_LUT"/>
@@ -2143,7 +2145,7 @@
 ##############################################################################
 # LEFT RECABD INSERTION
 ##############################################################################
-    <joint name="jLeftRecAbd_RP" type="fixed">
+    <joint name="jLeftRecAbd_LP" type="fixed">
         <origin xyz="0.075    0   0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecAbd_LP"/>
@@ -2172,7 +2174,7 @@
 ##############################################################################
 # RIGHT RECFEM ORIGIN
 ##############################################################################
-    <joint name="jRightRecFem_RLT" type="fixed">
+    <joint name="jRightRecFem_RP" type="fixed">
         <origin xyz="0.075    -0.083    0.05" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecFem_RLT"/>
@@ -2210,7 +2212,7 @@
 ##############################################################################
 # LEFT RECFEM ORIGIN
 ##############################################################################
-    <joint name="jRightRecFem_LLT" type="fixed">
+    <joint name="jLeftRecFem_LP" type="fixed">
         <origin xyz="0.075    0.083    0.05" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecFem_LLT"/>
@@ -2219,7 +2221,7 @@
 ##############################################################################
 # LEFT RECFEM INSERTION
 ##############################################################################
-    <joint name="jRightRecFem_LLL" type="fixed">
+    <joint name="jLeftRecFem_LLL" type="fixed">
         <origin xyz="0.03    0    0" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="RecFem_LLL"/>
@@ -2228,7 +2230,7 @@
 ##############################################################################
 # LEFT BICFEM ORIGIN
 ##############################################################################
-    <joint name="jRightBicFem_LUL" type="fixed">
+    <joint name="jLeftBicFem_LUL" type="fixed">
         <origin xyz="-0.05    0    0" rpy="0 0 0"/>
         <parent link="LeftUpperLeg"/>
         <child link="BicFem_LUL"/>
@@ -2237,7 +2239,7 @@
 ##############################################################################
 # LEFT BICFEM INSERTION
 ##############################################################################
-    <joint name="jRightBicFem_LLL" type="fixed">
+    <joint name="jLeftBicFem_LLL" type="fixed">
         <origin xyz="0    0.03    0" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="BicFem_LLL"/>
@@ -2355,7 +2357,6 @@
         <child link="GasMed_LF"/>
         <axis xyz="0 0 0" />  
     </joint>
-
 
 
 

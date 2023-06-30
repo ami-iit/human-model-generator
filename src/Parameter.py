@@ -3,18 +3,27 @@ import math
 def ScalingAnthroPar (H,Model,Geometry):
 
     #Empirically based constants on Lorenzo Flowers
+    '''
+    '''
 
-    Neck_W = 0.04
-    Upper_Arm_W = 0.05
-    Fore_Arm_W = 0.03
-    Thigh_W = 0.07
-    LowerLimb_W = 0.04
+    #Constants
+    Neck_W = 0.08
+    Upper_Arm_W = 0.1
+    Fore_Arm_W = 0.06
+    Thigh_W = 0.14
+    LowerLimb_W = 0.08
+    Hand_W = 0.1
 
-    Neck_D = 0.04
-    Upper_Arm_D = 0.05
-    Fore_Arm_D = 0.03
-    Thigh_D = 0.07
-    LowerLimb_D = 0.04
+    Neck_D = 0.08
+    UpperTrunk_D = 0.15
+    Upper_Arm_D = 0.1
+    Fore_Arm_D = 0.06
+    Thigh_D = 0.14
+    LowerLimb_D = 0.08
+    Pelvi_D = 0.15
+
+
+    Hand_H = 0.03
 
     # Links' length and width modification
 
@@ -76,9 +85,9 @@ def ScalingAnthroPar (H,Model,Geometry):
 
 
 
-    return Head_L,Neck_L,Neck_W,Neck_D,UpperTrunk_L,UpperTrunk_W,RightShoulder_L,RightShoulder_W,\
-    LeftShoulder_L,LeftShoulder_W,LowerTrunk_L,LowerTrunk_W,Pelvi_L,Pelvi_W,\
-    Upper_Arm_L,Upper_Arm_W,Upper_Arm_D,Fore_Arm_L,Fore_Arm_W,Fore_Arm_D,Hand_L,\
+    return Head_L,Neck_L,Neck_W,Neck_D,UpperTrunk_L,UpperTrunk_W,UpperTrunk_D,RightShoulder_L,RightShoulder_W,\
+    LeftShoulder_L,LeftShoulder_W,LowerTrunk_L,LowerTrunk_W,Pelvi_L,Pelvi_W,Pelvi_D,\
+    Upper_Arm_L,Upper_Arm_W,Upper_Arm_D,Fore_Arm_L,Fore_Arm_W,Fore_Arm_D,Hand_L,Hand_W,Hand_H,\
     Thigh_L,Thigh_W,Thigh_D,LowerLimb_L,LowerLimb_W,LowerLimb_D,Foot_H,Foot_W,Foot_L
 
 def ScalingJoint (Neck_L,UpperTrunk_L,UpperTrunk_W,RightShoulder_L,RightShoulder_W,\
@@ -159,6 +168,147 @@ def ScalingJoint (Neck_L,UpperTrunk_L,UpperTrunk_W,RightShoulder_L,RightShoulder
     J_Left_Shoulder_Y,J_Left_Shoulder_Z,J_Left_Elbow_Y,J_Left_Wrist_Y,j_Right_HandCOM_Y,j_Left_HandCOM_Y,J_Right_Hip_Y,J_Right_Knee_Z,J_Right_Ankle_Z,J_Left_Hip_Y,\
     J_Left_Knee_Z,J_Left_Ankle_Z,J_Pelvi_LowerTrunk_Z,J_LowerTrunk_UpperTrunk_Z,J_Right_Ankle_X,J_Left_Ankle_X,j_Right_BallFoot_X,\
     j_Right_BallFoot_Z,j_Left_BallFoot_X,j_Left_BallFoot_Z
+
+def ScalingMuscleJoint (Upper_Arm_D,Upper_Arm_W,Fore_Arm_D,Fore_Arm_W,Hand_L,Hand_W,Hand_H,UpperTrunk_L,UpperTrunk_W,UpperTrunk_D,Pelvi_D,\
+                        Pelvi_W,Pelvi_L,Thigh_L,Thigh_D,Thigh_W,LowerLimb_D,LowerLimb_W,Foot_H,Foot_L,Foot_W):
+    pi = math.pi
+
+    # Biceps
+    j_Right_BicBrac_RUA_X = (-1)*(Upper_Arm_D/2)*math.cos((pi/2)) 
+    j_Right_BicBrac_RUA_Z = (Upper_Arm_W/2) * math.sin((pi/2)) 
+    j_Right_BicBrac_RFA_X = (-1)*(Fore_Arm_D/2) * math.cos((pi))
+    j_Right_BicBrac_RFA_Z = (Fore_Arm_W/2) * math.sin((pi/2)) 
+    j_Left_BicBrac_LUA_X  = (Upper_Arm_D/2) * math.cos((pi/2)) 
+    j_Left_BicBrac_LUA_Z  = (Upper_Arm_W/2) * math.sin((pi/2)) 
+    j_Left_BicBrac_LFA_X  = (Fore_Arm_D/2) * math.cos((0))
+    j_Left_BicBrac_LFA_Z  = (Fore_Arm_W/2) * math.sin((0)) 
+
+    # Triceps
+    j_Right_TricBrac_RUA_X = (-1)*(Upper_Arm_D/2)* math.cos((0))
+    j_Right_TricBrac_RUA_Z = (Upper_Arm_W/2) * math.sin((0)) 
+    j_Right_TricBrac_RFA_X = (-1)*(Fore_Arm_D/2) * math.cos((0))
+    j_Right_TricBrac_RFA_Z = (Fore_Arm_W/2) * math.sin((0)) 
+    j_Left_TricBrac_LUA_X = (-1)*(Upper_Arm_D/2)* math.cos((pi))
+    j_Left_TricBrac_LUA_Z = (Upper_Arm_W/2) * math.sin((pi)) 
+    j_Left_TricBrac_LFA_X = (-1)*(Fore_Arm_D/2) * math.cos((pi))
+    j_Left_TricBrac_LFA_Z = (Fore_Arm_W/2) * math.sin((pi)) 
+    
+    # Flexor carpi radialis
+    j_Right_FlexCarp_RFA_X = (-1)*(Fore_Arm_D/2) * math.cos((0))
+    j_Right_FlexCarp_RFA_Z = (Fore_Arm_W/2) * math.sin((0)) 
+    j_Right_FlexCarp_RH_X =  Hand_W/5
+    j_Right_FlexCarp_RH_Y = -Hand_L/2
+    j_Right_FlexCarp_RH_Z =  Hand_H/2
+    j_Left_FlexCarp_LFA_X = (Fore_Arm_D/2) * math.cos((pi))
+    j_Left_FlexCarp_LFA_Z = (Fore_Arm_W/2) * math.sin((pi)) 
+    j_Left_FlexCarp_LH_X =  Hand_W/5
+    j_Left_FlexCarp_LH_Y =  Hand_L/2
+    j_Left_FlexCarp_LH_Z =  Hand_H/2
+
+    # Extensor carpi radialis
+    j_Right_ExtCarp_RFA_X = (-1)*(Fore_Arm_D/2) * math.cos((pi))
+    j_Right_ExtCarp_RFA_Z = (Fore_Arm_W/2) * math.sin((pi)) 
+    j_Right_ExtCarp_RH_X =  Hand_W/5
+    j_Right_ExtCarp_RH_Y = -Hand_L/2
+    j_Right_ExtCarp_RH_Z = -Hand_H/2
+    j_Left_ExtCarp_LFA_X = (Fore_Arm_D/2) * math.cos((pi))
+    j_Left_ExtCarp_LFA_Z = (Fore_Arm_W/2) * math.sin((pi)) 
+    j_Left_ExtCarp_LH_X =  Hand_W/5
+    j_Left_ExtCarp_LH_Y =  Hand_L/2
+    j_Left_ExtCarp_LH_Z = -Hand_H/2
+
+    # Erector spinae longissimus
+    j_Right_ErSpin_RUT_X = -UpperTrunk_D/2
+    j_Right_ErSpin_RUT_Y = -UpperTrunk_W/2
+    j_Right_ErSpin_RUT_Z =  UpperTrunk_L
+    j_Right_ErSpin_RP_X =  -Pelvi_D/2
+    j_Left_ErSpin_LUT_X = -UpperTrunk_D/2
+    j_Left_ErSpin_LUT_Y =  UpperTrunk_W/2
+    j_Left_ErSpin_LUT_Z = UpperTrunk_L
+    j_Left_ErSpin_LP_X = -Pelvi_D/2
+
+    # Rectus abdominis
+    j_Right_RecAbd_RUT_X = UpperTrunk_D/2
+    j_Right_RecAbd_RUT_Y = -UpperTrunk_W/2
+    j_Right_RecAbd_RP_X = Pelvi_D/2
+    j_Left_RecAbd_LUT_X = UpperTrunk_D/2
+    j_Left_RecAbd_LUT_Y = -UpperTrunk_W/2
+    j_Left_RecAbd_LP_X = Pelvi_D/2
+
+    # Biceps femoris
+    j_Right_BicFem_RUL_X = (Thigh_D/2) * math.sin((3/2*pi))
+    j_Right_BicFem_RUL_Y = (-1)*(Thigh_W/2) * math.cos((3/2*pi))
+    j_Right_BicFem_RLL_X = (LowerLimb_D/2) * math.sin(0)
+    j_Right_BicFem_RLL_Y = (-1)*(LowerLimb_W/2) * math.cos(0)
+    j_Left_BicFem_LUL_X =  (Thigh_D/2) * math.sin((3/2*pi))
+    j_Left_BicFem_LUL_Y = (-1)*(Thigh_W/2) * math.cos((3/2*pi))
+    j_Left_BicFem_LLL_X = (LowerLimb_D/2) * math.sin(pi)
+    j_Left_BicFem_LLL_Y = (-1)*(LowerLimb_W/2) * math.cos(pi)
+
+    # Rectus femoris
+    j_Right_RecFem_RP_X = Pelvi_D/2
+    j_Right_RecFem_RP_Y =  -Pelvi_W/3
+    j_Right_RecFem_RP_Z = Pelvi_L/2
+    j_Right_RecFem_RLL_X = (LowerLimb_D/2) * math.sin((pi/2))
+    j_Right_RecFem_RLL_Y =  (-1)*(LowerLimb_W/2) * math.cos((pi/2))
+    j_Left_RecFem_LP_X = Pelvi_D/2
+    j_Left_RecFem_LP_Y =  Pelvi_W/3
+    j_Left_RecFem_LP_Z = Pelvi_L/2
+    j_Left_RecFem_LLL_X = (LowerLimb_D/2) * math.sin((pi/2))
+    j_Left_RecFem_LLL_Y =  (-1)*(LowerLimb_W/2) * math.cos((pi/2))
+
+    # Tibialis anterior
+    j_Right_TibAnt_RLL_X = (LowerLimb_D/2) * math.sin((pi/2))
+    j_Right_TibAnt_RLL_Y = (-1)*(LowerLimb_W/2) * math.cos((pi/2))
+    j_Right_TibAnt_RF_X = Foot_L/2
+    j_Right_TibAnt_RF_Y = Foot_W/2
+    j_Left_TibAnt_LLL_X = (LowerLimb_D/2) * math.sin((pi/2))
+    j_Left_TibAnt_LLL_Y = (-1)*(LowerLimb_W/2) * math.cos((pi/2))
+    j_Left_TibAnt_LF_X = Foot_L/2
+    j_Left_TibAnt_LF_Y = Foot_W/2
+
+    # Gastrocnemius medialis
+    j_Right_GasMed_RUL_X = (Thigh_D/2) * math.sin((4/3*pi))
+    j_Right_GasMed_RUL_Y = (-1)*(Thigh_W/2) * math.cos((4/3*pi))
+    j_Right_GasMed_RUL_Z = -Thigh_L/2
+    j_Right_GasMed_RF_Z = -Foot_H/2
+    j_Left_GasMed_LUL_X = (Thigh_D/2) * math.sin((5/3*pi))
+    j_Left_GasMed_LUL_Y = (-1)*(Thigh_W/2) * math.cos((5/3*pi))
+    j_Left_GasMed_LUL_Z = -Thigh_L/2
+    j_Left_GasMed_LF_Z = -Foot_H/2
+
+    # Gastrocnemius lateralis
+    j_Right_GasLat_RUL_X = (Thigh_D/2) * math.sin((5/3*pi))
+    j_Right_GasLat_RUL_Y = (-1)*(Thigh_W/2) * math.cos((5/3*pi))
+    j_Right_GasLat_RUL_Z = -Thigh_L/2
+    j_Right_GasLat_RF_Z = -Foot_H/2
+    j_Left_GasLat_LUL_X = (Thigh_D/2) * math.sin((4/3*pi))
+    j_Left_GasLat_LUL_Y = (-1)*(Thigh_W/2) * math.cos((4/3*pi))
+    j_Left_GasLat_LUL_Z = -Thigh_L/2
+    j_Left_GasLat_LF_Z = -Foot_H/2
+
+    return j_Right_BicBrac_RUA_X, j_Right_BicBrac_RUA_Z, j_Right_BicBrac_RFA_X,j_Right_BicBrac_RFA_Z,\
+    j_Left_BicBrac_LUA_X, j_Left_BicBrac_LUA_Z, j_Left_BicBrac_LFA_X,j_Left_BicBrac_LFA_Z,\
+    j_Right_TricBrac_RUA_X,j_Right_TricBrac_RUA_Z, j_Right_TricBrac_RFA_X, j_Right_TricBrac_RFA_Z,\
+    j_Left_TricBrac_LUA_X,j_Left_TricBrac_LUA_Z, j_Left_TricBrac_LFA_X,j_Left_TricBrac_LFA_Z,\
+    j_Right_FlexCarp_RFA_X,j_Right_FlexCarp_RFA_Z,j_Right_FlexCarp_RH_X,j_Right_FlexCarp_RH_Y,j_Right_FlexCarp_RH_Z,\
+    j_Left_FlexCarp_LFA_X,j_Left_FlexCarp_LFA_Z,j_Left_FlexCarp_LH_X,j_Left_FlexCarp_LH_Y,j_Left_FlexCarp_LH_Z,\
+    j_Right_ExtCarp_RFA_X,j_Right_ExtCarp_RFA_Z,j_Right_ExtCarp_RH_X,j_Right_ExtCarp_RH_Y,j_Right_ExtCarp_RH_Z,\
+    j_Left_ExtCarp_LFA_X,j_Left_ExtCarp_LFA_Z,j_Left_ExtCarp_LH_X,j_Left_ExtCarp_LH_Y,j_Left_ExtCarp_LH_Z,\
+    j_Right_ErSpin_RUT_X, j_Right_ErSpin_RUT_Y,j_Right_ErSpin_RUT_Z,j_Right_ErSpin_RP_X,j_Left_ErSpin_LUT_X,\
+    j_Left_ErSpin_LUT_Y,j_Left_ErSpin_LUT_Z,j_Left_ErSpin_LP_X,\
+    j_Right_RecAbd_RUT_X,j_Right_RecAbd_RUT_Y,j_Right_RecAbd_RP_X,j_Left_RecAbd_LUT_X,j_Left_RecAbd_LUT_Y,j_Left_RecAbd_LP_X,\
+    j_Right_BicFem_RUL_X, j_Right_BicFem_RUL_Y, j_Right_BicFem_RLL_X, j_Right_BicFem_RLL_Y, j_Left_BicFem_LUL_X, j_Left_BicFem_LUL_Y,\
+    j_Left_BicFem_LLL_X,j_Left_BicFem_LLL_Y,j_Right_RecFem_RP_X,j_Right_RecFem_RP_Y,j_Right_RecFem_RP_Z,j_Right_RecFem_RLL_X,\
+    j_Right_RecFem_RLL_Y,j_Left_RecFem_LP_X,j_Left_RecFem_LP_Y,j_Left_RecFem_LP_Z,j_Left_RecFem_LLL_X,j_Left_RecFem_LLL_Y,\
+    j_Right_TibAnt_RLL_X,j_Right_TibAnt_RLL_Y,j_Right_TibAnt_RF_X,j_Right_TibAnt_RF_Y,j_Left_TibAnt_LLL_X,j_Left_TibAnt_LLL_Y,j_Left_TibAnt_LF_X,\
+    j_Left_TibAnt_LF_Y,j_Right_GasMed_RUL_X,j_Right_GasMed_RUL_Y,j_Right_GasMed_RUL_Z,j_Right_GasMed_RF_Z,j_Left_GasMed_LUL_X,j_Left_GasMed_LUL_Y,\
+    j_Left_GasMed_LUL_Z,j_Left_GasMed_LF_Z,j_Right_GasLat_RUL_X,j_Right_GasLat_RUL_Y,j_Right_GasLat_RUL_Z,j_Right_GasLat_RF_Z,j_Left_GasLat_LUL_X,\
+    j_Left_GasLat_LUL_Y,j_Left_GasLat_LUL_Z,j_Left_GasLat_LF_Z
+    
+
+    
+    
 
 def ScalingMassPar (m,Model):
     

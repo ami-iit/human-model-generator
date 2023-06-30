@@ -54,7 +54,6 @@ def Scaling_Joint_Position (joint_name,newjointposition,axis,robot):
     joint_modifications.add_position(newjointposition, absolute=True) 
     joint_modifier.modify(joint_modifications)
 
-
 def Scaling_Percentage_Mass (link_name,newmass,axis,robot):
 
     match axis:

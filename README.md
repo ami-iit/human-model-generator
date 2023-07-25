@@ -48,7 +48,7 @@ In order to generate the model launch:
 
 `Python src/GenerateModel.py`
 
-The generated template is named `humanModelGenerated.urdf` and saved in the folder `models/humanModelTemplate`.
+The generated template is named `Subject_Name.urdf` and saved in the folder `models/humanModel`.
 
 # Maintainers
 

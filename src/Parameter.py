@@ -232,7 +232,7 @@ def ScalingMuscleJoint (Upper_Arm_D,Upper_Arm_W,Fore_Arm_D,Fore_Arm_W,Hand_L,Han
     j_Right_RecAbd_RUT_Y = -UpperTrunk_W/2
     j_Right_RecAbd_RP_X = Pelvi_D/2
     j_Left_RecAbd_LUT_X = UpperTrunk_D/2
-    j_Left_RecAbd_LUT_Y = -UpperTrunk_W/2
+    j_Left_RecAbd_LUT_Y = UpperTrunk_W/2
     j_Left_RecAbd_LP_X = Pelvi_D/2
 
     # Biceps femoris
@@ -265,26 +265,26 @@ def ScalingMuscleJoint (Upper_Arm_D,Upper_Arm_W,Fore_Arm_D,Fore_Arm_W,Hand_L,Han
     j_Left_TibAnt_LLL_X = (LowerLimb_D/2) * math.sin((pi/2))
     j_Left_TibAnt_LLL_Y = (-1)*(LowerLimb_W/2) * math.cos((pi/2))
     j_Left_TibAnt_LF_X = Foot_L/2
-    j_Left_TibAnt_LF_Y = Foot_W/2
+    j_Left_TibAnt_LF_Y = -Foot_W/2
 
     # Gastrocnemius medialis
     j_Right_GasMed_RUL_X = (Thigh_D/2) * math.sin((4/3*pi))
     j_Right_GasMed_RUL_Y = (-1)*(Thigh_W/2) * math.cos((4/3*pi))
-    j_Right_GasMed_RUL_Z = -Thigh_L/2
+    j_Right_GasMed_RUL_Z = -Thigh_L
     j_Right_GasMed_RF_Z = -Foot_H/2
     j_Left_GasMed_LUL_X = (Thigh_D/2) * math.sin((5/3*pi))
     j_Left_GasMed_LUL_Y = (-1)*(Thigh_W/2) * math.cos((5/3*pi))
-    j_Left_GasMed_LUL_Z = -Thigh_L/2
+    j_Left_GasMed_LUL_Z = -Thigh_L
     j_Left_GasMed_LF_Z = -Foot_H/2
 
     # Gastrocnemius lateralis
     j_Right_GasLat_RUL_X = (Thigh_D/2) * math.sin((5/3*pi))
     j_Right_GasLat_RUL_Y = (-1)*(Thigh_W/2) * math.cos((5/3*pi))
-    j_Right_GasLat_RUL_Z = -Thigh_L/2
+    j_Right_GasLat_RUL_Z = -Thigh_L
     j_Right_GasLat_RF_Z = -Foot_H/2
     j_Left_GasLat_LUL_X = (Thigh_D/2) * math.sin((4/3*pi))
     j_Left_GasLat_LUL_Y = (-1)*(Thigh_W/2) * math.cos((4/3*pi))
-    j_Left_GasLat_LUL_Z = -Thigh_L/2
+    j_Left_GasLat_LUL_Z = -Thigh_L
     j_Left_GasLat_LF_Z = -Foot_H/2
 
     return j_Right_BicBrac_RUA_X, j_Right_BicBrac_RUA_Z, j_Right_BicBrac_RFA_X,j_Right_BicBrac_RFA_Z,\

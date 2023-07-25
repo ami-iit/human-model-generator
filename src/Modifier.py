@@ -127,8 +127,8 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
 
     ##RIGHT HAND
     Scaling_lenght ('RightHand',Hand_L,None,-Hand_L/2,"Y",'BOX',robot) 
-    Scaling_lenght ('RightHand',Hand_W,None,None,"Y",'BOX',robot) 
-    Scaling_lenght ('RightHand',Hand_H,None,None,"Y",'BOX',robot) 
+    Scaling_lenght ('RightHand',Hand_W,None,None,"X",'BOX',robot) 
+    Scaling_lenght ('RightHand',Hand_H,None,None,"Z",'BOX',robot) 
     Scaling_Percentage_Mass ('RightHand',Hand_m,'Z',robot)
 
     ##LEFT UPPERARM
@@ -141,6 +141,8 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
 
     ##LEFT HAND
     Scaling_lenght ('LeftHand',Hand_L,None,Hand_L/2,"Y",'BOX',robot) 
+    Scaling_lenght ('LeftHand',Hand_W,None,None,"X",'BOX',robot) 
+    Scaling_lenght ('LeftHand',Hand_H,None,None,"Z",'BOX',robot) 
     Scaling_Percentage_Mass ('LeftHand',Hand_m,'Z',robot)
 
     ##RIGHT THIGH
@@ -342,11 +344,11 @@ def ModelModifier (H,m,Model,Geometry,FileName,Control):
     # Tibialis anterior
     Scaling_Joint_Position ('jRightTibAnt_RLL',j_Right_TibAnt_RLL_X,'X',robot) 
     Scaling_Joint_Position ('jRightTibAnt_RLL',j_Right_TibAnt_RLL_Y,'Y',robot) 
-    Scaling_Joint_Position ('jRightTibAnt_RF',j_Right_TibAnt_RF_X,'Z',robot)
+    Scaling_Joint_Position ('jRightTibAnt_RF',j_Right_TibAnt_RF_X,'X',robot)
     Scaling_Joint_Position ('jRightTibAnt_RF',j_Right_TibAnt_RF_Y,'Y',robot)
     Scaling_Joint_Position ('jLeftTibAnt_LLL',j_Left_TibAnt_LLL_X,'X',robot) 
     Scaling_Joint_Position ('jLeftTibAnt_LLL',j_Left_TibAnt_LLL_Y,'Y',robot) 
-    Scaling_Joint_Position ('jLeftTibAnt_LF',j_Left_TibAnt_LF_X,'Z',robot)
+    Scaling_Joint_Position ('jLeftTibAnt_LF',j_Left_TibAnt_LF_X,'X',robot)
     Scaling_Joint_Position ('jLeftTibAnt_LF',j_Left_TibAnt_LF_Y,'Y',robot)
 
     # Gastrocnemius medialis

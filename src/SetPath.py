@@ -15,3 +15,4 @@ def SetPathLoadAndSave (Geometry,NameFile):
     dummy_file = 'no_gazebo_plugins.urdf'
 
     return urdf_path, output_file ,dummy_file
+

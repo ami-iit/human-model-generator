@@ -54,3 +54,11 @@ The generated template is named `Subject_Name.urdf` and saved in the folder `mod
 
 * Lorenzo Fiori ([@LorenzoFiori](https://github.com/LorenzoFiori))
 * Lorenzo Rapetti ([@lrapetti](https://github.com/lrapetti))
+
+# References
+
+* De Leva, P. (1996). Adjustments to Zatsiorsky-Seluyanov's segment inertia parameters. Journal of biomechanics, 29(9), 1223-1230. [link](https://doi.org/10.1016/0021-9290(95)00178-6)
+* Dumas, R., Cheze, L., & Verriest, J. P. (2007). Adjustments to McConville et al. and Young et al. body segment inertial parameters. Journal of biomechanics, 40(3), 543-553. [link](https://doi.org/10.1016/j.jbiomech.2006.02.013)
+* Dumas, R., Cheze, L., & Verriest, J. P. (2007). Corrigendum to “Adjustments to McConville et al. and Young et al. body segment inertial parameters”[J. Biomech. 40 (2007) 543–553]. Journal of Biomechanics, 40(7), 1651-1652. [link](http://bibtexbib.free.fr/bibliographie_net/Dumas_2007_Corrigendum.pdf)
+* Winter, D. A. (2009). Biomechanics and motor control of human movement. John wiley & sons. [link](https://d1wqtxts1xzle7.cloudfront.net/64122734/BIOMECHANICS_AND_MOTOR_CONTROL_OF_HUMAN-libre.pdf?1596837144=&response-content-disposition=inline%3B+filename%3DBIOMECHANICS_AND_MOTOR_CONTROL_OF_HUMAN.pdf)
+* Dumas, R., & Wojtusch, J. (2018). Estimation of the Body Segment Inertial Parameters for the Rigid Body Biomechanical Models Used in Motion Analysis. In: Müller B., Wolf S.(eds) Handbook of Human Motion. [link](https://hal.science/hal-02266177/)

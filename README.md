@@ -41,7 +41,7 @@ Dynamics is a significant aspect in the study of human movement. The generation 
   Control  = "On"
    ```
 
-- Generate the model by running on the terminal `Python src/GenerateModel.py`.
+- Generate the model by running on the terminal `python src/GenerateModel.py`.
 - A template called `Subject_Name.urdf` will be saved in the folder `models/humanModel`.
 
 ## Maintainers

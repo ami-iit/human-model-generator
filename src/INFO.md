@@ -8,25 +8,26 @@ Manually modify the following parameters:
 | Control      | generates a table with estimated anthropometric measurements for each body segment: `On` or `Off`.                                          |
 | H            | total height of the subject to be modelled [m].                                                                                             |
 | m            | total body mass of the subject to be modelled [Kg].                                                                                         |
-| Neck_x       |                                                                                                                                             |
-| UpperTrunk_x |                                                                                                                                             |
-| LowerTrunk_x |                                                                                                                                             |
-| Pelvis_x     |                                                                                                                                             |
-| Shoulder_x   |                                                                                                                                             |
-| UpperArm_x   |                                                                                                                                             |
-| ForeArm_x    |                                                                                                                                             |
-| Hand_z       |                                                                                                                                             |
-| Hand_x       |                                                                                                                                             |
-| UpperLeg_x   |                                                                                                                                             |
-| LowerLeg_x   |                                                                                                                                             |                                                                                      
+| Neck_x       | Width of the Neck                                                                                                                           |
+| UpperTrunk_x | Depth of the upper trunk                                                                                                                    |
+| LowerTrunk_x | Depth of the lower trunk                                                                                                                    |
+| Pelvis_x     | Depth of the pelvis                                                                                                                         |
+| Shoulder_x   | Width of the shoulder                                                                                                                       |
+| UpperArm_x   | Width of the upper arm                                                                                                                      |
+| ForeArm_x    | Width of the fore arm                                                                                                                       |
+| Hand_z       | Height of the hand                                                                                                                          |
+| Hand_x       | Width of the hand                                                                                                                           |
+| UpperLeg_x   | Width of the upper leg                                                                                                                      |
+| LowerLeg_x   | Width of the lower leg                                                                                                                      |
+
 
 
    Please consider that the default configuration is the following
 
    ```
-  Model    = 'DeLeva'# or 'Dumas'
+  Model    = 'DeLeva'
   FileName = 'FileNames'
-  Control  = "On" # or "On"
+  Control  = "On"
 
   ''' ANTHROPOMETRIC MEASUREMENTS''' 
 

@@ -12,45 +12,37 @@
 	<!--Link base (1)-->
 	<link name="Pelvis">
         <inertial>
-            <mass value="4.976"/>
-			<!--COM origin wrt pHipOrigin-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
-            <inertia ixx="0.029678" iyy="0.011854" izz="0.033653" ixy="0" ixz="0" iyz="0"/>
+            <mass value="0.0"/>
+            <!--box origin wrt Pelvis-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
-			<!--box origin wrt pHipOrigin-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
+			<!--box origin wrt Pelvis-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15     0.25    0.1"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
-			<!--box origin wrt pHipOrigin-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
+			<!--box origin wrt Pelvis-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15     0.25    0.1"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
         </collision>
     </link>
 ##############################################################################
 # PELVI - LOWERTRUNK
 ##############################################################################
-    <!--Chain from (2) to (7)-->
 	<link name="LowerTrunk_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="LowerTrunk_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -58,26 +50,26 @@
 ##############################################################################
 	<link name="LowerTrunk">
         <inertial>
-            <mass value="6.3444"/>
-			<!--COM origin wrt jL5S1-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
-            <inertia ixx="0.018868" iyy="0.014872" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+            <mass value="0.0"/>
+			<!--COM origin wrt LowerTrunk-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin origin wrt jL5S1-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15    0.25    0.2"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin origin wrt jL5S1-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15    0.25    0.2"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
         </collision>
     </link>
@@ -86,16 +78,16 @@
 ##############################################################################
 	<link name="UpperTrunk_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="UpperTrunk_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -103,116 +95,82 @@
 ##############################################################################
 	<link name="UpperTrunk">
         <inertial>
-            <mass value="6.3444"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jL4L3-->
-            <origin xyz="0       0    0.05" rpy="0 0 0" />
-            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0       0    0.05" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15   0.1  0.1"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0       0    0.05" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.15  0.1  0.1"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
         </collision>
-    </link>
-##############################################################################
-# UPPERTRUNK - RIGHTSHOULDER
-##############################################################################
-	<link name="RightC7Shoulder_f1">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="RightC7Shoulder_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
     </link>
 ##############################################################################
 # RIGHTSHOULDER
 ##############################################################################
 	<link name="RightShoulder">
         <inertial>
-            <mass value="6.3444"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jL4L3-->
-            <origin xyz="0       -0.05    0" rpy="1.5708 0 0" />
-            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0    -0.05   0 " rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.1" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0    -0.05    0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.1" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
-##############################################################################
-# UPPERTRUNK - LEFTSHOULDER
-##############################################################################
-	<link name="LeftC7Shoulder_f1">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="LeftC7Shoulder_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>    
 ##############################################################################
 # LEFTSHOULDER
 ##############################################################################
 	<link name="LeftShoulder">
         <inertial>
-            <mass value="6.3444"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jL4L3-->
-            <origin xyz="0       0.05    0" rpy="0 0 0" />
-            <inertia ixx="0.017989" iyy="0.013993" izz="0.024177" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0    0.05    0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.1" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin origin wrt jL4L3-->
-            <origin xyz="0    0.05    0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.1" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -221,16 +179,16 @@
 ##############################################################################	
 	<link name="Neck_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="Neck_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -238,26 +196,26 @@
 ##############################################################################	
 	<link name="Neck">
         <inertial>
-            <mass value="0.7464"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jT1C7-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
-            <inertia ixx="0.0006461" iyy="0.0006461" izz="0.00030124" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jT1C7-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-		<cylinder length="0.1" radius="0.02"/>
+		<cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jT1C7-->
-            <origin xyz="0           0    0.05" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.1" radius="0.02"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -266,16 +224,9 @@
 ##############################################################################	
 	<link name="Head_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="Head_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -283,26 +234,26 @@
 ##############################################################################	
 	<link name="Head">
         <inertial>
-            <mass value="2.2392"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jC1Head-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
-            <inertia ixx="0.0070955" iyy="0.0070955" izz="0.0070955" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--boc origin wrt jC1Head-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <sphere radius="0.1"/>
+                <sphere radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jC1Head-->
-            <origin xyz="0           0    0.1" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <sphere radius="0.1"/>
+                <sphere radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -311,20 +262,18 @@
 ##############################################################################
 # RIGHT SHOULDER
 ##############################################################################
-
-	<!--Chain from (8) to (11)-->
 	<link name="RightShoulder_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="RightShoulder_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -332,26 +281,26 @@
 ##############################################################################
     <link name="RightUpperArm">
         <inertial>
-            <mass value="1.866"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightShoulder-->
-            <origin xyz="0    -0.1           0" rpy="0 0 0" />
-            <inertia ixx="0.011736" iyy="0.00080917" izz="0.011736" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
-            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
-            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -360,16 +309,9 @@
 ##############################################################################
 	<link name="RightForeArm_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="RightForeArm_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -377,26 +319,26 @@
 ##############################################################################
 	<link name="RightForeArm">
         <inertial>
-            <mass value="1.244"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightElbow-->
-            <origin xyz="0    -0.1           0" rpy="0 0 0" />
-            <inertia ixx="0.0052508" iyy="0.00023975" izz="0.0052508" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
-            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.02"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
-            <origin xyz="0    -0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.02"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -405,16 +347,9 @@
 ##############################################################################
 	<link name="RightHand_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="RightHand_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -422,26 +357,26 @@
 ##############################################################################
 	<link name="RightHand">
         <inertial>
-            <mass value="0.3732"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightWrist-->
-            <origin xyz="0   -0.05           0" rpy="0 0 0" />
-            <inertia ixx="0.00091713" iyy="0.00043425" izz="0.0012555" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightWrist-->
-            <origin xyz="0   -0.05           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.075     0.1    0.03"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jRightWrist-->
-            <origin xyz="0   -0.05           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.075     0.1   0.03"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
         </collision>
     </link>
@@ -450,15 +385,15 @@
 ##############################################################################
     <link name="RightHandCOM">
         <inertial>
-            <mass value="0.00001"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
             <!--box origin wrt jRightWrist-->
-            <origin xyz="0   0           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0     0    0"/>
+                <box size="0 0 0"/>
             </geometry>
             <material name="color"/>
         </visual>
@@ -468,19 +403,18 @@
 ##############################################################################
 # LEFT SHOULDER
 ##############################################################################
-	<!--Chain from (12) to (15)-->
 	<link name="LeftShoulder_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="LeftShoulder_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -489,26 +423,26 @@
 
 	<link name="LeftUpperArm">
         <inertial>
-            <mass value="1.866"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftShoulder-->
-            <origin xyz="0     0.13          0" rpy="0 0 0" />
-            <inertia ixx="0.011736" iyy="0.00080917" izz="0.011736" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
-            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
-            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -517,16 +451,9 @@
 ##############################################################################
 	<link name="LeftForeArm_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="LeftForeArm_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -534,26 +461,26 @@
 ##############################################################################
 	<link name="LeftForeArm">
         <inertial>
-            <mass value="1.244"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftElbow-->
-            <origin xyz="0     0.1           0" rpy="0 0 0" />
-            <inertia ixx="0.0052508" iyy="0.00023975" izz="0.0052508" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
-            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.02"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
-            <origin xyz="0     0.1           0" rpy="1.5708 0 0" />
+            <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
-                <cylinder length="0.2" radius="0.02"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -562,16 +489,9 @@
 ##############################################################################
 	<link name="LeftHand_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="LeftHand_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -579,26 +499,26 @@
 ##############################################################################
 	<link name="LeftHand">
         <inertial>
-            <mass value="0.3732"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftWrist-->
-            <origin xyz="0    0.05           0" rpy="0 0 0" />
-            <inertia ixx="0.00091713" iyy="0.00043425" izz="0.0012555" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--COM origin wrt jLeftWrist-->
-            <origin xyz="0    0.05           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.075     0.1    0.03"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--COM origin wrt jLeftWrist-->
-            <origin xyz="0    0.05           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.075     0.1    0.03"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
         </collision>
 
@@ -608,36 +528,36 @@
 ##############################################################################
     <link name="LeftHandCOM">
         <inertial>
-            <mass value="0.00001"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
             <!--COM origin wrt jLeftWrist-->
-            <origin xyz="0    0           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0     0    0"/>
+                <box size="0 0 0"/>
             </geometry>
             <material name="color"/>
         </visual>
     </link>
 
+
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
-	<!--Chain from (16) to (19)-->
 	<link name="RightUpperLeg_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="RightUpperLeg_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -645,45 +565,37 @@
 ##############################################################################
     <link name="RightUpperLeg">
         <inertial>
-            <mass value="7.775"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
-            <inertia ixx="0.13681" iyy="0.13681" izz="0.01241" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.05"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jRightHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.05"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
      </link>
 ##############################################################################
 # RIGHT KNEE
 ##############################################################################
-
 	<link name="RightLowerLeg_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="RightLowerLeg_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -691,26 +603,26 @@
 ##############################################################################
     <link name="RightLowerLeg">
         <inertial>
-            <mass value="2.2703"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightKnee-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
-            <inertia ixx="0.031992" iyy="0.031992" izz="0.0015867" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jRightKnee-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jRightKnee-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.03"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
     </link>
@@ -719,16 +631,16 @@
 ############################################################################## 
 	<link name="RightFoot_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="RightFoot_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -736,7 +648,7 @@
 ##############################################################################
     <link name="RightFoot">
         <inertial>
-            <mass value="0.8086"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jRightAnkle-->
             <origin xyz="0.1    0   -0.025" rpy="0 0 0" />
             <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
@@ -765,9 +677,9 @@
 ##############################################################################
     <link name="RightToe">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
             <!--box origin wrt jRightAnkle-->
@@ -778,24 +690,59 @@
             <material name="color"/>
         </visual>
     </link>
+##############################################################################
+# RIGHT HEEL
+##############################################################################
+    <link name="RightHeel">
+        <inertial>
+            <mass value="0.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jRightAnkle-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
+##############################################################################
+# RIGHT FTSENSOR
+##############################################################################
+    <link name="RightFTSensor">
+        <inertial>
+            <mass value="0.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jRightBirken-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
 
 
 ##############################################################################
 # LEFT HIP
 ##############################################################################	
-	<!--Chain from (20) to (23)-->
 	<link name="LeftUpperLeg_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="LeftUpperLeg_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -803,44 +750,37 @@
 ##############################################################################
     <link name="LeftUpperLeg">
         <inertial>
-            <mass value="7.775"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
-            <inertia ixx="0.13681" iyy="0.13681" izz="0.01241" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.05"/>
+                <cylinder length="Nan" radius="NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jLeftHip-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <cylinder length="0.4" radius="0.05"/>
+                <cylinder length="NaN" radius="NaN"/>
             </geometry>
         </collision>
+    </link>
 ##############################################################################
 # LEFT KNEE
 ##############################################################################
-    </link>
 	<link name="LeftLowerLeg_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
-        </inertial>
-    </link>
-	<link name="LeftLowerLeg_f2">
-        <inertial>
-            <mass value="0"/>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -848,10 +788,10 @@
 ##############################################################################
 	<link name="LeftLowerLeg">
         <inertial>
-            <mass value="2.2703"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftKnee-->
-            <origin xyz="0           0    -0.2" rpy="0 0 0" />
-            <inertia ixx="0.031992" iyy="0.031992" izz="0.0015867" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" ixz="0.0" iyz="0.0"/>
         </inertial>
 
         <visual>
@@ -877,16 +817,16 @@
 ##############################################################################
 	<link name="LeftFoot_f1">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 	<link name="LeftFoot_f2">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -894,91 +834,117 @@
 ##############################################################################
     <link name="LeftFoot">
         <inertial>
-            <mass value="0.8086"/>
+            <mass value="0.0"/>
 			<!--COM origin wrt jLeftAnkle-->
-            <origin xyz="0.1         0   -0.025" rpy="0 0 0" />
-            <inertia ixx="0.00079209" iyy="0.0025944" izz="0.0025558" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
 
         <visual>
 			<!--box origin wrt jLeftAnkle-->
-	   	 	<origin xyz="0.1         0   -0.025" rpy="0 0 0" />
+	   	 	<origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0.2    0.05    0.05"/>
+                <box size="NaN NaN NaN"/>
             </geometry>
             <material name="color"/>
         </visual>
 
         <collision>
 			<!--box origin wrt jLeftAnkle-->
-		    <origin xyz="0.1         0   -0.025" rpy="0 0 0" />
+		    <origin xyz="0 0 0" rpy="0 0 0" />
 	            <geometry>
-	                <box size="0.2    0.05    0.05"/>
+	                <box size="NaN NaN NaN"/>
 	            </geometry>
         </collision>
-
     </link>
 ##############################################################################
 # LEFT TOE
 ##############################################################################
     <link name="LeftToe">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
         <visual>
             <!--box origin wrt jLeftAnkle-->
-            <origin xyz="0   0           0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <box size="0     0    0"/>
+                <box size="0 0 0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
+##############################################################################
+# LEFT HEEL
+##############################################################################
+    <link name="LeftHeel">
+        <inertial>
+            <mass value="0.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jLeftAnkle-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0"/>
+            </geometry>
+            <material name="color"/>
+        </visual>
+    </link>
+##############################################################################
+# LEFT FTSENSOR
+##############################################################################
+    <link name="LeftFTSensor">
+        <inertial>
+            <mass value="0.0"/>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+        </inertial>
+        <visual>
+            <!--box origin wrt jLeftBirken-->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0 0 0"/>
             </geometry>
             <material name="color"/>
         </visual>
     </link>
 
+
 <!--JOINTS-->
-
-
 
 ##############################################################################
 # PELVI - LOWERTRUNK
 ##############################################################################
 	
 	<joint name="jL5S1_rotx" type="revolute">
-        <origin xyz="0          0    0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="LowerTrunk_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.610865" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jL5S1_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LowerTrunk_f1"/>
-        <child link="LowerTrunk_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
-    </joint>
-    <joint name="jL5S1_rotz" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LowerTrunk_f2"/>
         <child link="LowerTrunk"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="1.309" />
+        <axis xyz="0 1 0" />
     </joint>
 ##############################################################################
 # LOWERTRUNK - UPPERTRUNK
 ##############################################################################
 
 	<joint name="jT9T8_rotx" type="revolute">
-        <origin xyz="0      0    0.2" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LowerTrunk"/>
         <child link="UpperTrunk_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.349066" upper="0.349066" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jT9T8_roty" type="revolute">
@@ -986,7 +952,7 @@
         <parent link="UpperTrunk_f1"/>
         <child link="UpperTrunk_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.261799" upper="0.698132" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jT9T8_rotz" type="revolute">
@@ -994,73 +960,41 @@
         <parent link="UpperTrunk_f2"/>
         <child link="UpperTrunk"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.610865" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # UPPERTRUNK - RIGHTSHOULDER
 ##############################################################################
 	<joint name="jC7RightShoulder_rotx" type="revolute">
-        <origin xyz="0   -0.05    0.07" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
-        <child link="RightC7Shoulder_f1"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jC7RightShoulder_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightC7Shoulder_f1"/>
-        <child link="RightC7Shoulder_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
-    </joint>
-    <joint name="jC7RightShoulder_rotz" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightC7Shoulder_f2"/>
         <child link="RightShoulder"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.0872665" />
+        <axis xyz="1 0 0" />
     </joint>
 ##############################################################################
 # UPPERTRUNK - LEFTSHOULDER
 ##############################################################################
 	<joint name="jC7LeftShoulder_rotx" type="revolute">
-        <origin xyz="0   0.05    0.07" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
-        <child link="LeftC7Shoulder_f1"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jC7LeftShoulder_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftC7Shoulder_f1"/>
-        <child link="LeftC7Shoulder_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
-    </joint>
-    <joint name="jC7LeftShoulder_rotz" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftC7Shoulder_f2"/>
         <child link="LeftShoulder"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-0.0872665" upper="0.785398" />
+        <axis xyz="1 0 0" />
     </joint>
 ##############################################################################
 # UPPERTRUNK - NECK
 ##############################################################################
 
 	<joint name="jT1C7_rotx" type="revolute">
-        <origin xyz="0        0     0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="Neck_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.610865" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jT1C7_roty" type="revolute">
@@ -1068,7 +1002,7 @@
         <parent link="Neck_f1"/>
         <child link="Neck_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.959931" upper="1.5708" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jT1C7_rotz" type="revolute">
@@ -1076,49 +1010,39 @@
         <parent link="Neck_f2"/>
         <child link="Neck"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.22173" upper="1.22173" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # NECK - HEAD
 ##############################################################################  
 	<joint name="jC1Head_rotx" type="revolute">
-        <origin xyz="0           0    0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Neck"/>
         <child link="Head_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.610865" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jC1Head_roty" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Head_f1"/>
-        <child link="Head_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
-    </joint>
-    <joint name="jC1Head_rotz" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="Head_f2"/>
         <child link="Head"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 0 1" />
+        <limit effort="30" velocity="1.0" lower="-0.436332" upper="0.174533" />
+        <axis xyz="0 1 0" />
     </joint>
 
 
 ##############################################################################
 # RIGHT SHOULDER
 ##############################################################################
-
-
 	<joint name="jRightShoulder_rotx" type="revolute">
-        <origin xyz="0   -0.1    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightShoulder"/>
         <child link="RightShoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-2.35619" upper="1.5708" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jRightShoulder_roty" type="revolute">
@@ -1126,7 +1050,7 @@
         <parent link="RightShoulder_f1"/>
         <child link="RightShoulder_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.5708" upper="1.5708" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightShoulder_rotz" type="revolute">
@@ -1134,83 +1058,68 @@
         <parent link="RightShoulder_f2"/>
         <child link="RightUpperArm"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="3.14159" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT ELBOW
 ##############################################################################
-	<joint name="jRightElbow_rotx" type="revolute">
-        <origin xyz="0    -0.2   0" rpy="0 0 0"/>
+	<joint name="jRightElbow_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperArm"/>
         <child link="RightForeArm_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jRightElbow_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightForeArm_f1"/>
-        <child link="RightForeArm_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.5708" upper="1.48353" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightElbow_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightForeArm_f2"/>
+        <parent link="RightForeArm_f1"/>
         <child link="RightForeArm"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="0" upper="2.53073" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT WRIST
 ##############################################################################
 	<joint name="jRightWrist_rotx" type="revolute">
-        <origin xyz="0    -0.2           0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightForeArm"/>
         <child link="RightHand_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.872665" upper="1.0472" />
         <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jRightWrist_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightHand_f1"/>
-        <child link="RightHand_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightWrist_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightHand_f2"/>
+        <parent link="RightHand_f1"/>
         <child link="RightHand"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.349066" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT HAND COM
 ##############################################################################   
     <joint name="jRightHandCOM" type="fixed">
-        <origin xyz="0 -0.05 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightHand"/>
         <child link="RightHandCOM"/>
         <axis xyz="0 0 0" />
     </joint>
+
 
 ##############################################################################
 # LEFT SHOULDER
 ##############################################################################
 
 	<joint name="jLeftShoulder_rotx" type="revolute">
-        <origin xyz="0    0.1    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftShoulder"/>
         <child link="LeftShoulder_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.5708" upper="2.35619" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jLeftShoulder_roty" type="revolute">
@@ -1218,7 +1127,7 @@
         <parent link="LeftShoulder_f1"/>
         <child link="LeftShoulder_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.5708" upper="1.5708" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftShoulder_rotz" type="revolute">
@@ -1226,83 +1135,68 @@
         <parent link="LeftShoulder_f2"/>
         <child link="LeftUpperArm"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-3.14159" upper="0.785398" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT ELBOW
 ##############################################################################
-    <joint name="jLeftElbow_rotx" type="revolute">
-        <origin xyz="0     0.2           0" rpy="0 0 0"/>
+	<joint name="jLeftElbow_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperArm"/>
         <child link="LeftForeArm_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jLeftElbow_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftForeArm_f1"/>
-        <child link="LeftForeArm_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.5708" upper="1.48353" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftElbow_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftForeArm_f2"/>
+        <parent link="LeftForeArm_f1"/>
         <child link="LeftForeArm"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-2.53073" upper="0" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT WRIST
 ##############################################################################
 	<joint name="jLeftWrist_rotx" type="revolute">
-        <origin xyz="0     0.2         0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="LeftHand_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-1.0472" upper="0.872665" />
         <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jLeftWrist_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftHand_f1"/>
-        <child link="LeftHand_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftWrist_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftHand_f2"/>
+        <parent link="LeftHand_f1"/>
         <child link="LeftHand"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.349066" upper="0.523599" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT HAND COM
 ############################################################################## 
     <joint name="jLeftHandCOM" type="fixed">
-        <origin xyz="0 0.05 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftHand"/>
         <child link="LeftHandCOM"/>
         <axis xyz="0 0 0" />
     </joint>
+
 
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
 
 	<joint name="jRightHip_rotx" type="revolute">
-        <origin xyz="0   -0.075    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RightUpperLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.523599" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jRightHip_roty" type="revolute">
@@ -1310,7 +1204,7 @@
         <parent link="RightUpperLeg_f1"/>
         <child link="RightUpperLeg_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-2.0944" upper="0.261799" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightHip_rotz" type="revolute">
@@ -1318,45 +1212,37 @@
         <parent link="RightUpperLeg_f2"/>
         <child link="RightUpperLeg"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.785398" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT KNEE
 ##############################################################################
-	<joint name="jRightKnee_rotx" type="revolute">
-        <origin xyz="0    0    -0.4" rpy="0 0 0"/>
+	<joint name="jRightKnee_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperLeg"/>
         <child link="RightLowerLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jRightKnee_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightLowerLeg_f1"/>
-        <child link="RightLowerLeg_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="0" upper="2.35619" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightKnee_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="RightLowerLeg_f2"/>
+        <parent link="RightLowerLeg_f1"/>
         <child link="RightLowerLeg"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.698132" upper="0.523599" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT ANKLE
 ##############################################################################
 	<joint name="jRightAnkle_rotx" type="revolute">
-        <origin xyz="-0.03       0    -0.4" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="RightFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.610865" upper="0.785398" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jRightAnkle_roty" type="revolute">
@@ -1364,7 +1250,7 @@
         <parent link="RightFoot_f1"/>
         <child link="RightFoot_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.872665" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jRightAnkle_rotz" type="revolute">
@@ -1372,31 +1258,54 @@
         <parent link="RightFoot_f2"/>
         <child link="RightFoot"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.436332" upper="0.872665" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # RIGHT TOE
 ##############################################################################   
     <joint name="jRightBallFoot_roty" type="revolute">
-        <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightFoot"/>
         <child link="RightToe"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
         <axis xyz="0 1 0" />
     </joint>
+##############################################################################
+# RIGHT HEEL
+##############################################################################   
+    <joint name="jRightHeel_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightFoot"/>
+        <child link="RightHeel"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
+    </joint>
+##############################################################################
+# RIGHT BIRKEN
+##############################################################################   
+    <joint name="jRightBirken_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="RightHeel"/>
+        <child link="RightFTSensor"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
+    </joint>
+
 
 ##############################################################################
 # LEFT HIP
 ##############################################################################
 
 	<joint name="jLeftHip_rotx" type="revolute">
-        <origin xyz="0   0.075    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="LeftUpperLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.785398" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jLeftHip_roty" type="revolute">
@@ -1404,7 +1313,7 @@
         <parent link="LeftUpperLeg_f1"/>
         <child link="LeftUpperLeg_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-2.0944" upper="0.261799" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftHip_rotz" type="revolute">
@@ -1412,45 +1321,37 @@
         <parent link="LeftUpperLeg_f2"/>
         <child link="LeftUpperLeg"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.785398" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT KNEE
 ##############################################################################
-	<joint name="jLeftKnee_rotx" type="revolute">
-        <origin xyz=" 0      0    -0.4" rpy="0 0 0"/>
+	<joint name="jLeftKnee_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperLeg"/>
         <child link="LeftLowerLeg_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
-        <axis xyz="1 0 0" />
-    </joint>
-	<joint name="jLeftKnee_roty" type="revolute">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftLowerLeg_f1"/>
-        <child link="LeftLowerLeg_f2"/>
-        <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="0" upper="2.35619" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftKnee_rotz" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="LeftLowerLeg_f2"/>
+        <parent link="LeftLowerLeg_f1"/>
         <child link="LeftLowerLeg"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.698132" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT ANKLE
 ##############################################################################
 	<joint name="jLeftAnkle_rotx" type="revolute">
-        <origin xyz="-0.03       0    -0.4"  rpy="0 0 0"/>
+        <origin xyz="0 0 0"  rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="LeftFoot_f1"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.785398" upper="0.610865" />
         <axis xyz="1 0 0" />
     </joint>
 	<joint name="jLeftAnkle_roty" type="revolute">
@@ -1458,7 +1359,7 @@
         <parent link="LeftFoot_f1"/>
         <child link="LeftFoot_f2"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.523599" upper="0.872665" />
         <axis xyz="0 1 0" />
     </joint>
     <joint name="jLeftAnkle_rotz" type="revolute">
@@ -1466,16 +1367,38 @@
         <parent link="LeftFoot_f2"/>
         <child link="LeftFoot"/>
         <dynamics damping="0.1" friction="0.0"/>
-        <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
+        <limit effort="30" velocity="1.0" lower="-0.872665" upper="0.436332" />
         <axis xyz="0 0 1" />
     </joint>
 ##############################################################################
 # LEFT TOE
 ##############################################################################   
     <joint name="jLeftBallFoot_roty" type="revolute">
-        <origin xyz="0.2 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftFoot"/>
         <child link="LeftToe"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
+    </joint>
+##############################################################################
+# LEFT HEEL
+##############################################################################   
+    <joint name="jLeftHeel_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftFoot"/>
+        <child link="LeftHeel"/>
+        <dynamics damping="0.1" friction="0.0"/>
+        <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
+        <axis xyz="0 1 0" />
+    </joint>
+##############################################################################
+# LEFT BIRKEN
+##############################################################################   
+    <joint name="jLeftBirken_roty" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="LeftHeel"/>
+        <child link="LeftFTSensor"/>
         <dynamics damping="0.1" friction="0.0"/>
         <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
         <axis xyz="0 1 0" />
@@ -1491,9 +1414,9 @@
 ##############################################################################
     <link name="BicBrac_RUA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1501,9 +1424,9 @@
 ##############################################################################
     <link name="BicBrac_RFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1511,9 +1434,9 @@
 ##############################################################################
     <link name="TricBrac_RUA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1521,9 +1444,9 @@
 ##############################################################################
     <link name="TricBrac_RFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1531,9 +1454,9 @@
 ##############################################################################
     <link name="FlexCarp_RFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1541,9 +1464,9 @@
 ##############################################################################
     <link name="FlexCarp_RH">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1551,9 +1474,9 @@
 ##############################################################################
     <link name="ExtCarp_RFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1561,9 +1484,9 @@
 ##############################################################################
     <link name="ExtCarp_RH">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1573,9 +1496,9 @@
 ##############################################################################
     <link name="BicBrac_LUA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1583,9 +1506,9 @@
 ##############################################################################
     <link name="BicBrac_LFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1593,9 +1516,9 @@
 ##############################################################################
     <link name="TricBrac_LUA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1603,9 +1526,9 @@
 ##############################################################################
     <link name="TricBrac_LFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1613,9 +1536,9 @@
 ##############################################################################
     <link name="FlexCarp_LFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1623,9 +1546,9 @@
 ##############################################################################
     <link name="FlexCarp_LH">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1633,9 +1556,9 @@
 ##############################################################################
     <link name="ExtCarp_LFA">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1643,9 +1566,9 @@
 ##############################################################################
     <link name="ExtCarp_LH">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1655,9 +1578,9 @@
 ##############################################################################
     <link name="RecAbd_RUT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1665,9 +1588,9 @@
 ##############################################################################
     <link name="RecAbd_RP">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1675,9 +1598,9 @@
 ##############################################################################
     <link name="ErSpin_RUT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1685,9 +1608,9 @@
 ##############################################################################
     <link name="ErSpin_RP">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1697,9 +1620,9 @@
 ##############################################################################
     <link name="RecAbd_LUT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1707,9 +1630,9 @@
 ##############################################################################
     <link name="RecAbd_LP">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1717,9 +1640,9 @@
 ##############################################################################
     <link name="ErSpin_LUT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1727,9 +1650,9 @@
 ##############################################################################
     <link name="ErSpin_LP">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1739,9 +1662,9 @@
 ##############################################################################
     <link name="RecFem_RLT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1749,9 +1672,9 @@
 ##############################################################################
     <link name="RecFem_RLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1759,9 +1682,9 @@
 ##############################################################################
     <link name="BicFem_RUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1769,9 +1692,9 @@
 ##############################################################################
     <link name="BicFem_RLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1781,9 +1704,9 @@
 ##############################################################################
     <link name="RecFem_LLT">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1791,9 +1714,9 @@
 ##############################################################################
     <link name="RecFem_LLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1801,9 +1724,9 @@
 ##############################################################################
     <link name="BicFem_LUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1811,9 +1734,9 @@
 ##############################################################################
     <link name="BicFem_LLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1823,9 +1746,9 @@
 ##############################################################################
     <link name="TibAnt_RLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1833,9 +1756,9 @@
 ##############################################################################
     <link name="TibAnt_RF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1843,9 +1766,9 @@
 ##############################################################################
     <link name="GasLat_RUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1853,9 +1776,9 @@
 ##############################################################################
     <link name="GasLat_RF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1863,9 +1786,9 @@
 ##############################################################################
     <link name="GasMed_RUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1873,9 +1796,9 @@
 ##############################################################################
     <link name="GasMed_RF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1885,9 +1808,9 @@
 ##############################################################################
     <link name="TibAnt_LLL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1895,9 +1818,9 @@
 ##############################################################################
     <link name="TibAnt_LF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1905,9 +1828,9 @@
 ##############################################################################
     <link name="GasLat_LUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1915,9 +1838,9 @@
 ##############################################################################
     <link name="GasLat_LF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1925,9 +1848,9 @@
 ##############################################################################
     <link name="GasMed_LUL">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 ##############################################################################
@@ -1935,9 +1858,9 @@
 ##############################################################################
     <link name="GasMed_LF">
         <inertial>
-            <mass value="0"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
 
@@ -1950,7 +1873,7 @@
 # RIGHT BICBRAC ORIGIN
 ##############################################################################
     <joint name="jRightBicBrac_RUA" type="fixed">
-        <origin xyz="0    0   0.03" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperArm"/>
         <child link="BicBrac_RUA"/>
         <axis xyz="0 0 0" />
@@ -1959,7 +1882,7 @@
 # RIGHT BICBRAC INSERTION
 ##############################################################################
     <joint name="jRightBicBrac_RFA" type="fixed">
-        <origin xyz="0.02    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightForeArm"/>
         <child link="BicBrac_RFA"/>
         <axis xyz="0 0 0" />
@@ -1968,7 +1891,7 @@
 # RIGHT TRICBRAC ORIGIN
 ##############################################################################
     <joint name="jRightTricBrac_RUA" type="fixed">
-        <origin xyz="-0.03    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperArm"/>
         <child link="TricBrac_RUA"/>
         <axis xyz="0 0 0" />
@@ -1977,7 +1900,7 @@
 # RIGHT TRICBRAC INSERTION
 ##############################################################################
     <joint name="jRightTricBrac_RFA" type="fixed">
-        <origin xyz="-0.02    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightForeArm"/>
         <child link="TricBrac_RFA"/>
         <axis xyz="0 0 0" />
@@ -1986,7 +1909,7 @@
 # RIGHT FLEXCARP ORIGIN
 ##############################################################################
     <joint name="jRightFlexCarp_RFA" type="fixed">
-        <origin xyz="-0.02   0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightForeArm"/>
         <child link="FlexCarp_RFA"/>
         <axis xyz="0 0 0" />
@@ -1995,7 +1918,7 @@
 # RIGHT FLEXCARP INSERTION
 ##############################################################################
     <joint name="jRightFlexCarp_RH" type="fixed">
-        <origin xyz="0.015    -0.05   0.015" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightHand"/>
         <child link="FlexCarp_RH"/>
         <axis xyz="0 0 0" />
@@ -2004,7 +1927,7 @@
 # RIGHT EXTCARP ORIGIN
 ##############################################################################
     <joint name="jRightExtCarp_RFA" type="fixed">
-        <origin xyz="0.02   0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightForeArm"/>
         <child link="ExtCarp_RFA"/>
         <axis xyz="0 0 0" />
@@ -2013,7 +1936,7 @@
 # RIGHT EXTCARP INSERTION
 ##############################################################################
     <joint name="jRightExtCarp_RH" type="fixed">
-        <origin xyz="0.015    -0.05   -0.015" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightHand"/>
         <child link="ExtCarp_RH"/>
         <axis xyz="0 0 0" />
@@ -2024,7 +1947,7 @@
 # LEFT BICBRAC ORIGIN
 ##############################################################################
     <joint name="jLeftBicBrac_LUA" type="fixed">
-        <origin xyz="0    0   0.03" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperArm"/>
         <child link="BicBrac_LUA"/>
         <axis xyz="0 0 0" />
@@ -2033,7 +1956,7 @@
 # LEFT BICBRAC INSERTION
 ##############################################################################
     <joint name="jLeftBicBrac_LFA" type="fixed">
-        <origin xyz="0.02    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="BicBrac_LFA"/>
         <axis xyz="0 0 0" />
@@ -2042,7 +1965,7 @@
 # LEFT TRICBRAC ORIGIN
 ##############################################################################
     <joint name="jLeftTricBrac_LUA" type="fixed">
-        <origin xyz="-0.03    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperArm"/>
         <child link="TricBrac_LUA"/>
         <axis xyz="0 0 0" />
@@ -2051,7 +1974,7 @@
 # LEFT TRICBRAC INSERTION
 ##############################################################################
     <joint name="jLeftTricBrac_LFA" type="fixed">
-        <origin xyz="-0.02    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="TricBrac_LFA"/>
         <axis xyz="0 0 0" />
@@ -2060,7 +1983,7 @@
 # LEFT FLEXCARP ORIGIN
 ##############################################################################
     <joint name="jLeftFlexCarp_LFA" type="fixed">
-        <origin xyz="-0.02   0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="FlexCarp_LFA"/>
         <axis xyz="0 0 0" />
@@ -2069,7 +1992,7 @@
 # LEFT FLEXCARP INSERTION
 ##############################################################################
     <joint name="jLeftFlexCarp_LH" type="fixed">
-        <origin xyz="0.015    0.05   0.015" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftHand"/>
         <child link="FlexCarp_LH"/>
         <axis xyz="0 0 0" />
@@ -2078,7 +2001,7 @@
 # LEFT EXTCARP ORIGIN
 ##############################################################################
     <joint name="jLeftExtCarp_LFA" type="fixed">
-        <origin xyz="0.02   0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftForeArm"/>
         <child link="ExtCarp_LFA"/>
         <axis xyz="0 0 0" />
@@ -2087,7 +2010,7 @@
 # LEFT EXTCARP INSERTION
 ##############################################################################
     <joint name="jLeftExtCarp_LH" type="fixed">
-        <origin xyz="0.015    0.05   -0.015" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftHand"/>
         <child link="ExtCarp_LH"/>
         <axis xyz="0 0 0" />
@@ -2098,7 +2021,7 @@
 # RIGHT RECABD ORIGIN
 ##############################################################################
     <joint name="jRightRecAbd_RUT" type="fixed">
-        <origin xyz="0.075    -0.05   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="RecAbd_RUT"/>
         <axis xyz="0 0 0" />
@@ -2107,7 +2030,7 @@
 # RIGHT RECABD INSERTION
 ##############################################################################
     <joint name="jRightRecAbd_RP" type="fixed">
-        <origin xyz="0.075    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecAbd_RP"/>
         <axis xyz="0 0 0" />
@@ -2116,7 +2039,7 @@
 # RIGHT ERSPIN ORIGIN
 ##############################################################################
     <joint name="jRightErSpin_RUT" type="fixed">
-        <origin xyz="-0.075    -0.05   0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="ErSpin_RUT"/>
         <axis xyz="0 0 0" />
@@ -2125,7 +2048,7 @@
 # RIGHT ERSPIN INSERTION
 ##############################################################################
     <joint name="jRightErSpin_RP" type="fixed">
-        <origin xyz="-0.075    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="ErSpin_RP"/>
         <axis xyz="0 0 0" />
@@ -2136,7 +2059,7 @@
 # LEFT RECABD ORIGIN
 ##############################################################################
     <joint name="jLeftRecAbd_LUT" type="fixed">
-        <origin xyz="0.075    0.05   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="RecAbd_LUT"/>
         <axis xyz="0 0 0" />
@@ -2145,7 +2068,7 @@
 # LEFT RECABD INSERTION
 ##############################################################################
     <joint name="jLeftRecAbd_LP" type="fixed">
-        <origin xyz="0.075    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecAbd_LP"/>
         <axis xyz="0 0 0" />
@@ -2154,7 +2077,7 @@
 # LEFT ERSPIN ORIGIN
 ##############################################################################
     <joint name="jLeftErSpin_LUT" type="fixed">
-        <origin xyz="-0.075    0.05   0.1" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
         <child link="ErSpin_LUT"/>
         <axis xyz="0 0 0" />
@@ -2163,7 +2086,7 @@
 # LEFT ERSPIN INSERTION
 ##############################################################################
     <joint name="jLeftErSpin_LP" type="fixed">
-        <origin xyz="-0.075    0   0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="ErSpin_LP"/>
         <axis xyz="0 0 0" />
@@ -2174,7 +2097,7 @@
 # RIGHT RECFEM ORIGIN
 ##############################################################################
     <joint name="jRightRecFem_RP" type="fixed">
-        <origin xyz="0.075    -0.083    0.05" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecFem_RLT"/>
         <axis xyz="0 0 0" />
@@ -2183,7 +2106,7 @@
 # RIGHT RECFEM INSERTION
 ##############################################################################
     <joint name="jRightRecFem_RLL" type="fixed">
-        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="RecFem_RLL"/>
         <axis xyz="0 0 0" />
@@ -2192,7 +2115,7 @@
 # RIGHT BICFEM ORIGIN
 ##############################################################################
     <joint name="jRightBicFem_RUL" type="fixed">
-        <origin xyz="-0.05    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperLeg"/>
         <child link="BicFem_RUL"/>
         <axis xyz="0 0 0" />
@@ -2201,7 +2124,7 @@
 # RIGHT BICFEM INSERTION
 ##############################################################################
     <joint name="jRightBicFem_RLL" type="fixed">
-        <origin xyz="0    -0.03    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="BicFem_RLL"/>
         <axis xyz="0 0 0" />
@@ -2212,7 +2135,7 @@
 # LEFT RECFEM ORIGIN
 ##############################################################################
     <joint name="jLeftRecFem_LP" type="fixed">
-        <origin xyz="0.075    0.083    0.05" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
         <child link="RecFem_LLT"/>
         <axis xyz="0 0 0" />
@@ -2221,7 +2144,7 @@
 # LEFT RECFEM INSERTION
 ##############################################################################
     <joint name="jLeftRecFem_LLL" type="fixed">
-        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="RecFem_LLL"/>
         <axis xyz="0 0 0" />
@@ -2230,7 +2153,7 @@
 # LEFT BICFEM ORIGIN
 ##############################################################################
     <joint name="jLeftBicFem_LUL" type="fixed">
-        <origin xyz="-0.05    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperLeg"/>
         <child link="BicFem_LUL"/>
         <axis xyz="0 0 0" />
@@ -2239,7 +2162,7 @@
 # LEFT BICFEM INSERTION
 ##############################################################################
     <joint name="jLeftBicFem_LLL" type="fixed">
-        <origin xyz="0    0.03    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="BicFem_LLL"/>
         <axis xyz="0 0 0" />
@@ -2250,7 +2173,7 @@
 # RIGHT TIBANT ORIGIN
 ##############################################################################
     <joint name="jRightTibAnt_RLL" type="fixed">
-        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightLowerLeg"/>
         <child link="TibAnt_RLL"/>
         <axis xyz="0 0 0" />
@@ -2259,7 +2182,7 @@
 # RIGHT TIBANT INSERTION
 ##############################################################################
     <joint name="jRightTibAnt_RF" type="fixed">
-        <origin xyz="0.1    0.025    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightFoot"/>
         <child link="TibAnt_RF"/>
         <axis xyz="0 0 0" />
@@ -2268,7 +2191,7 @@
 # RIGHT GASLAT ORIGIN
 ##############################################################################
     <joint name="jRightGasLat_RUL" type="fixed">
-        <origin xyz="-0.043    -0.025    -0.4" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperLeg"/>
         <child link="GasLat_RUL"/>
         <axis xyz="0 0 0" />
@@ -2277,7 +2200,7 @@
 # RIGHT GASLAT INSERTION
 ##############################################################################
     <joint name="jRightGasLat_RF" type="fixed">
-        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightFoot"/>
         <child link="GasLat_RF"/>
         <axis xyz="0 0 0" />
@@ -2286,7 +2209,7 @@
 # RIGHT GASMED ORIGIN
 ##############################################################################
     <joint name="jRightGasMed_RUL" type="fixed">
-        <origin xyz="-0.0433    0.025    -0.4" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightUpperLeg"/>
         <child link="GasMed_RUL"/>
         <axis xyz="0 0 0" />
@@ -2295,7 +2218,7 @@
 # RIGHT GASMED INSERTION
 ##############################################################################
     <joint name="jRightGasMed_RF" type="fixed">
-        <origin xyz="0     0    -0.025" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="RightFoot"/>
         <child link="GasMed_RF"/>
         <axis xyz="0 0 0" />
@@ -2306,7 +2229,7 @@
 # LEFT TIBANT ORIGIN
 ##############################################################################
     <joint name="jLeftTibAnt_LLL" type="fixed">
-        <origin xyz="0.03    0    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftLowerLeg"/>
         <child link="TibAnt_LLL"/>
         <axis xyz="0 0 0" />
@@ -2315,7 +2238,7 @@
 # LEFT TIBANT INSERTION
 ##############################################################################
     <joint name="jLeftTibAnt_LF" type="fixed">
-        <origin xyz="0.1    -0.025    0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftFoot"/>
         <child link="TibAnt_LF"/>
         <axis xyz="0 0 0" />
@@ -2324,7 +2247,7 @@
 # LEFT GASLAT ORIGIN
 ##############################################################################
     <joint name="jLeftGasLat_LUL" type="fixed">
-        <origin xyz="-0.0433    0.025    -0.4" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperLeg"/>
         <child link="GasLat_LUL"/>
         <axis xyz="0 0 0" />
@@ -2333,7 +2256,7 @@
 # LEFT GASLAT INSERTION
 ##############################################################################
     <joint name="jLeftGasLat_LF" type="fixed">
-        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftFoot"/>
         <child link="GasLat_LF"/>
         <axis xyz="0 0 0" />
@@ -2342,7 +2265,7 @@
 # LEFT GASMED ORIGIN
 ##############################################################################
     <joint name="jLeftGasMed_LUL" type="fixed">
-        <origin xyz="-0.0433    -0.025    -0.4" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftUpperLeg"/>
         <child link="GasMed_LUL"/>
         <axis xyz="0 0 0" />
@@ -2351,7 +2274,7 @@
 # LEFT GASMED INSERTION
 ##############################################################################
     <joint name="jLeftGasMed_LF" type="fixed">
-        <origin xyz="0    0    -0.025" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LeftFoot"/>
         <child link="GasMed_LF"/>
         <axis xyz="0 0 0" />  

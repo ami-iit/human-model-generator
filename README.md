@@ -17,37 +17,11 @@ Dynamics is a significant aspect in the study of human movement. The generation 
   git clone https://github.com/ami-iit/human-model-generator.git
   cd human-model-generator
   ```
-- Open the file `src/GenerateModel.py` with a text editor.
-- Manually modify the following parameters.
-
-   | Parameter | Description                                                                                                              |  
-   |:----------:|---------------------------------------------------------------------------------------------------------------------------------------------|
-   | H          | height of the subject to be modelled.                                                                                                       |
-   | m          | mass of the subject to be modelled.                                                                                                         |
-   | Model      | type of model to be used based on different theoretical approaches: `DeLeva` (see De Leva, et. al 1996) or `Dumas` (see Dumas, et. al 2007) |      
-   | Geometry   | type of geometry to model the shoulder: `Cylinder` or  `Box`.                                                                           | 
-   | FileName   | name of the file with which the .urdf model will be saved.                                                                                  |
-   | Control    | generates a table with estimated anthropometric measurements for each body segment: `On` or `Off`.                                          |
-
-
-   Please consider that the default configuration is the following
-
-   ```
-  H        = 1.70
-  m        = 105
-  Model    = 'DeLeva'
-  Geometry = "Cylinder"
-  FileName = 'Subject_Name'
-  Control  = "On"
-   ```
-
-- Generate the model by running on the terminal `python src/GenerateModel.py`.
-- A template called `Subject_Name.urdf` will be saved in the folder `models/humanModel`.
-
+  
 ## Maintainers
 
 * Lorenzo Fiori ([@LorenzoFiori](https://github.com/LorenzoFiori))
-* Lorenzo Rapetti ([@lrapetti](https://github.com/lrapetti))
+* Claudia Latella ([@claudia-lat](https://github.com/claudia-lat/claudia-lat))
 
 ## References
 

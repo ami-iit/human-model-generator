@@ -20,7 +20,7 @@ Dynamics is a significant aspect in the study of human movement. The generation 
 - Open the file `src/generateModels.py` with a text editor.
 - Manually modify the parameters.
 - Generate the model by running on the terminal `python src/generateModels.py`.
-- A template called `FileName` + `.urdf` will be saved in the folder `models/humanModel`.
+- A template called `FileName.urdf` will be saved in the folder `models/humanModel`.
 
 ## Maintainers
 

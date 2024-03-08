@@ -3,26 +3,26 @@ Manually modify the following parameters:
 
 | Parameter    | Description                                                                                                                                 |  
 |:------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
-| Model        | type of model to be used based on different theoretical approaches: `DeLeva` (see De Leva, et. al 1996) or `Dumas` (see Dumas, et. al 2007) |
-| FileName     | name of the file with which the .urdf model will be saved.                                                                                  |
-| Control      | generates a table with estimated anthropometric measurements for each body segment: `On` or `Off`.                                          |
-| H            | total height of the subject to be modelled [m].                                                                                             |
-| m            | total body mass of the subject to be modelled [Kg].                                                                                         |
-| Neck_x       | Width of the Neck                                                                                                                           |
-| UpperTrunk_x | Depth of the upper trunk                                                                                                                    |
-| LowerTrunk_x | Depth of the lower trunk                                                                                                                    |
-| Pelvis_x     | Depth of the pelvis                                                                                                                         |
-| Shoulder_x   | Width of the shoulder                                                                                                                       |
-| UpperArm_x   | Width of the upper arm                                                                                                                      |
-| ForeArm_x    | Width of the fore arm                                                                                                                       |
-| Hand_z       | Height of the hand                                                                                                                          |
-| Hand_x       | Width of the hand                                                                                                                           |
-| UpperLeg_x   | Width of the upper leg                                                                                                                      |
-| LowerLeg_x   | Width of the lower leg                                                                                                                      |
+| Model        | Type of model to be used based on different theoretical approaches: `DeLeva` (see De Leva, et. al 1996) or `Dumas` (see Dumas, et. al 2007) |
+| FileName     | Name of the file with which the .urdf model will be saved.                                                                                  |
+| Control      | Generates a table with estimated anthropometric measurements for each body segment: `On` or `Off`.                                          |
+| H            | Total height of the subject to be modelled [m].                                                                                             |
+| m            | Total body mass of the subject to be modelled [Kg].                                                                                         |
+| Neck_x       | Width of the neck.                                                                                                                          |
+| UpperTrunk_x | Depth of the upper trunk.                                                                                                                   |
+| LowerTrunk_x | Depth of the lower trunk.                                                                                                                   |
+| Pelvis_x     | Depth of the pelvis.                                                                                                                        |
+| Shoulder_x   | Width of the shoulder.                                                                                                                      |
+| UpperArm_x   | Width of the upper arm.                                                                                                                     |
+| ForeArm_x    | Width of the fore arm.                                                                                                                      |
+| Hand_z       | Height of the hand.                                                                                                                         |
+| Hand_x       | Width of the hand.                                                                                                                          |
+| UpperLeg_x   | Width of the upper leg.                                                                                                                     |
+| LowerLeg_x   | Width of the lower leg.                                                                                                                     |
 
 
 
-   Please consider that the default configuration is the following
+Please consider that the default configuration is the following
 
    ```
   Model    = 'DeLeva'

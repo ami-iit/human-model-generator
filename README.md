@@ -1,12 +1,11 @@
 # Human-Model-Generator (HMG)
 
+The Human Model Generator is a tool designed to generate detailed human models that follow to the Unified Robot Description Format (URDF) standard. This tool, which uses the Python programming environment, provides a solution for automatic creating human models for use in movement analysis, robotics and simulation applications.
+
 ## Introduction
-Dynamics is a critical aspect in the study of human movement, encompassing the forces and torques that cause motion. The generation of movement is made possible through the synergistic action of the nervous system and muscles. The nervous system sends signals to the muscles, which then contract and produce movement by exerting force on the skeletal system. This intricate interaction between the skeletal system and muscles allows for complex and coordinated motions.
-
-Current skeletal models, such as the Unified Robot Description Format (URDF) model, offer a valuable approximation of human anatomy. These models are used extensively in fields like biomechanics, robotics, and computer simulations to study and replicate human movement. However, for a more accurate representation, especially when customizing models for individual subjects, additional data is required. This includes inertial parameters of body segments, which describe how mass is distributed throughout the body, and various anthropometric measurements that capture the unique dimensions and proportions of an individual.
-
-Moreover, muscle modeling is essential for a comprehensive understanding of human movement. This involves simulating the behavior of muscles, including their activation patterns, force production, and interaction with the skeletal system. Accurate muscle models can predict how changes in muscle strength, coordination, or fatigue affect overall movement and performance.
-
+Dynamics is a critical aspect in the study of human movement, encompassing the forces and torques that cause motion. The generation of movement is made possible through the synergistic action of the nervous system and muscles. The nervous system sends signals to the muscles, which then contract and produce movement by exerting forces on the skeletal system. The intricate interaction between the skeletal system and muscles allows for complex and coordinated motions.
+The muscle-skeletal models offer a valuable approximation of human anatomy and are used extensively in fields like biomechanics, robotics, and computer simulations to study and replicate human movement. The muscle modeling is essential for a comprehensive understanding of human movement. This involves simulating the behavior of muscles, including their activation patterns, force production, and interaction with the skeletal system. Accurate muscle models can predict how changes in muscle strength, coordination, or fatigue affect overall movement and performance.
+However, for a more accurate representation, especially when customizing models for individual subjects, additional data is required. This includes inertial parameters of body segments, which describe how mass is distributed throughout the body, and various anthropometric measurements that capture the unique dimensions and proportions of an individual. URDF models include scalable inertial parameters, making them useful in this studies.
 Therefore, our goal is to develop an advanced human model that integrates both skeletal and muscular information. This model will not only include detailed anatomical and inertial data but also be scalable to accommodate the specific characteristics of each individual. By achieving this, we can enhance the precision and applicability of simulations and analyses in various applications, from clinical assessments to the development of prosthetics and robotics.
 
 <p align="center">
@@ -15,30 +14,56 @@ Therefore, our goal is to develop an advanced human model that integrates both s
 
 
 ## Dependencies 
-This library requires the following dependencies
+This library requires the following dependencies:
 
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
 - [``idyntree``](https://github.com/robotology/idyntree)
 
+## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
+
+- Generate and activate a new enviroment:
+```
+conda create -n human_model_env
+conda activate human_model_env
+```
+- Clone urdf-modifiers repository: 
+```
+git clone https://github.com/icub-tech-iit/urdf-modifiers.git
+```
+- Go to the repository folder: 
+```
+ cd urdf-modifiers
+```
+- Install urdf-modifiers using:
+```
+pip install .
+```
+- Install idyntree using:
+```
+conda install idyntree
+```
+- Clone human-model-generator repository: 
+ ```
+git clone https://github.com/ami-iit/human-model-generator.git
+ ```
 
 ## Usage
 
-- Clone this repository: 
+- Go to the repository human-model-generator folder: 
+```
+cd human-model-generator
+```
+- Open the file `config.py` with a text editor.
 
-  ```
-  git clone https://github.com/ami-iit/human-model-generator.git
-  ```
-- Go to the repository folder: 
-  ```
-  cd human-model-generator
-  ```
-- Open the file `src/main.py` with a text editor.
-- Manually modify the parameters (see file [INFO.md](src/INFO.md)).
+- Manually modify the parameters (see file [INFO.md](INFO.md)).
+
 - Generate the model by running on the terminal: 
-    ```
-    python src/main.py
-    ```
-- A template called `FileName.urdf` will be saved in the folder `models/humanModel`.
+
+```
+python main.py
+```
+    
+- A human model called `FileName.urdf` will be saved in the new folder `models/humanModel`.
   
 ## Maintainers
 * Lorenzo Fiori ([@LorenzoFiori](https://github.com/LorenzoFiori))

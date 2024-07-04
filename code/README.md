@@ -19,7 +19,7 @@ Below are the parameters that can be manually modified to configure the model. T
 | Hand_x       | Width of the hand.                                                                                                                          |
 | UpperLeg_x   | Diameter of the upper leg.                                                                                                                  |
 | LowerLeg_x   | Diameter of the lower leg.                                                                                                                  |
-|:------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
+
 
 ## Additional Options
 
@@ -31,4 +31,4 @@ These options provide further customization for the model's consistency check, m
 | OPT_TYPE_MOVEMENT                     | `physio` or `random`| Type of movement for the model.    |
 | OPT_VISUALIZZATION_MOVEMENT           | `True` or `False`   | Visualize the movement.            |
 | OPT_VISUALIZZATION_MEASUREOFCONTROL   | `True` or `False`   | Visualize the measure of control.  |
-|:-------------------------------------:|:-------------------:|:-----------------------------------|
+

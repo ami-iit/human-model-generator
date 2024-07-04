@@ -25,13 +25,13 @@ This library requires the following dependencies:
 conda create -n human_model_env
 conda activate human_model_env
 ```
-- Install `urdf-modifiers` repository
+- Install `urdf-modifiers`
 ```
 git clone https://github.com/icub-tech-iit/urdf-modifiers.git
 cd urdf-modifiers
 pip install .
 ```
-- Install idyntree following [this instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
+- Install `idyntree` following [this instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
 
 ## Usage
 ```
@@ -41,7 +41,7 @@ cd human-model-generator
 - Open the file `config.py` with a text editor
 - Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/src/INFO.md))
 - Generate the model by running `python main.py` 
-- A URDF model called `FileName.urdf` will be saved in the folder `models/humanModel`.
+- A URDF model called `FileName.urdf` will be saved in the folder `models/humanModel`
   
 ## Maintainers
 * Lorenzo Fiori ([@LorenzoFiori](https://github.com/LorenzoFiori))

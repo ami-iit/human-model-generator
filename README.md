@@ -39,7 +39,7 @@ git clone https://github.com/ami-iit/human-model-generator.git
 cd human-model-generator
 ```
 - Open the file `config.py` with a text editor
-- Manually modify the parameters according to the human subject anthropometric measurements (see file [INFO.md](INFO.md))
+- Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/src/INFO.md))
 - Generate the model by running `python main.py` 
 - A URDF model called `FileName.urdf` will be saved in the folder `models/humanModel`.
   

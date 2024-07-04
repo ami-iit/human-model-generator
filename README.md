@@ -46,4 +46,4 @@ cd human-model-generator
 ## Maintainers
 |[Lorenzo Fiori](https://www.iit.it/it/web/guest/people-details/-/people/lorenzo-fiori)|[Claudia Latella](https://www.iit.it/it/web/guest/people-details/-/people/claudia-latella)|          
 |:-------------------------------------------------------:|:-------------------------------------------------------:| 
-|<img src="https://avatars.githubusercontent.com/u/118193358?v=4" width="180">|<img src="https://avatars.githubusercontent.com/u/50736304?v=4" width="180">|
+|<img src="https://scientilla.iit.it/api/v1/users/username/lorenzo.fiori@iit.it/profile-image" width="180">|<img src="https://scientilla.iit.it/api/v1/users/username/claudia.latella@iit.it/profile-image" width="180">|

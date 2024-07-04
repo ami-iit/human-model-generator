@@ -31,7 +31,7 @@ git clone https://github.com/icub-tech-iit/urdf-modifiers.git
 cd urdf-modifiers
 pip install .
 ```
-- Install `idyntree` following [this instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
+- Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
 
 ## Usage
 ```
@@ -39,11 +39,11 @@ git clone https://github.com/ami-iit/human-model-generator.git
 cd human-model-generator
 ```
 - Open the file `config.py` with a text editor
-- Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/src/INFO.md))
+- Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md))
 - Generate the model by running `python main.py` 
 - A URDF model called `FileName.urdf` will be saved in the folder `models/humanModel`
   
 ## Maintainers
 |[Lorenzo Fiori](https://www.iit.it/it/web/guest/people-details/-/people/lorenzo-fiori)|[Claudia Latella](https://www.iit.it/it/web/guest/people-details/-/people/claudia-latella)|          
 |:-------------------------------------------------------:|:-------------------------------------------------------:| 
-|<img src="https://avatars.githubusercontent.com/u/118193358?v=4" width="180">|<img src="https://avatars.githubusercontent.com/u/10923418?v=4" width="180">|
+|<img src="https://avatars.githubusercontent.com/u/118193358?v=4" width="100">|<img src="https://avatars.githubusercontent.com/u/10923418?v=4" width="100">|

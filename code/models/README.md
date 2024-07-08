@@ -7,7 +7,7 @@ The modeling is done using simple geometric shapes like parallelepipeds, cylinde
 
 There are two possible models that can be used in Human Model Generator, one is called `Dumas` and the other is `DeLeva` (see [here](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md) how to select them in the tool) . Each model has its own theoretical framework, a set of assumptions and techniques for handling the trunk's structure, as in example: 
 
- <img src="" width="650" height="700">
+ <img src="https://github.com/ami-iit/human-model-generator/assets/118193358/ec05cc8e-f8fc-4507-bd2c-ba5dfb4b3828" width="650" height="700">
 
 
  ## References

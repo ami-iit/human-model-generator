@@ -11,22 +11,22 @@ OPT_VISUALIZZATION_MEASUREOFCONTROL = True  # 'True' or 'False
 
 """ ANTHROPOMETRIC MEASUREMENTS"""
 
-MODEL_TYPE = "Dumas"  # "DeLeva" or "Dumas"
+MODEL_TYPE = "DeLeva"  # "DeLeva" or "Dumas"
 
-H = 1.85
-m = 103
+H = 1.70
+m = 60
 
 # some neck,trunk,arm and leg dimensions
 linkDimensions = {
-    "Neck_x": 0.115,
-    "UpperTrunk_x": 0.235,
-    "LowerTrunk_x": 0.235,
-    "Pelvis_x": 0.235,
-    "Shoulder_x": 0.075,
-    "UpperArm_x": 0.075,
-    "ForeArm_x": 0.07,
-    "Hand_z": 0.035,
-    "Hand_x": 0.08,
-    "UpperLeg_x": 0.155,
-    "LowerLeg_x": 0.125,
+    "Neck_x": 0.095,
+    "UpperTrunk_x": 0.175,
+    "LowerTrunk_x": 0.175,
+    "Pelvis_x": 0.175,
+    "Shoulder_x": 0.06,
+    "UpperArm_x": 0.06,
+    "ForeArm_x": 0.055,
+    "Hand_z": 0.025,
+    "Hand_x": 0.072,
+    "UpperLeg_x": 0.125,
+    "LowerLeg_x": 0.09,
 }

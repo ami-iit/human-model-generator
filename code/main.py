@@ -173,7 +173,7 @@ if OPT_CHECK_CONSISTENCY_MODEL:
     quaternion_idyn = iDynTree.Vector4([1, 0, 0, 0])
     G_T_b_rot = iDynTree.Rotation()
     G_T_b_rot.fromQuaternion(quaternion_idyn)
-    G_T_b_pos = iDynTree.Position([0, 0, 1])
+    G_T_b_pos = iDynTree.Position([0, 0, 0])
     G_T_base = iDynTree.Transform(G_T_b_rot, G_T_b_pos)
     base_vel = iDynTree.Twist([0, 0, 0, 0, 0, 0])
 

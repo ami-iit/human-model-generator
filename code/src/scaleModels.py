@@ -67,7 +67,10 @@ def scaleJoint(linkDimensions):
 
     # Pelvis - LowerTrunk
     jointPosition = {
-        "jL5S1_z": linkDimensions["Pelvis_z"],
+        "jL5S1_z": linkDimensions["Pelvis_z"]
+        + linkDimensions["UpperLeg_z"]
+        + linkDimensions["LowerLeg_z"]
+        + linkDimensions["Foot_z"],
         "jT9T8_z": linkDimensions["LowerTrunk_z"],  # LowerTrunk - UpperTrunk
         "jC7RightShoulder_y": -linkDimensions["UpperTrunk_y"] / 2,
         "jC7RightShoulder_z": (
@@ -92,6 +95,13 @@ def scaleJoint(linkDimensions):
         "jRightHip_y": -(
             (linkDimensions["Pelvis_y"] / 2) - (linkDimensions["UpperLeg_x"] / 2)
         ),  # Right Hip
+        "jRightHip_z": (
+            (
+                linkDimensions["UpperLeg_z"]
+                + linkDimensions["LowerLeg_z"]
+                + linkDimensions["Foot_z"]
+            )
+        ),
         "jRightKnee_z": -linkDimensions["UpperLeg_z"],  # Right Knee
         "jRightAnkle_x": 0,  # Right Ankle
         "jRightAnkle_z": -linkDimensions["LowerLeg_z"],
@@ -103,6 +113,13 @@ def scaleJoint(linkDimensions):
         "jRightBallFoot_z": -linkDimensions["Foot_z"] / 2,
         "jLeftHip_y": (linkDimensions["Pelvis_y"] / 2)
         - (linkDimensions["UpperLeg_x"] / 2),  # Left Hip
+        "jLeftHip_z": (
+            (
+                linkDimensions["UpperLeg_z"]
+                + linkDimensions["LowerLeg_z"]
+                + linkDimensions["Foot_z"]
+            )
+        ),
         "jLeftKnee_z": -linkDimensions["UpperLeg_z"],  # Left Knee
         "jLeftAnkle_x": 0,  # Left Ankle
         "jLeftAnkle_z": -linkDimensions["LowerLeg_z"],

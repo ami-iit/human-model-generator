@@ -15,7 +15,10 @@ def modifyLinkDimention(linkDimensions, robot):
         "Pelvis",
         linkDimensions["Pelvis_z"],
         None,
-        linkDimensions["Pelvis_z"] / 2,
+        linkDimensions["Pelvis_z"] / 2
+        + linkDimensions["UpperLeg_z"]
+        + linkDimensions["LowerLeg_z"]
+        + linkDimensions["Foot_z"],
         "Z",
         "BOX",
         robot,
@@ -404,6 +407,7 @@ def modifyJointPosition(robot, jointPosition):
 
     # JOINT RIGHT HIP
     setJointPosition("jRightHip_rotx", jointPosition["jRightHip_y"], "Y", robot)
+    setJointPosition("jRightHip_rotx", jointPosition["jRightHip_z"], "Z", robot)
 
     # JOINT RIGHT KNEE
     setJointPosition("jRightKnee_roty", jointPosition["jRightKnee_z"], "Z", robot)
@@ -426,6 +430,7 @@ def modifyJointPosition(robot, jointPosition):
 
     # JOINT LEFT HIP
     setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip_y"], "Y", robot)
+    setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip_z"], "Z", robot)
 
     # JOINT LEFT KNEE
     setJointPosition("jLeftKnee_roty", jointPosition["jLeftKnee_z"], "Z", robot)

@@ -6,27 +6,27 @@
 
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
 OPT_TYPE_MOVEMENT = "physio"  # "physio" or "random"
-OPT_VISUALIZZATION_MOVEMENT = True  # 'True' or 'False
-OPT_VISUALIZZATION_MEASUREOFCONTROL = True  # 'True' or 'False
+OPT_VISUALIZZATION_MOVEMENT = False  # 'True' or 'False
+OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False
 
 """ ANTHROPOMETRIC MEASUREMENTS"""
 
-MODEL_TYPE = "DeLeva"  # "DeLeva" or "Dumas"
+MODEL_TYPE = "Dumas"  # "DeLeva" or "Dumas"
 
-H = 1.70
-m = 60
+H = 1.75
+m = 68.5
 
 # some neck,trunk,arm and leg dimensions
 linkDimensions = {
-    "Neck_x": 0.095,
-    "UpperTrunk_x": 0.175,
-    "LowerTrunk_x": 0.175,
-    "Pelvis_x": 0.175,
+    "Neck_x": 0.11,
+    "UpperTrunk_x": 0.18,
+    "LowerTrunk_x": 0.18,
+    "Pelvis_x": 0.18,
     "Shoulder_x": 0.06,
     "UpperArm_x": 0.06,
-    "ForeArm_x": 0.055,
-    "Hand_z": 0.025,
-    "Hand_x": 0.072,
-    "UpperLeg_x": 0.125,
+    "ForeArm_x": 0.06,
+    "Hand_z": 0.04,
+    "Hand_x": 0.1,
+    "UpperLeg_x": 0.115,
     "LowerLeg_x": 0.09,
 }

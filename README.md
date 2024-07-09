@@ -7,10 +7,13 @@ Dynamics is a critical aspect in the study of human movement, encompassing the f
 The musculoskeletal models offer a valuable approximation of the human anatomy and they are used extensively in fields like biomechanics, robotics, and computer simulations to study and mimic human movement. The muscle modeling is essential for a comprehensive understanding of the human movement. This involves the simulation of the behavior of muscles, including their activation patterns, force production, and interaction with the skeletal system. Accurate muscle models can predict how the whole-body movement and performance are affected by changes in muscle strength, coordination, and fatigue.  However, for a more accurate representation, additional data is required to customize models for different subjects, e.g., inertial parameters of body segments and anthropometric measurements.
 Therefore, the goal of the HMG is to develop an advanced human model that integrates both skeletal and muscular information. This model does not only include detailed anatomical and inertial data but also it is scalable to accommodate the specific features of each human subject.
 
+<br>
+
 <p align="center">
-<img src= https://github.com/ami-iit/human-model-generator/assets/116801366/ffb6bbd9-632a-4201-b7ee-dcb99a23fda2 width ="600" height="500">
+<img src= https://github.com/ami-iit/human-model-generator/assets/118193358/095c6a28-5dd8-4a73-a1ab-d2d5446c2e39 width ="650" height="500">
 </p>
 
+</br>
 
 ## Dependencies 
 This library requires the following dependencies:

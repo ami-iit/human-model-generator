@@ -1,11 +1,11 @@
 ## URDF Models
 
-The Human Model Generator (HMG) model the human musculoskeletal system as a rigid multi-body system with 21 links connected by 18 joints and 22 muscles, 11 bilaterally, using their points of origin and insertion in the body. 
-The modeling is done using simple geometric shapes like parallelepipeds, cylinders, and spheres or frames, which are automatically scaled based on anthropometric parameters like total height, total mass, and specific circumferences.
+The Human Model Generator (HMG) models the human musculoskeletal system as a rigid multi-body system with 21 links connected by 18 joints and 22 muscles, 11 bilaterally, using their points of origin and insertion in the body. 
+The modeling is done by using simple geometric shapes like parallelepipeds, cylinders, and spheres, which are automatically scaled based on anthropometric parameters like total height, total mass, and specific circumferences.
 
 ### Model types
 
-There are two possible models that can be used in Human Model Generator, one is called `Dumas` and the other is `DeLeva` (see [here](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md) how to select them in the tool) . Each model has its own theoretical framework, a set of assumptions and techniques for handling the trunk's structure, as in example: 
+There are two possible models that can be used in Human Model Generator, one is called `Dumas` and the other is `DeLeva` (see [here](https://github.com/ami-iit/human-model-generator/blob/main/code/README.md) how to select them in the tool) . Each model has its own theoretical framework, a set of assumptions and techniques for handling the trunk structure, e.g.,: 
 
 <br>
 

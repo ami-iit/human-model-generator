@@ -5,7 +5,7 @@ The modeling is done by using simple geometric shapes like parallelepipeds, cyli
 
 ### Model types
 
-There are two possible models that can be used in Human Model Generator, one is called `Dumas` and the other is `DeLeva` (see [here](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md) how to select them in the tool) . Each model has its own theoretical framework, a set of assumptions and techniques for handling the trunk structure, e.g.,: 
+There are two possible models that can be used in Human Model Generator, one is called `Dumas` and the other is `DeLeva` (see [here](https://github.com/ami-iit/human-model-generator/blob/main/code/README.md) how to select them in the tool) . Each model has its own theoretical framework, a set of assumptions and techniques for handling the trunk structure, e.g.,: 
 
 <br>
 

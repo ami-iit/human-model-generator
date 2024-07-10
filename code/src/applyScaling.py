@@ -1,4 +1,3 @@
-
 # SPDX-FileCopyrightText: Fondazione Istituto Italiano di Tecnologia
 #
 # SPDX-License-Identifier: BSD-3-Clause
@@ -9,8 +8,8 @@ from urdfModifiers.core.modification import Modification
 from urdfModifiers.utils import *
 from urdfModifiers.geometry import *
 
-def setLinkLength (linkName,newLength,newRadius,newPosition,axis,geometries,robot):
 
+def setLinkLength(linkName, newLength, newRadius, newPosition, axis, geometries, robot):
     """
     Modifies the length, radius, position, and axis of a link in the URDF model.
 
@@ -39,40 +38,40 @@ def setLinkLength (linkName,newLength,newRadius,newPosition,axis,geometries,robo
 
         case "Z":
 
-            axis = geometry.Side.Z    
+            axis = geometry.Side.Z
 
-    Link_modifier      = LinkModifier.from_name(linkName, robot, axis)
+    Link_modifier = LinkModifier.from_name(linkName, robot, axis)
     Link_modifications = Modification()
 
     # Verify the geometry type
     match geometries:
 
-         case 'BOX':
-             
-             Link_modifications.add_dimension(newLength, absolute=True)
+        case "BOX":
 
-         case 'CYLINDER':
-             
-             if  newLength != None: 
-                 
-                 Link_modifications.add_dimension(newLength, absolute=True) 
+            Link_modifications.add_dimension(newLength, absolute=True)
 
-             if newRadius != None:
-                 
-                 Link_modifications.add_radius(newRadius, absolute=True)   
+        case "CYLINDER":
 
-         case 'SPHERE':
-             
-             Link_modifications.add_radius(newRadius, absolute=True)    
+            if newLength != None:
 
-    if  newPosition != None:       
+                Link_modifications.add_dimension(newLength, absolute=True)
 
-        Link_modifications.add_position(newPosition, absolute=True)   
+            if newRadius != None:
+
+                Link_modifications.add_radius(newRadius, absolute=True)
+
+        case "SPHERE":
+
+            Link_modifications.add_radius(newRadius, absolute=True)
+
+    if newPosition != None:
+
+        Link_modifications.add_position(newPosition, absolute=True)
 
     Link_modifier.modify(Link_modifications)
 
-def setJointPosition (jointName,newJointPosition,axis,robot):
 
+def setJointPosition(jointName, newJointPosition, axis, robot):
     """
     Modifies the position of a joint in the URDF model.
 
@@ -100,13 +99,13 @@ def setJointPosition (jointName,newJointPosition,axis,robot):
 
             axis = geometry.Side.Z
 
-    joint_modifier      = JointModifier.from_name(jointName, robot, axis)
+    joint_modifier = JointModifier.from_name(jointName, robot, axis)
     joint_modifications = Modification()
-    joint_modifications.add_position(newJointPosition, absolute=True) 
+    joint_modifications.add_position(newJointPosition, absolute=True)
     joint_modifier.modify(joint_modifications)
 
-def setMassPercentage (linkName,newMass,axis,robot):
 
+def setMassPercentage(linkName, newMass, axis, robot):
     """
     Modifies the mass of a link in the URDF model.
 
@@ -133,8 +132,7 @@ def setMassPercentage (linkName,newMass,axis,robot):
 
             axis = geometry.Side.Z
 
-    Link_modifier      = LinkModifier.from_name(linkName,robot,axis)
+    Link_modifier = LinkModifier.from_name(linkName, robot, axis)
     Link_modifications = Modification()
-    Link_modifications.add_mass(newMass, absolute=True)     
+    Link_modifications.add_mass(newMass, absolute=True)
     Link_modifier.modify(Link_modifications)
-

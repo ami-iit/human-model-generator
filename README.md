@@ -1,32 +1,52 @@
-# human-model-generator
-Dynamics is a significant aspect in the study of human movement. The generation of movement is possible due to the synergetic action of the nervous system and muscles, which is then implemented through the connection of the skeletal system with the muscles. The skeletal models used to date, such as the URDF model, are a good approximation of real human models; however, the inertial parameters of the body segment, as well as other anthropometric data required for customizing the model to individual subjects, and muscle modeling must be added to these. As a result, our goal is to generate a human model that includes skeletal and muscular informations and is scalable to each subject.
+# Human Model Generator (HMG) [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) 
+
+The Human Model Generator is a Python-based tool designed to generate anthropometric human whole-body models in the Unified Robot Description Format (URDF) standard, suitable in robotics for motion analysis and simulation applications.
+
+## Introduction
+The movement of the human body is made possible through the synergistic action of the nervous, muscular, and skeletal systems. The nervous system sends signals to the muscles, causing them to contract and exert forces on the skeletal system. This intricate interaction between these systems enables complex and coordinated motions.
+The musculoskeletal models offer a valuable approximation of the human anatomy and they are used extensively in fields like biomechanics, robotics, and computer simulations to study and mimic human movement. The muscle modeling is essential for a comprehensive understanding of the human movement. This involves the simulation of the behavior of muscles, including their activation patterns, force production, and interaction with the skeletal system. Accurate muscle models can predict how the whole-body movement and performance are affected by changes in muscle strength, coordination, and fatigue.  However, for a more accurate representation, additional data is required to customize models for different subjects, e.g., inertial parameters of body segments and anthropometric measurements.
+Therefore, the goal of the HMG is to develop an advanced human model that integrates both skeletal and muscular information. This model does not only include detailed anatomical and inertial data but also it is scalable to accommodate the specific features of each human subject.
+
+<br>
 
 <p align="center">
-<img src= https://github.com/ami-iit/human-model-generator/assets/116801366/ffb6bbd9-632a-4201-b7ee-dcb99a23fda2 width ="600" height="500">
+<img src= https://github.com/ami-iit/human-model-generator/assets/118193358/095c6a28-5dd8-4a73-a1ab-d2d5446c2e39 width ="650" height="500">
 </p>
 
-## Dependencies
-- [`python3`](https://wiki.python.org/moin/BeginnersGuide)
-- [`urdf-modifiers`](https://github.com/icub-tech-iit/urdf-modifiers)
+</br>
+
+## Dependencies 
+This library requires the following dependencies:
+
+- [``idyntree``](https://github.com/robotology/idyntree)
+- [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
+
+## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
+
+- Create and activate a brand new enviroment
+```
+conda create -n human_model_env
+conda activate human_model_env
+```
+- Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
+- Install `urdf-modifiers`
+```
+git clone https://github.com/icub-tech-iit/urdf-modifiers.git
+cd urdf-modifiers
+pip install .
+```
 
 ## Usage
-- Clone this repository
-  ```
-  git clone https://github.com/ami-iit/human-model-generator.git
-  cd human-model-generator
-  ```
-- Open the file `src/generateModels.py` with a text editor.
-- Manually modify the parameters (see file [INFO.md](src/INFO.md)).
-- Generate the model by running on the terminal `python src/generateModels.py`.
-- A template called `FileName.urdf` will be saved in the folder `models/humanModel`.
+```
+git clone https://github.com/ami-iit/human-model-generator.git
+cd human-model-generator/code
+```
+- Open the file `config.py` with a text editor
+- Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md))
+- Generate the model by running `python main.py` 
+- The URDF model will be saved in the folder `models/humanModels`
   
 ## Maintainers
-* Lorenzo Fiori ([@LorenzoFiori](https://github.com/LorenzoFiori))
-* Claudia Latella ([@claudia-lat](https://github.com/claudia-lat/claudia-lat))
-
-## References
-* De Leva, P. (1996). Adjustments to Zatsiorsky-Seluyanov's segment inertia parameters. Journal of biomechanics, 29(9), 1223-1230. [link](https://doi.org/10.1016/0021-9290(95)00178-6)
-* Dumas, R., Cheze, L., & Verriest, J. P. (2007). Adjustments to McConville et al. and Young et al. body segment inertial parameters. Journal of biomechanics, 40(3), 543-553. [link](https://doi.org/10.1016/j.jbiomech.2006.02.013)
-* Dumas, R., Cheze, L., & Verriest, J. P. (2007). Corrigendum to “Adjustments to McConville et al. and Young et al. body segment inertial parameters”[J. Biomech. 40 (2007) 543–553]. Journal of Biomechanics, 40(7), 1651-1652. [link](http://bibtexbib.free.fr/bibliographie_net/Dumas_2007_Corrigendum.pdf)
-* Winter, D. A. (2009). Biomechanics and motor control of human movement. John wiley & sons. [link](https://books.google.it/books?hl=it&lr=&id=_bFHL08IWfwC&oi=fnd&pg=PR13&dq=Winter,+D.+A.+(2009).+Biomechanics+and+motor+control+of+human+movement.+John+wiley+%26+sons&ots=Jnprer8eP5&sig=wOJ3iIC8niVM8NxsKUsUAbgaTW8&redir_esc=y#v=onepage&q=Winter%2C%20D.%20A.%20(2009).%20Biomechanics%20and%20motor%20control%20of%20human%20movement.%20John%20wiley%20%26%20sons&f=false)
-* Dumas, R., & Wojtusch, J. (2018). Estimation of the Body Segment Inertial Parameters for the Rigid Body Biomechanical Models Used in Motion Analysis. In: Müller B., Wolf S.(eds) Handbook of Human Motion. [link](https://hal.science/hal-02266177/)
+|[Lorenzo Fiori](https://www.iit.it/it/web/guest/people-details/-/people/lorenzo-fiori)|[Claudia Latella](https://www.iit.it/it/web/guest/people-details/-/people/claudia-latella)|          
+|:-------------------------------------------------------:|:-------------------------------------------------------:| 
+|<img src="https://avatars.githubusercontent.com/u/118193358?v=4" width="100">|<img src="https://avatars.githubusercontent.com/u/10923418?v=4" width="100">|

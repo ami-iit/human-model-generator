@@ -715,6 +715,9 @@ def modifyMuscleJointPosition(robot, jointMusclePosition):
         "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF_z"], "Z", robot
     )
     setJointPosition(
+        "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF_x"], "X", robot
+    )
+    setJointPosition(
         "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL_x"], "X", robot
     )
     setJointPosition(
@@ -725,6 +728,9 @@ def modifyMuscleJointPosition(robot, jointMusclePosition):
     )
     setJointPosition(
         "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF_z"], "Z", robot
+    )
+    setJointPosition(
+        "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF_x"], "X", robot
     )
 
     # Gastrocnemius lateralis
@@ -741,6 +747,9 @@ def modifyMuscleJointPosition(robot, jointMusclePosition):
         "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF_z"], "Z", robot
     )
     setJointPosition(
+        "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF_x"], "X", robot
+    )
+    setJointPosition(
         "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL_x"], "X", robot
     )
     setJointPosition(
@@ -751,6 +760,9 @@ def modifyMuscleJointPosition(robot, jointMusclePosition):
     )
     setJointPosition(
         "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF_z"], "Z", robot
+    )
+    setJointPosition(
+        "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF_x"], "X", robot
     )
 
     return robot

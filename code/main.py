@@ -105,6 +105,7 @@ print(
             + (linkMass["LowerLeg_mass"] * 2)
             + (linkMass["Foot_mass"] * 2)
             + (linkMass["Toe_mass"] * 2),
+            2,
         )
     ),
     "Kg",
@@ -112,14 +113,17 @@ print(
 print(
     "[INFO] Model height:",
     str(
-        linkDimensions["Head_x"]
-        + linkDimensions["Neck_z"]
-        + linkDimensions["UpperTrunk_z"]
-        + linkDimensions["LowerTrunk_z"]
-        + linkDimensions["Pelvis_z"]
-        + linkDimensions["UpperLeg_z"]
-        + linkDimensions["LowerLeg_z"]
-        + linkDimensions["Foot_z"]
+        round(
+            linkDimensions["Head_x"]
+            + linkDimensions["Neck_z"]
+            + linkDimensions["UpperTrunk_z"]
+            + linkDimensions["LowerTrunk_z"]
+            + linkDimensions["Pelvis_z"]
+            + linkDimensions["UpperLeg_z"]
+            + linkDimensions["LowerLeg_z"]
+            + linkDimensions["Foot_z"],
+            2,
+        )
     ),
     "m",
 )
@@ -141,10 +145,6 @@ for indxJoint in range(NrOfJoints):
     JOINTLIST.append(dynComp.model().getJointName(indxJoint))
 
 Links = linkPhysicallyConsistence(dynComp)
-
-print("[INFO] Model links:  " + str(len(Links)))
-print("[INFO] Model joints: " + str(NrOfJoints))
-print("[INFO] Model DoFs:   " + str(ndofs))
 
 #################################################################
 # PHYSICALLY CONSISTENCE TESTS

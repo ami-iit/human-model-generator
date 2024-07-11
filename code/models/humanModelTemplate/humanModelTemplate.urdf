@@ -1376,7 +1376,7 @@
 ##############################################################################
     <link name="BicBrac_RUA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1386,7 +1386,7 @@
 ##############################################################################
     <link name="BicBrac_RFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1396,7 +1396,7 @@
 ##############################################################################
     <link name="TricBrac_RUA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1406,7 +1406,7 @@
 ##############################################################################
     <link name="TricBrac_RFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1416,7 +1416,7 @@
 ##############################################################################
     <link name="FlexCarp_RFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1426,7 +1426,7 @@
 ##############################################################################
     <link name="FlexCarp_RH">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1436,7 +1436,7 @@
 ##############################################################################
     <link name="ExtCarp_RFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1446,7 +1446,7 @@
 ##############################################################################
     <link name="ExtCarp_RH">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1458,7 +1458,7 @@
 ##############################################################################
     <link name="BicBrac_LUA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1468,7 +1468,7 @@
 ##############################################################################
     <link name="BicBrac_LFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1478,7 +1478,7 @@
 ##############################################################################
     <link name="TricBrac_LUA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1488,7 +1488,7 @@
 ##############################################################################
     <link name="TricBrac_LFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1498,7 +1498,7 @@
 ##############################################################################
     <link name="FlexCarp_LFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1508,7 +1508,7 @@
 ##############################################################################
     <link name="FlexCarp_LH">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1518,7 +1518,7 @@
 ##############################################################################
     <link name="ExtCarp_LFA">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1528,7 +1528,7 @@
 ##############################################################################
     <link name="ExtCarp_LH">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1540,7 +1540,7 @@
 ##############################################################################
     <link name="RecAbd_RUT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1550,7 +1550,7 @@
 ##############################################################################
     <link name="RecAbd_RP">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1560,7 +1560,7 @@
 ##############################################################################
     <link name="ErSpin_RUT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1570,7 +1570,7 @@
 ##############################################################################
     <link name="ErSpin_RP">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1582,7 +1582,7 @@
 ##############################################################################
     <link name="RecAbd_LUT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1592,7 +1592,7 @@
 ##############################################################################
     <link name="RecAbd_LP">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1602,7 +1602,7 @@
 ##############################################################################
     <link name="ErSpin_LUT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1612,7 +1612,7 @@
 ##############################################################################
     <link name="ErSpin_LP">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1624,7 +1624,7 @@
 ##############################################################################
     <link name="RecFem_RLT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1634,7 +1634,7 @@
 ##############################################################################
     <link name="RecFem_RLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1644,7 +1644,7 @@
 ##############################################################################
     <link name="BicFem_RUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1654,7 +1654,7 @@
 ##############################################################################
     <link name="BicFem_RLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1666,7 +1666,7 @@
 ##############################################################################
     <link name="RecFem_LLT">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1676,7 +1676,7 @@
 ##############################################################################
     <link name="RecFem_LLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1686,7 +1686,7 @@
 ##############################################################################
     <link name="BicFem_LUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1696,7 +1696,7 @@
 ##############################################################################
     <link name="BicFem_LLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1708,7 +1708,7 @@
 ##############################################################################
     <link name="TibAnt_RLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1718,7 +1718,7 @@
 ##############################################################################
     <link name="TibAnt_RF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1728,7 +1728,7 @@
 ##############################################################################
     <link name="GasLat_RUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1738,7 +1738,7 @@
 ##############################################################################
     <link name="GasLat_RF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1748,7 +1748,7 @@
 ##############################################################################
     <link name="GasMed_RUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1758,7 +1758,7 @@
 ##############################################################################
     <link name="GasMed_RF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1770,7 +1770,7 @@
 ##############################################################################
     <link name="TibAnt_LLL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1780,7 +1780,7 @@
 ##############################################################################
     <link name="TibAnt_LF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1790,7 +1790,7 @@
 ##############################################################################
     <link name="GasLat_LUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1800,7 +1800,7 @@
 ##############################################################################
     <link name="GasLat_LF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1810,7 +1810,7 @@
 ##############################################################################
     <link name="GasMed_LUL">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
@@ -1820,7 +1820,7 @@
 ##############################################################################
     <link name="GasMed_LF">
         <inertial>
-            <mass value="1e-5"/>
+            <mass value="0.0"/>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>

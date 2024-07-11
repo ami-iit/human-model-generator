@@ -5,7 +5,7 @@
 """ OPTIONS"""
 
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
-OPT_TYPE_MOVEMENT = "physio"  # "physio" or "random"
+OPT_TYPE_MOVEMENT = "random"  # "physio" or "random"
 OPT_VISUALIZZATION_MOVEMENT = False  # 'True' or 'False
 OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False
 

@@ -67,10 +67,7 @@ def scaleJoint(linkDimensions):
 
     # Pelvis - LowerTrunk
     jointPosition = {
-        "jL5S1_z": linkDimensions["Pelvis_z"]
-        + linkDimensions["UpperLeg_z"]
-        + linkDimensions["LowerLeg_z"]
-        + linkDimensions["Foot_z"],
+        "jL5S1_z": linkDimensions["Pelvis_z"] / 2,
         "jT9T8_z": linkDimensions["LowerTrunk_z"],  # LowerTrunk - UpperTrunk
         "jC7RightShoulder_y": -linkDimensions["UpperTrunk_y"] / 2,
         "jC7RightShoulder_z": (
@@ -95,13 +92,7 @@ def scaleJoint(linkDimensions):
         "jRightHip_y": -(
             (linkDimensions["Pelvis_y"] / 2) - (linkDimensions["UpperLeg_x"] / 2)
         ),  # Right Hip
-        "jRightHip_z": (
-            (
-                linkDimensions["UpperLeg_z"]
-                + linkDimensions["LowerLeg_z"]
-                + linkDimensions["Foot_z"]
-            )
-        ),
+        "jRightHip_z": -linkDimensions["Pelvis_z"] / 2,
         "jRightKnee_z": -linkDimensions["UpperLeg_z"],  # Right Knee
         "jRightAnkle_x": 0,  # Right Ankle
         "jRightAnkle_z": -linkDimensions["LowerLeg_z"],
@@ -113,13 +104,7 @@ def scaleJoint(linkDimensions):
         "jRightBallFoot_z": -linkDimensions["Foot_z"] / 2,
         "jLeftHip_y": (linkDimensions["Pelvis_y"] / 2)
         - (linkDimensions["UpperLeg_x"] / 2),  # Left Hip
-        "jLeftHip_z": (
-            (
-                linkDimensions["UpperLeg_z"]
-                + linkDimensions["LowerLeg_z"]
-                + linkDimensions["Foot_z"]
-            )
-        ),
+        "jLeftHip_z": -linkDimensions["Pelvis_z"] / 2,
         "jLeftKnee_z": -linkDimensions["UpperLeg_z"],  # Left Knee
         "jLeftAnkle_x": 0,  # Left Ankle
         "jLeftAnkle_z": -linkDimensions["LowerLeg_z"],
@@ -198,7 +183,7 @@ def scaleMuscleJoint(linkDimensions):
         "jRightRecAbd_RP_x": linkDimensions["Pelvis_x"] / 2,
         "jLeftRecAbd_LUT_x": linkDimensions["UpperTrunk_x"] / 2,
         "jLeftRecAbd_LUT_y": linkDimensions["UpperTrunk_y"] / 2,
-        "jLeftRecAbd_LP_x": linkDimensions["Pelvis_x"] / 2,  # Biceps femoris
+        "jLeftRecAbd_LP_x": linkDimensions["Pelvis_x"] / 2,  # Biceps femoris,
         "jRightBicFem_RUL_x": (linkDimensions["UpperLeg_x"] / 2) * np.sin((3 / 2 * pi)),
         "jRightBicFem_RUL_y": (
             (-1) * (linkDimensions["LowerLeg_x"] / 2) * np.cos((3 / 2 * pi))
@@ -215,20 +200,14 @@ def scaleMuscleJoint(linkDimensions):
         * np.cos(pi),  # Rectus femoris
         "jRightRecFem_RP_x": linkDimensions["Pelvis_x"] / 2,
         "jRightRecFem_RP_y": -linkDimensions["Pelvis_y"] / 3,
-        "jRightRecFem_RP_z": linkDimensions["Pelvis_z"] / 2
-        + linkDimensions["UpperLeg_z"]
-        + linkDimensions["LowerLeg_z"]
-        + linkDimensions["Foot_z"],
+        "jRightRecFem_RP_z": -linkDimensions["Pelvis_z"] / 2,
         "jRightRecFem_RLL_x": (linkDimensions["LowerLeg_x"] / 2) * np.sin((pi / 2)),
         "jRightRecFem_RLL_y": (-1)
         * (linkDimensions["LowerLeg_x"] / 2)
         * np.cos((pi / 2)),
         "jLeftRecFem_LP_x": linkDimensions["Pelvis_x"] / 2,
         "jLeftRecFem_LP_y": linkDimensions["Pelvis_y"] / 3,
-        "jLeftRecFem_LP_z": linkDimensions["Pelvis_z"] / 2
-        + linkDimensions["UpperLeg_z"]
-        + linkDimensions["LowerLeg_z"]
-        + linkDimensions["Foot_z"],
+        "jLeftRecFem_LP_z": -linkDimensions["Pelvis_z"] / 2,
         "jLeftRecFem_LLL_x": (linkDimensions["LowerLeg_x"] / 2) * np.sin((pi / 2)),
         "jLeftRecFem_LLL_y": (-1)
         * (linkDimensions["LowerLeg_x"] / 2)
@@ -251,36 +230,28 @@ def scaleMuscleJoint(linkDimensions):
         ),
         "jRightGasMed_RUL_z": -linkDimensions["UpperLeg_z"],
         "jRightGasMed_RF_z": -linkDimensions["Foot_z"] / 2,
-        "jRightGasMed_RF_x": -abs(
-            (linkDimensions["LowerLeg_x"]) - (linkDimensions["Foot_x"] / 2)
-        ),
+        "jRightGasMed_RF_x": -(linkDimensions["LowerLeg_x"] / 2),
         "jLeftGasMed_LUL_x": (linkDimensions["UpperLeg_x"] / 2) * np.sin((5 / 3 * pi)),
         "jLeftGasMed_LUL_y": (-1)
         * (linkDimensions["LowerLeg_x"] / 2)
         * np.cos((5 / 3 * pi)),
         "jLeftGasMed_LUL_z": -linkDimensions["UpperLeg_z"],
         "jLeftGasMed_LF_z": -linkDimensions["Foot_z"] / 2,  # Gastrocnemius lateralis
-        "jLeftGasMed_LF_x": -abs(
-            (linkDimensions["LowerLeg_x"]) - (linkDimensions["Foot_x"] / 2)
-        ),
+        "jLeftGasMed_LF_x": -(linkDimensions["LowerLeg_x"] / 2),
         "jRightGasLat_RUL_x": (linkDimensions["UpperLeg_x"] / 2) * np.sin((5 / 3 * pi)),
         "jRightGasLat_RUL_y": (-1)
         * (linkDimensions["LowerLeg_x"] / 2)
         * np.cos((5 / 3 * pi)),
         "jRightGasLat_RUL_z": -linkDimensions["UpperLeg_z"],
         "jRightGasLat_RF_z": -linkDimensions["Foot_z"] / 2,
-        "jRightGasLat_RF_x": -abs(
-            (linkDimensions["LowerLeg_x"]) - (linkDimensions["Foot_x"] / 2)
-        ),
+        "jRightGasLat_RF_x": -(linkDimensions["LowerLeg_x"] / 2),
         "jLeftGasLat_LUL_x": (linkDimensions["UpperLeg_x"] / 2) * np.sin((4 / 3 * pi)),
         "jLeftGasLat_LUL_y": (-1)
         * (linkDimensions["LowerLeg_x"] / 2)
         * np.cos((4 / 3 * pi)),
         "jLeftGasLat_LUL_z": -linkDimensions["UpperLeg_z"],
         "jLeftGasLat_LF_z": -linkDimensions["Foot_z"] / 2,
-        "jLeftGasLat_LF_x": -abs(
-            (linkDimensions["LowerLeg_x"]) - (linkDimensions["Foot_x"] / 2)
-        ),
+        "jLeftGasLat_LF_x": -(linkDimensions["LowerLeg_x"] / 2),
     }
 
     return jointMusclePosition

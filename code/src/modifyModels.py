@@ -15,10 +15,7 @@ def modifyLinkDimention(linkDimensions, robot):
         "Pelvis",
         linkDimensions["Pelvis_z"],
         None,
-        linkDimensions["Pelvis_z"] / 2
-        + linkDimensions["UpperLeg_z"]
-        + linkDimensions["LowerLeg_z"]
-        + linkDimensions["Foot_z"],
+        0,
         "Z",
         "BOX",
         robot,
@@ -612,9 +609,6 @@ def modifyMuscleJointPosition(robot, jointMusclePosition):
     )
     setJointPosition(
         "jLeftRecAbd_LUT", jointMusclePosition["jLeftRecAbd_LUT_y"], "Y", robot
-    )
-    setJointPosition(
-        "jLeftRecAbd_LP", jointMusclePosition["jLeftRecAbd_LP_x"], "X", robot
     )
 
     # Biceps femoris

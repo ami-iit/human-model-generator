@@ -15,11 +15,11 @@ import os
 import sys
 import idyntree.bindings as iDynTree
 from urdfModifiers.utils import *
-from config import *
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
-
 from src import *
+from config import *
+
 
 """ COSTANT"""
 
@@ -65,23 +65,23 @@ robot, gazebo_plugin_text = utils.load_robot_and_gazebo_plugins(
 #################################################################
 # LINK
 #################################################################
-linkDimensions = scaleLink(H, MODEL_TYPE, linkDimensions)
+linkDimensions = scaleLink(H, linkDimensions, MODEL_TYPE)
 robot = modifyLinkDimention(linkDimensions, robot)
 #################################################################
 # MASS
 #################################################################
-linkMass = scaleMass(m, MODEL_TYPE)
+linkMass = scaleMass(m, linkMass, MODEL_TYPE)
 robot = modifyLinkmass(linkMass, robot)
 #################################################################
 # JOINT
 #################################################################
-jointPosition = scaleJoint(linkDimensions)
-robot = modifyJointPosition(robot, jointPosition)
+jointPosition = scaleJoint(linkDimensions, jointPosition)
+robot = modifyJointPosition(jointPosition, robot)
 #################################################################
 # MUSCLE FRAMES
 #################################################################
-jointMusclePosition = scaleMuscleJoint(linkDimensions)
-robot = modifyMuscleJointPosition(robot, jointMusclePosition)
+jointMusclePosition = scaleMuscleJoint(linkDimensions, jointMusclePosition)
+robot = modifyMuscleJointPosition(jointMusclePosition, robot)
 
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
 utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
@@ -110,18 +110,19 @@ print(
     ),
     "Kg",
 )
+
 print(
     "[INFO] Model height:",
     str(
         round(
-            linkDimensions["Head_x"]
-            + linkDimensions["Neck_z"]
-            + linkDimensions["UpperTrunk_z"]
-            + linkDimensions["LowerTrunk_z"]
-            + linkDimensions["Pelvis_z"]
-            + linkDimensions["UpperLeg_z"]
-            + linkDimensions["LowerLeg_z"]
-            + linkDimensions["Foot_z"],
+            linkDimensions["Head"]["Z"]
+            + linkDimensions["Neck"]["Z"]
+            + linkDimensions["UpperTrunk"]["Z"]
+            + linkDimensions["LowerTrunk"]["Z"]
+            + linkDimensions["Pelvis"]["Z"]
+            + linkDimensions["UpperLeg"]["Z"]
+            + linkDimensions["LowerLeg"]["Z"]
+            + linkDimensions["Foot"]["Z"],
             2,
         )
     ),

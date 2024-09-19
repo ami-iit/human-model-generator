@@ -13,22 +13,22 @@ OPT_VISUALIZZATION_MEASUREOFCONTROL = True  # 'True' or 'False
 
 MODEL_TYPE = "DeLeva"  # "DeLeva" or "Dumas"
 
-H = 1.65
-m = 96
+H = 1.85
+m = 103
 
 
 from src.humanLinksJoints import linkDimensions
 
 # some neck,trunk,arm and leg dimensions
 
-linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.13
-linkDimensions["UpperTrunk"]["X"] = 0.30
-linkDimensions["LowerTrunk"]["X"] = 0.30
-linkDimensions["Pelvis"]["X"] = 0.30
-linkDimensions["Shoulder"]["X"] = linkDimensions["Shoulder"]["Z"] = 0.09
-linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.09
-linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.09
-linkDimensions["Hand"]["Z"] = 0.045
+linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.115
+linkDimensions["UpperTrunk"]["X"] = 0.235
+linkDimensions["LowerTrunk"]["X"] = 0.235
+linkDimensions["Pelvis"]["X"] = 0.235
+linkDimensions["Shoulder"]["X"] = linkDimensions["Shoulder"]["Z"] = 0.075
+linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.075
+linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.07
+linkDimensions["Hand"]["Z"] = 0.035
 linkDimensions["Hand"]["X"] = 0.08
-linkDimensions["UpperLeg"]["X"] = linkDimensions["UpperLeg"]["Y"] = 0.15
-linkDimensions["LowerLeg"]["X"] = linkDimensions["LowerLeg"]["Y"] = 0.115
+linkDimensions["UpperLeg"]["X"] = linkDimensions["UpperLeg"]["Y"] = 0.155
+linkDimensions["LowerLeg"]["X"] = linkDimensions["LowerLeg"]["Y"] = 0.125

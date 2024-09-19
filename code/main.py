@@ -26,6 +26,7 @@ from config import *
 URDF_MAIN_FOLDER = "models"
 URDF_TEMPLATE_FILE_FOLDER = "humanModelTemplate"
 URDF_TEMPLATE_FILE_NAME = "humanModelTemplate.urdf"
+URDF_MESHES_FILE_FOLDER = "meshes"
 
 URDF_TEMPLATE_FILE_PATH = os.path.join(
     os.path.dirname(__file__),
@@ -33,6 +34,14 @@ URDF_TEMPLATE_FILE_PATH = os.path.join(
     URDF_TEMPLATE_FILE_FOLDER,
     URDF_TEMPLATE_FILE_NAME,
 )
+
+URDF_MESHES_FILE_PATH = os.path.join(
+    os.path.dirname(__file__),
+    URDF_MAIN_FOLDER,
+    URDF_TEMPLATE_FILE_FOLDER,
+    URDF_MESHES_FILE_FOLDER,
+)
+
 URDF_FILE_FOLDER = "humanModels"
 URDF_FILE_NAME = input("\n[INPUT] Insert the model name: ") + ".urdf"
 
@@ -82,6 +91,16 @@ robot = modifyJointPosition(jointPosition, robot)
 #################################################################
 jointMusclePosition = scaleMuscleJoint(linkDimensions, jointMusclePosition)
 robot = modifyMuscleJointPosition(jointMusclePosition, robot)
+#################################################################
+# ADD MESH
+#################################################################
+scalingParam = getScalingParam(linkDimensions, linkDimensions_norm)
+scalingParamMesh = createScalingParamMesh(
+    scalingParam, meshLinksName, mesh_name_mapping
+)
+robot = update_robot_with_mesh_and_muscles(
+    scalingParamMesh, map_link_to_muscles, URDF_MESHES_FILE_PATH, robot
+)
 
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
 utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)

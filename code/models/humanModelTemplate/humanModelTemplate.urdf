@@ -1,8 +1,11 @@
 <robot name="HumanModel">
 
-    <material name="color">
-        <color rgba="0.9922 00.8667 0.7922 1"/>
-    </material>
+  <material name="color">
+    <color rgba="0.9922 0.8667 0.7922 1.    "/>
+  </material>
+  <material name="muscle">
+    <color rgba="1.0 0.0 0.0 1.    "/>
+  </material>
 
 <!--LINKS-->
 

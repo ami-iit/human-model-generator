@@ -4,6 +4,7 @@
 
 from urchin import URDF, Link, Visual, Geometry, Mesh, Material
 
+
 def getScalingParam(linkDimensions, linkDimensions_norm):
     scalingParam = {}
 
@@ -16,13 +17,15 @@ def getScalingParam(linkDimensions, linkDimensions_norm):
                 scalingParam[key][dimension] = link_value / norm_value
 
     links_to_invert = ["Shoulder", "UpperArm", "ForeArm"]
-    
+
     for link in links_to_invert:
         if link in scalingParam:
-            scalingParam[link]["Y"], scalingParam[link]["Z"] = scalingParam[link]["Z"], scalingParam[link]["Y"]
+            scalingParam[link]["Y"], scalingParam[link]["Z"] = (
+                scalingParam[link]["Z"],
+                scalingParam[link]["Y"],
+            )
 
     return scalingParam
-
 
 
 def createScalingParamMesh(scalingParam, meshLinksName, mesh_name_mapping):
@@ -35,7 +38,7 @@ def createScalingParamMesh(scalingParam, meshLinksName, mesh_name_mapping):
     return scalingParamMesh
 
 
-def update_robot_with_mesh_and_muscles(
+def updateRobotWithMeshAndMuscles(
     scalingParamMesh, map_link_to_muscles, mesh_folder, robot
 ):
 
@@ -59,8 +62,8 @@ def update_robot_with_mesh_and_muscles(
                 origin=original_origin,
                 material=Material(name="color"),
             )
-            link.visuals = []  
-            link.visuals.append(visual)  
+            link.visuals = []
+            link.visuals.append(visual)
 
         if link_name in map_link_to_muscles:
             muscles = map_link_to_muscles[link_name]
@@ -82,8 +85,6 @@ def update_robot_with_mesh_and_muscles(
                     origin=original_origin,
                     material=Material(name="muscle"),
                 )
-                link.visuals.append(
-                    muscle_visual
-                )  
+                link.visuals.append(muscle_visual)
 
     return robot

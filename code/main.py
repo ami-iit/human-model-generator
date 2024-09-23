@@ -98,7 +98,7 @@ scalingParam = getScalingParam(linkDimensions, linkDimensions_norm)
 scalingParamMesh = createScalingParamMesh(
     scalingParam, meshLinksName, mesh_name_mapping
 )
-robot = update_robot_with_mesh_and_muscles(
+robot = updateRobotWithMeshAndMuscles(
     scalingParamMesh, map_link_to_muscles, URDF_MESHES_FILE_PATH, robot
 )
 

@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 from urchin import URDF, Link, Visual, Geometry, Mesh, Material
+import numpy as np
 
 
 def getScalingParam(linkDimensions, linkDimensions_norm):
@@ -39,8 +40,15 @@ def createScalingParamMesh(scalingParam, meshLinksName, mesh_name_mapping):
 
 
 def updateRobotWithMeshAndMuscles(
-    scalingParamMesh, map_link_to_muscles, mesh_folder, robot
+    scalingParamMesh,
+    map_link_to_muscles,
+    mesh_folder,
+    robot,
+    OPT_COLOR_LINK_MESH,
+    OPT_COLOR_MUSCLE_MESH,
 ):
+
+    robot.materials.clear()
 
     for link in robot.links:
         link_name = link.name
@@ -60,7 +68,7 @@ def updateRobotWithMeshAndMuscles(
                     )
                 ),
                 origin=original_origin,
-                material=Material(name="color"),
+                material=Material(name="Link", color=OPT_COLOR_LINK_MESH),
             )
             link.visuals = []
             link.visuals.append(visual)
@@ -83,7 +91,7 @@ def updateRobotWithMeshAndMuscles(
                         )
                     ),
                     origin=original_origin,
-                    material=Material(name="muscle"),
+                    material=Material(name="muscle", color=OPT_COLOR_MUSCLE_MESH),
                 )
                 link.visuals.append(muscle_visual)
 

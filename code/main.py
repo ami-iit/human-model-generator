@@ -99,7 +99,12 @@ scalingParamMesh = createScalingParamMesh(
     scalingParam, meshLinksName, mesh_name_mapping
 )
 robot = updateRobotWithMeshAndMuscles(
-    scalingParamMesh, map_link_to_muscles, URDF_MESHES_FILE_PATH, robot
+    scalingParamMesh,
+    map_link_to_muscles,
+    URDF_MESHES_FILE_PATH,
+    robot,
+    OPT_COLOR_LINK_MESH,
+    OPT_COLOR_MUSCLE_MESH,
 )
 
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags

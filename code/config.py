@@ -3,11 +3,17 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 """ OPTIONS"""
+import numpy as np
 
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
 OPT_TYPE_MOVEMENT = "random"  # "physio" or "random"
 OPT_VISUALIZZATION_MOVEMENT = True  # 'True' or 'False
-OPT_VISUALIZZATION_MEASUREOFCONTROL = True  # 'True' or 'False
+OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False
+
+
+OPT_COLOR_LINK_MESH = [0.9922, 0.8667, 0.7922, 1.0]
+OPT_COLOR_MUSCLE_MESH = [0.9922, 0.8667, 0.7922, 1.0]
+
 
 """ ANTHROPOMETRIC MEASUREMENTS"""
 

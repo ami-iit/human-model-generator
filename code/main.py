@@ -174,21 +174,11 @@ Links = linkPhysicallyConsistence(dynComp)
 #################################################################
 # PHYSICALLY CONSISTENCE TESTS
 #################################################################
-#################################################################
-# GENERATION OF MOVEMENT
-#################################################################
 
 if OPT_CHECK_CONSISTENCY_MODEL:
     print("\n[CHECK] PHYSICAL CONSISTENCY TESTS START")
-    if OPT_TYPE_MOVEMENT == "physio":
-        generated_Movement = genSynthPhysMov(JOINTLIST, ndofs)
-    elif OPT_TYPE_MOVEMENT == "random":
-        generated_Movement = genSynthRandMov(ndofs, -360, 360, 3, 100)
-    else:
-        print(
-            "[ERROR] You did not choose a valid movement type. Consistency check not performed."
-        )
-        sys.exit(1)
+
+    generated_Movement = genSynthRandMov(ndofs, -360, 360, 3, 100)
 
     print("\n       1. Synthetic motion dataset generated \u2713")
 
@@ -234,7 +224,7 @@ if OPT_CHECK_CONSISTENCY_MODEL:
         print(
             "\n       2. Mass matrix remains positive throughout the entire dataset \u2713 "
         )
-
+    print("\n[CHECK] PHYSICAL CONSISTENCY TESTS COMPLETED")
     #################################################################
     # VISUALIZZATION MODEL
     #################################################################
@@ -256,16 +246,13 @@ if OPT_CHECK_CONSISTENCY_MODEL:
         viz.camera().animator().enableMouseControl(True)
 
         viz.addModel(mdlLoader.model(), "ModelVisualizer")
-        viz.modelViz("ModelVisualizer").setPositions(G_T_base, s[:, 0])
-        num_rows, num_cols = s.shape
-        indx = 1
-        while indx < num_cols:
-            viz.modelViz("ModelVisualizer").setPositions(G_T_base, s[:, indx])
-            viz.draw()
-            indx += 1
-            if indx >= num_cols:
-                viz.close()
+        s = [0] * ndofs
+        ds = [0] * ndofs
+        viz.modelViz("ModelVisualizer").setPositions(G_T_base, s)
 
-    print("\n[CHECK] PHYSICAL CONSISTENCY TESTS COMPLETED")
+        while viz.run():
+            viz.draw()
+
+
 if OPT_VISUALIZZATION_MEASUREOFCONTROL:
     measurementControl(linkMass, linkDimensions)

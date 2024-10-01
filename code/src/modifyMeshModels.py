@@ -4,6 +4,7 @@
 
 from urchin import URDF, Link, Visual, Geometry, Mesh, Material
 import numpy as np
+import os
 
 
 def getScalingParam(linkDimensions, linkDimensions_norm):
@@ -62,7 +63,7 @@ def updateRobotWithMeshAndMuscles(
                 name=link_name,
                 geometry=Geometry(
                     mesh=Mesh(
-                        filename=f"{mesh_folder}\{link_name}.stl",
+                        filename=os.path.join(mesh_folder, f"{link_name}.stl"),
                         scale=[scale["X"], scale["Y"], scale["Z"]],
                         combine=False,
                     )
@@ -81,7 +82,7 @@ def updateRobotWithMeshAndMuscles(
                     name=muscle,
                     geometry=Geometry(
                         mesh=Mesh(
-                            filename=f"{mesh_folder}\{muscle}.stl",
+                            filename=os.path.join(mesh_folder, f"{muscle}.stl"),
                             scale=[
                                 muscle_scale["X"],
                                 muscle_scale["Y"],

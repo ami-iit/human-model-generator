@@ -74,12 +74,12 @@ robot, gazebo_plugin_text = utils.load_robot_and_gazebo_plugins(
 #################################################################
 # LINK
 #################################################################
-linkDimensions = scaleLink(H, linkDimensions, MODEL_TYPE)
+linkDimensions = scaleLink(H, linkDimensions)
 robot = modifyLinkDimention(linkDimensions, robot)
 #################################################################
 # MASS
 #################################################################
-linkMass = scaleMass(m, linkMass, MODEL_TYPE)
+linkMass = scaleMass(m, linkMass)
 robot = modifyLinkmass(linkMass, robot)
 #################################################################
 # JOINT

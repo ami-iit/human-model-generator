@@ -16,8 +16,6 @@ OPT_COLOR_MUSCLE_MESH = [0.9922, 0.8667, 0.7922, 1.0]
 
 """ ANTHROPOMETRIC MEASUREMENTS"""
 
-MODEL_TYPE = "DeLeva"  # "DeLeva" or "Dumas"
-
 H = 1.75
 m = 68.5
 

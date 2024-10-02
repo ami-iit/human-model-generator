@@ -47,7 +47,6 @@ linkMass = {
     "Toe_mass": None,
 }
 
-
 jointPosition = {
     "jL5S1": {"X": None, "Y": None, "Z": None},
     "jT9T8": {"X": None, "Y": None, "Z": None},
@@ -132,7 +131,6 @@ jointMusclePosition = {
     "jLeftGasLat_LUL": {"X": None, "Y": None, "Z": None},
     "jLeftGasLat_LF": {"X": None, "Y": None, "Z": None},
 }
-
 
 linkDimensions_norm = {
     "Neck": {"X": 0.13, "Y": 0.13, "Z": 0.0858},
@@ -245,7 +243,6 @@ map_link_to_muscles = {
         "UpperTrunk_LeftErcSpin",
     ],
 }
-
 
 mesh_name_mapping = {
     "Head": "Head",

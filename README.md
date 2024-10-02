@@ -53,12 +53,13 @@ cd human-model-generator/code
 - Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/blob/ReorganizeCode/code/README.md))
 - Generate the model by running `python main.py` 
 - The URDF model will be saved in the folder `models/humanModels`
-  
+
+## License
+The meshes for the links are derived from the [Blendswap model](https://blendswap.com/blend/11604) under the [CC-BY license](https://creativecommons.org/share-your-work/cclicenses/), whereas the meshes for the muscles are derived from [BodyParts3D](https://lifesciencedb.jp/bp3d/?lng=en) and [Blendswap](https://blendswap.com/blend/26915), both under the [CC-BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/deed.en).
+All the meshes were trimmed, morphed, and totally or partially reconstructed to achieve the desired shape and topology.
+
 ## Maintainers
 |[Lorenzo Fiori](https://www.iit.it/it/web/guest/people-details/-/people/lorenzo-fiori)|[Claudia Latella](https://www.iit.it/it/web/guest/people-details/-/people/claudia-latella)|          
 |:-------------------------------------------------------:|:-------------------------------------------------------:| 
 |<img src="https://avatars.githubusercontent.com/u/118193358?v=4" width="100">|<img src="https://avatars.githubusercontent.com/u/10923418?v=4" width="100">|
 
-## License
-The meshes for the links are derived from the [Blendswap model](https://blendswap.com/blend/11604) under the [CC-BY license](https://creativecommons.org/share-your-work/cclicenses/), whereas the meshes for the muscles are derived from [BodyParts3D](https://lifesciencedb.jp/bp3d/?lng=en) and [Blendswap](https://blendswap.com/blend/26915), both under the [CC-BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/deed.en).
-All the meshes were trimmed, morphed, and totally or partially reconstructed to achieve the desired shape and topology.

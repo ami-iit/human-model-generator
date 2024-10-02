@@ -4,7 +4,7 @@
 Below are the parameters that can be manually modified to configure the model. These parameters allow you to set up the anthropometric characteristics and control options for the URDF model:
 
 | Parameter        | Description                                                                                                                                 |  
-|:----------------:|---------------------------------------------------------------------------------------------------------------------------------------------|
+|:----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------:|
 | H                | Total height of the subject to be modelled [m].                                                                                             |
 | m                | Total body mass of the subject to be modelled [Kg].                                                                                         |
 | Neck [X]         | Diameter of the neck.                                                                                                                       |

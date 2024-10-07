@@ -10,7 +10,7 @@ Therefore, the goal of the HMG is to develop an advanced human model that integr
 <br>
 
 <p align="center">
-<img src= https://github.com/ami-iit/human-model-generator/assets/118193358/095c6a28-5dd8-4a73-a1ab-d2d5446c2e39 width ="650" height="500">
+<img src=https://github.com/user-attachments/assets/52b31ca1-7975-4180-adde-5108f20e3f84 width ="650" height="500">
 </p>
 
 </br>

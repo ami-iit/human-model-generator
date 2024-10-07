@@ -1,13 +1,14 @@
 ## URDF Models
 
-The Human Model Generator (HMG) models the human musculoskeletal system as a rigid multi-body system with 21 links connected by 18 joints and 22 muscles, 11 bilaterally, using their points of origin and insertion in the body. 
-The modeling is done by using simple geometric shapes like parallelepipeds, cylinders, and spheres, which are automatically scaled based on anthropometric parameters like total height, total mass, and specific circumferences.
+The Human Model Generator (HMG) models the human musculoskeletal system as a rigid multi-body system with 21 links connected by 18 joints and 22 muscles, 11 bilaterally, using their points of origin and insertion in the body. The modeling is done by using simple geometric shapes like parallelepipeds, cylinders, and spheres, which are automatically scaled based on anthropometric parameters like total height, total mass, and specific circumferences. A total of 51 meshes for both links and muscles are added onto the body to represent the structure more accurately.
 
 <br>
 
-<p align="center">
-<img src=https://github.com/ami-iit/human-model-generator/assets/118193358/c1174edc-1b7e-4388-b50c-b5054f90eb02 width ="850" height="500">
-</p>
+<div align="center">
+ 
+![image](https://github.com/user-attachments/assets/865d695a-0c75-4525-86c8-791077622379)
+
+</div>
 
 </br>
 

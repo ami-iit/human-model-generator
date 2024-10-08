@@ -6,7 +6,8 @@ The Human Model Generator (HMG) models the human musculoskeletal system as a rig
 
 <div align="center">
  
-![image](https://github.com/user-attachments/assets/865d695a-0c75-4525-86c8-791077622379)
+![image](https://github.com/user-attachments/assets/ba1a3762-8c7d-4f49-a909-d2e9db565b34)
+
 
 </div>
 

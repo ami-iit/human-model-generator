@@ -228,7 +228,7 @@ if OPT_CHECK_CONSISTENCY_MODEL:
     #################################################################
     # VISUALIZZATION MODEL
     #################################################################
-    if OPT_VISUALIZZATION_MOVEMENT:
+    if OPT_VISUALIZZATION_MODEL:
         print("\n[INFO] Visualization :\n")
         viz = iDynTree.Visualizer()
         vizOpt = iDynTree.VisualizerOptions()

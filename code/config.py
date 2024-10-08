@@ -6,7 +6,7 @@
 import numpy as np
 
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
-OPT_VISUALIZZATION_MOVEMENT = True  # 'True' or 'False
+OPT_VISUALIZZATION_MODEL = True  # 'True' or 'False
 OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False
 
 

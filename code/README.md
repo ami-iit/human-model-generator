@@ -18,7 +18,7 @@ Below are the parameters that can be manually modified to configure the model. T
 | Hand [Z]         | Height of the hand.                                                                                                                         |
 | Hand [X]         | Width of the hand.                                                                                                                          |
 | UpperLeg [X, Y]  | Diameter of the upper leg.                                                                                                                  |
-| LowerLegm [X, Y] | Diameter of the lower leg.                                                                                                                  |
+| LowerLeg  [X, Y] | Diameter of the lower leg.                                                                                                                  |
 
 </div>
 
@@ -30,7 +30,7 @@ These options provide further customization for the model's consistency check, m
 | Option                              | Value               | Description                                                  |
 |:-----------------------------------:|:-------------------:|:-------------------------------------------------------------|
 | OPT_CHECK_CONSISTENCY_MODEL         | `True` or `False`   | Check the consistency of the model.                          |
-| OPT_VISUALIZZATION_MOVEMENT         | `True` or `False`   | Visualize the movement.                                      |
+| OPT_VISUALIZZATION_MODEL            | `True` or `False`   | Visualize the movement.                                      |
 | OPT_VISUALIZZATION_MEASUREOFCONTROL | `True` or `False`   | Visualize the measure of control.                            |
 | OPT_COLOR_LINK_MESH                 | `[R, G, B, alpha]`  | Defines the RGBA color of the link mesh for visualization.   |
 | OPT_COLOR_MUSCLE_MESH               | `[R, G, B, alpha]`  | Defines the RGBA color of the muscle mesh for visualization. |

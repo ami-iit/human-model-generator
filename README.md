@@ -20,7 +20,7 @@ This library requires the following dependencies:
 
 - [``idyntree``](https://github.com/robotology/idyntree)
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
-- [``urchin``](https://github.com/fishbotics/urchin.git)
+- [``urchin``](https://github.com/fishbotics/urchin.git) *(Note: the usage of `urchin` is a temporary step. Once the branch (`traversaro-patch-1`) is merged, it will be integrated into `urdf-modifiers`.)
 
 ## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
 

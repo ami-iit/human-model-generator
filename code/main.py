@@ -225,33 +225,32 @@ if OPT_CHECK_CONSISTENCY_MODEL:
             "\n       2. Mass matrix remains positive throughout the entire dataset \u2713 "
         )
     print("\n[CHECK] PHYSICAL CONSISTENCY TESTS COMPLETED")
-    #################################################################
-    # VISUALIZZATION MODEL
-    #################################################################
-    if OPT_VISUALIZZATION_MODEL:
-        print("\n[INFO] Visualization :\n")
-        viz = iDynTree.Visualizer()
-        vizOpt = iDynTree.VisualizerOptions()
-        vizOpt.winWidth = 1500
-        vizOpt.winHeight = 1000
-        viz.init(vizOpt)
+#################################################################
+# VISUALIZZATION MODEL
+#################################################################
+if OPT_VISUALIZZATION_MODEL:
+    print("\n[INFO] Visualization :\n")
+    viz = iDynTree.Visualizer()
+    vizOpt = iDynTree.VisualizerOptions()
+    vizOpt.winWidth = 1500
+    vizOpt.winHeight = 1000
+    viz.init(vizOpt)
 
-        env = viz.enviroment()
-        env.setElementVisibility("floor_grid", True)
-        env.setElementVisibility("world_frame", True)
-        viz.setColorPalette("meshcat")
-        # frames = viz.frames()
-        cam = viz.camera()
-        cam.setPosition(iDynTree.Position(2, 1, 2.5))
-        viz.camera().animator().enableMouseControl(True)
+    env = viz.enviroment()
+    env.setElementVisibility("floor_grid", True)
+    env.setElementVisibility("world_frame", True)
+    viz.setColorPalette("meshcat")
+    # frames = viz.frames()
+    cam = viz.camera()
+    cam.setPosition(iDynTree.Position(2, 1, 2.5))
+    viz.camera().animator().enableMouseControl(True)
 
-        viz.addModel(mdlLoader.model(), "ModelVisualizer")
-        s = [0] * ndofs
-        ds = [0] * ndofs
-        viz.modelViz("ModelVisualizer").setPositions(G_T_base, s)
+    viz.addModel(mdlLoader.model(), "ModelVisualizer")
+    s = [0] * ndofs
+    viz.modelViz("ModelVisualizer").setPositions(G_T_base, s)
 
-        while viz.run():
-            viz.draw()
+    while viz.run():
+        viz.draw()
 
 
 if OPT_VISUALIZZATION_MEASUREOFCONTROL:

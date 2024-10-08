@@ -20,7 +20,7 @@ H = 1.75
 m = 68.5
 
 
-# some neck,trunk,arm and leg dimensions
+# some neck,trunk,arm and leg dimensions in [m]
 from src import linkDimensions
 
 linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.11

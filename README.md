@@ -20,7 +20,7 @@ This library requires the following dependencies:
 
 - [``idyntree``](https://github.com/robotology/idyntree)
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
-- [``urchin``](https://github.com/fishbotics/urchin.git) *(Note: the usage of `urchin` is a temporary step. Once the branch (`traversaro-patch-1`) is merged, it will be integrated into `urdf-modifiers`.)
+- [``urchin``](https://github.com/fishbotics/urchin.git) *(Note: the usage of `urchin` is a temporary step. Once the branch (`traversaro-patch-2`) is merged, it will be integrated into `urdf-modifiers`.)
 
 ## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
 
@@ -29,7 +29,7 @@ This library requires the following dependencies:
 conda create -n human_model_env
 conda activate human_model_env
 ```
-- Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) 
+- Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) [MATLAB bindings not required]
 - Install `urdf-modifiers`
 ```
 git clone https://github.com/icub-tech-iit/urdf-modifiers.git

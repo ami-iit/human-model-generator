@@ -26,8 +26,8 @@ This library requires the following dependencies:
 
 - Create and activate a brand new enviroment
 ```
-conda create -n human_model_env
-conda activate human_model_env
+conda create -n name_new_env
+conda activate name_new_env
 ```
 - Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) [MATLAB bindings not required]
 - Install `urdf-modifiers`

@@ -40,7 +40,7 @@ pip install .
 ```
 git clone https://github.com/fishbotics/urchin.git
 cd urchin
-git checkout traversaro-patch-1
+git checkout traversaro-patch-2
 pip install .
 ```
 

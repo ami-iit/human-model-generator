@@ -15,17 +15,18 @@ import os
 import sys
 import idyntree.bindings as iDynTree
 from urdfModifiers.utils import *
-from config import *
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
-
 from src import *
+from config import *
+
 
 """ COSTANT"""
 
 URDF_MAIN_FOLDER = "models"
 URDF_TEMPLATE_FILE_FOLDER = "humanModelTemplate"
 URDF_TEMPLATE_FILE_NAME = "humanModelTemplate.urdf"
+URDF_MESHES_FILE_FOLDER = "meshes"
 
 URDF_TEMPLATE_FILE_PATH = os.path.join(
     os.path.dirname(__file__),
@@ -33,6 +34,14 @@ URDF_TEMPLATE_FILE_PATH = os.path.join(
     URDF_TEMPLATE_FILE_FOLDER,
     URDF_TEMPLATE_FILE_NAME,
 )
+
+URDF_MESHES_FILE_PATH = os.path.join(
+    os.path.dirname(__file__),
+    URDF_MAIN_FOLDER,
+    URDF_TEMPLATE_FILE_FOLDER,
+    URDF_MESHES_FILE_FOLDER,
+)
+
 URDF_FILE_FOLDER = "humanModels"
 URDF_FILE_NAME = input("\n[INPUT] Insert the model name: ") + ".urdf"
 
@@ -65,23 +74,38 @@ robot, gazebo_plugin_text = utils.load_robot_and_gazebo_plugins(
 #################################################################
 # LINK
 #################################################################
-linkDimensions = scaleLink(H, MODEL_TYPE, linkDimensions)
+linkDimensions = scaleLink(H, linkDimensions)
 robot = modifyLinkDimention(linkDimensions, robot)
 #################################################################
 # MASS
 #################################################################
-linkMass = scaleMass(m, MODEL_TYPE)
+linkMass = scaleMass(m, linkMass)
 robot = modifyLinkmass(linkMass, robot)
 #################################################################
 # JOINT
 #################################################################
-jointPosition = scaleJoint(linkDimensions)
-robot = modifyJointPosition(robot, jointPosition)
+jointPosition = scaleJoint(linkDimensions, jointPosition)
+robot = modifyJointPosition(jointPosition, robot)
 #################################################################
 # MUSCLE FRAMES
 #################################################################
-jointMusclePosition = scaleMuscleJoint(linkDimensions)
-robot = modifyMuscleJointPosition(robot, jointMusclePosition)
+jointMusclePosition = scaleMuscleJoint(linkDimensions, jointMusclePosition)
+robot = modifyMuscleJointPosition(jointMusclePosition, robot)
+#################################################################
+# ADD MESH
+#################################################################
+scalingParam = getScalingParam(linkDimensions, linkDimensions_norm)
+scalingParamMesh = createScalingParamMesh(
+    scalingParam, meshLinksName, mesh_name_mapping
+)
+robot = updateRobotWithMeshAndMuscles(
+    scalingParamMesh,
+    map_link_to_muscles,
+    URDF_MESHES_FILE_PATH,
+    robot,
+    OPT_COLOR_LINK_MESH,
+    OPT_COLOR_MUSCLE_MESH,
+)
 
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
 utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
@@ -110,18 +134,19 @@ print(
     ),
     "Kg",
 )
+
 print(
     "[INFO] Model height:",
     str(
         round(
-            linkDimensions["Head_x"]
-            + linkDimensions["Neck_z"]
-            + linkDimensions["UpperTrunk_z"]
-            + linkDimensions["LowerTrunk_z"]
-            + linkDimensions["Pelvis_z"]
-            + linkDimensions["UpperLeg_z"]
-            + linkDimensions["LowerLeg_z"]
-            + linkDimensions["Foot_z"],
+            linkDimensions["Head"]["Z"]
+            + linkDimensions["Neck"]["Z"]
+            + linkDimensions["UpperTrunk"]["Z"]
+            + linkDimensions["LowerTrunk"]["Z"]
+            + linkDimensions["Pelvis"]["Z"]
+            + linkDimensions["UpperLeg"]["Z"]
+            + linkDimensions["LowerLeg"]["Z"]
+            + linkDimensions["Foot"]["Z"],
             2,
         )
     ),
@@ -149,21 +174,11 @@ Links = linkPhysicallyConsistence(dynComp)
 #################################################################
 # PHYSICALLY CONSISTENCE TESTS
 #################################################################
-#################################################################
-# GENERATION OF MOVEMENT
-#################################################################
 
 if OPT_CHECK_CONSISTENCY_MODEL:
     print("\n[CHECK] PHYSICAL CONSISTENCY TESTS START")
-    if OPT_TYPE_MOVEMENT == "physio":
-        generated_Movement = genSynthPhysMov(JOINTLIST, ndofs)
-    elif OPT_TYPE_MOVEMENT == "random":
-        generated_Movement = genSynthRandMov(ndofs, -360, 360, 3, 100)
-    else:
-        print(
-            "[ERROR] You did not choose a valid movement type. Consistency check not performed."
-        )
-        sys.exit(1)
+
+    generated_Movement = genSynthRandMov(ndofs, -360, 360, 3, 100)
 
     print("\n       1. Synthetic motion dataset generated \u2713")
 
@@ -209,38 +224,42 @@ if OPT_CHECK_CONSISTENCY_MODEL:
         print(
             "\n       2. Mass matrix remains positive throughout the entire dataset \u2713 "
         )
-
-    #################################################################
-    # VISUALIZZATION MODEL
-    #################################################################
-    if OPT_VISUALIZZATION_MOVEMENT:
-        print("\n[INFO] Visualization :\n")
-        viz = iDynTree.Visualizer()
-        vizOpt = iDynTree.VisualizerOptions()
-        vizOpt.winWidth = 1500
-        vizOpt.winHeight = 1000
-        viz.init(vizOpt)
-
-        env = viz.enviroment()
-        env.setElementVisibility("floor_grid", True)
-        env.setElementVisibility("world_frame", True)
-        viz.setColorPalette("meshcat")
-        # frames = viz.frames()
-        cam = viz.camera()
-        cam.setPosition(iDynTree.Position(2, 1, 2.5))
-        viz.camera().animator().enableMouseControl(True)
-
-        viz.addModel(mdlLoader.model(), "ModelVisualizer")
-        viz.modelViz("ModelVisualizer").setPositions(G_T_base, s[:, 0])
-        num_rows, num_cols = s.shape
-        indx = 1
-        while indx < num_cols:
-            viz.modelViz("ModelVisualizer").setPositions(G_T_base, s[:, indx])
-            viz.draw()
-            indx += 1
-            if indx >= num_cols:
-                viz.close()
-
     print("\n[CHECK] PHYSICAL CONSISTENCY TESTS COMPLETED")
+#################################################################
+# VISUALIZZATION MODEL
+#################################################################
+if OPT_VISUALIZZATION_MODEL:
+    print("\n[INFO] Visualization :\n")
+    viz = iDynTree.Visualizer()
+    vizOpt = iDynTree.VisualizerOptions()
+    vizOpt.winWidth = 1500
+    vizOpt.winHeight = 1000
+    viz.init(vizOpt)
+
+    env = viz.enviroment()
+    env.setElementVisibility("floor_grid", True)
+    env.setElementVisibility("world_frame", True)
+    viz.setColorPalette("meshcat")
+    # frames = viz.frames()
+    cam = viz.camera()
+    cam.setPosition(iDynTree.Position(2, 1, 2.5))
+    viz.camera().animator().enableMouseControl(True)
+
+    viz.addModel(mdlLoader.model(), "ModelVisualizer")
+
+    gravity = [0.0, 0.0, -9.81]
+    quaternion_idyn = iDynTree.Vector4([1, 0, 0, 0])
+    G_T_b_rot = iDynTree.Rotation()
+    G_T_b_rot.fromQuaternion(quaternion_idyn)
+    G_T_b_pos = iDynTree.Position([0, 0, 0])
+    G_T_base = iDynTree.Transform(G_T_b_rot, G_T_b_pos)
+    s = [0] * ndofs
+
+    viz.modelViz("ModelVisualizer").setPositions(G_T_base, s)
+
+    while viz.run():
+        viz.draw()
+
+
 if OPT_VISUALIZZATION_MEASUREOFCONTROL:
     measurementControl(linkMass, linkDimensions)

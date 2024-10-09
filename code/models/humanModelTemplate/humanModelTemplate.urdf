@@ -1,9 +1,5 @@
 <robot name="HumanModel">
 
-    <material name="color">
-        <color rgba="0.9922 00.8667 0.7922 1"/>
-    </material>
-
 <!--LINKS-->
 
 ##############################################################################
@@ -17,16 +13,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt Pelvis-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt Pelvis-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -55,16 +48,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin origin wrt jL5S1-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin origin wrt jL5S1-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -100,16 +90,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -128,16 +115,13 @@
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -156,16 +140,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin origin wrt jL4L3-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -201,16 +182,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jT1C7-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
 		<cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jT1C7-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -239,16 +217,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--boc origin wrt jC1Head-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <sphere radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jC1Head-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -257,8 +232,6 @@
             </geometry>
         </collision>
     </link>
-
-
 ##############################################################################
 # RIGHT SHOULDER
 ##############################################################################
@@ -286,16 +259,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightShoulder. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -324,16 +294,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightElbow. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -362,16 +329,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightWrist-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightWrist-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -395,11 +359,8 @@
             <geometry>
                 <box size="0 0 0"/>
             </geometry>
-            <material name="color"/>
         </visual>
     </link>
-
-
 ##############################################################################
 # LEFT SHOULDER
 ##############################################################################
@@ -420,7 +381,6 @@
 ##############################################################################
 # LEFT UPPERARM
 ##############################################################################
-
 	<link name="LeftUpperArm">
         <inertial>
             <mass value="1e-5"/>
@@ -428,16 +388,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftShoulder. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -466,16 +423,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftElbow. RPY rotated of pi/2.-->
             <origin xyz="0 0 0" rpy="1.5708 0 0" />
@@ -504,16 +458,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--COM origin wrt jLeftWrist-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--COM origin wrt jLeftWrist-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -521,7 +472,6 @@
                 <box size="1 1 1"/>
             </geometry>
         </collision>
-
     </link>
 ##############################################################################
 # LEFT HAND COM
@@ -538,11 +488,9 @@
             <geometry>
                 <box size="0 0 0"/>
             </geometry>
-            <material name="color"/>
+
         </visual>
     </link>
-
-
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
@@ -570,16 +518,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightHip-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightHip-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -608,16 +553,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightKnee-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightKnee-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -653,16 +595,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightAnkle-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightAnkle-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -670,7 +609,6 @@
                 <box size="1 1 1"/>
 	        </geometry>
         </collision>
-
     </link>
 ##############################################################################
 # RIGHT TOE
@@ -682,16 +620,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jRightBallFoot-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jRightBallFoot-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -715,11 +650,8 @@
             <geometry>
                 <box size="0 0 0"/>
             </geometry>
-            <material name="color"/>
         </visual>
     </link>
-
-
 ##############################################################################
 # LEFT HIP
 ##############################################################################	
@@ -747,16 +679,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftHip-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftHip-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -785,16 +714,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" ixz="0.0" iyz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftKnee-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <cylinder length="1" radius="1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftKnee-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -802,7 +728,6 @@
                 <cylinder length="1" radius="1"/>
             </geometry>
         </collision>
-
     </link>
 ##############################################################################
 # LEFT ANKLE
@@ -831,16 +756,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftAnkle-->
 	   	 	<origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftAnkle-->
 		    <origin xyz="0 0 0" rpy="0 0 0" />
@@ -859,16 +781,13 @@
             <origin xyz="0 0 0" rpy="0 0 0" />
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
-
         <visual>
 			<!--box origin wrt jLeftBallFoot-->
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <box size="1 1 1"/>
             </geometry>
-            <material name="color"/>
         </visual>
-
         <collision>
 			<!--box origin wrt jLeftBallFoot-->
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -892,17 +811,14 @@
             <geometry>
                 <box size="0 0 0"/>
             </geometry>
-            <material name="color"/>
         </visual>
     </link>
-
 
 <!--JOINTS-->
 
 ##############################################################################
 # PELVI - LOWERTRUNK
 ##############################################################################
-	
 	<joint name="jL5S1_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
@@ -922,7 +838,6 @@
 ##############################################################################
 # LOWERTRUNK - UPPERTRUNK
 ##############################################################################
-
 	<joint name="jT9T8_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="LowerTrunk"/>
@@ -972,7 +887,6 @@
 ##############################################################################
 # UPPERTRUNK - NECK
 ##############################################################################
-
 	<joint name="jT1C7_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="UpperTrunk"/>
@@ -1016,8 +930,6 @@
         <limit effort="30" velocity="1.0" lower="-0.436332" upper="0.174533" />
         <axis xyz="0 1 0" />
     </joint>
-
-
 ##############################################################################
 # RIGHT SHOULDER
 ##############################################################################
@@ -1092,8 +1004,6 @@
         <child link="RightHandCOM"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT SHOULDER
 ##############################################################################
@@ -1169,12 +1079,9 @@
         <child link="LeftHandCOM"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # RIGHT HIP
 ##############################################################################
-
 	<joint name="jRightHip_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
@@ -1267,12 +1174,9 @@
         <limit effort="30" velocity="1.0" lower="-0.174533" upper="1.5708" />
         <axis xyz="0 1 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT HIP
 ##############################################################################
-
 	<joint name="jLeftHip_rotx" type="revolute">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="Pelvis"/>
@@ -1366,10 +1270,7 @@
         <axis xyz="0 1 0" />
     </joint>
 
-
 <!--MUSCLE LINKS-->  
-
-
 
 ##############################################################################
 # RIGHT BICBRAC ORIGIN
@@ -1451,8 +1352,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # LEFT BICBRAC ORIGIN
 ##############################################################################
@@ -1533,8 +1432,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # RIGHT RECABD ORIGIN
 ##############################################################################
@@ -1575,8 +1472,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
  LEFT RECABD ORIGIN
 ##############################################################################
@@ -1617,8 +1512,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # RIGHT RECFEM ORIGIN
 ##############################################################################
@@ -1659,8 +1552,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # LEFT RECFEM ORIGIN
 ##############################################################################
@@ -1701,8 +1592,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # RIGHT TIBANT ORIGIN
 ##############################################################################
@@ -1763,8 +1652,6 @@
             <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
         </inertial>
     </link>
-
-
 ##############################################################################
 # LEFT TIBANT ORIGIN
 ##############################################################################
@@ -1826,10 +1713,7 @@
         </inertial>
     </link>
 
-
-
 <!--MUSCLE JOINT-->  
-
 
 ##############################################################################
 # RIGHT BICBRAC ORIGIN
@@ -1903,8 +1787,6 @@
         <child link="ExtCarp_RH"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT BICBRAC ORIGIN
 ##############################################################################
@@ -1977,8 +1859,6 @@
         <child link="ExtCarp_LH"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # RIGHT RECABD ORIGIN
 ##############################################################################
@@ -2015,8 +1895,6 @@
         <child link="ErSpin_RP"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT RECABD ORIGIN
 ##############################################################################
@@ -2053,8 +1931,6 @@
         <child link="ErSpin_LP"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # RIGHT RECFEM ORIGIN
 ##############################################################################
@@ -2091,8 +1967,6 @@
         <child link="BicFem_RLL"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT RECFEM ORIGIN
 ##############################################################################
@@ -2129,8 +2003,6 @@
         <child link="BicFem_LLL"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ############################################################################## 
 # RIGHT TIBANT ORIGIN
 ##############################################################################
@@ -2185,8 +2057,6 @@
         <child link="GasMed_RF"/>
         <axis xyz="0 0 0" />
     </joint>
-
-
 ##############################################################################
 # LEFT TIBANT ORIGIN
 ##############################################################################
@@ -2241,8 +2111,5 @@
         <child link="GasMed_LF"/>
         <axis xyz="0 0 0" />  
     </joint>
-
-
-
-
 </robot>
+  

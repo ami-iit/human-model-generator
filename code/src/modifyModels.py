@@ -10,62 +10,54 @@ def modifyLinkDimention(linkDimensions, robot):
     # LINK MODIFICATION
     ##############################################################################################
 
-    # PELVI
+    # PELVIS
+    setLinkLength("Pelvis", linkDimensions["Pelvis"]["Z"], None, 0, "Z", "BOX", robot)
     setLinkLength(
-        "Pelvis",
-        linkDimensions["Pelvis_z"],
-        None,
-        0,
-        "Z",
-        "BOX",
-        robot,
-    )
-    setLinkLength(
-        "Pelvis", linkDimensions["Pelvis_y"], None, None, "Y", "BOX", robot
+        "Pelvis", linkDimensions["Pelvis"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "Pelvis", linkDimensions["Pelvis_x"], None, None, "X", "BOX", robot
+        "Pelvis", linkDimensions["Pelvis"]["X"], None, None, "X", "BOX", robot
     )  # width
 
     # LOWER TRUNK
     setLinkLength(
         "LowerTrunk",
-        linkDimensions["LowerTrunk_z"],
+        linkDimensions["LowerTrunk"]["Z"],
         None,
-        linkDimensions["LowerTrunk_z"] / 2,
+        linkDimensions["LowerTrunk"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "LowerTrunk", linkDimensions["LowerTrunk_y"], None, None, "Y", "BOX", robot
+        "LowerTrunk", linkDimensions["LowerTrunk"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "LowerTrunk", linkDimensions["LowerTrunk_x"], None, None, "X", "BOX", robot
+        "LowerTrunk", linkDimensions["LowerTrunk"]["X"], None, None, "X", "BOX", robot
     )  # width
 
     # UPPER TRUNK
     setLinkLength(
         "UpperTrunk",
-        linkDimensions["UpperTrunk_z"],
+        linkDimensions["UpperTrunk"]["Z"],
         None,
-        linkDimensions["UpperTrunk_z"] / 2,
+        linkDimensions["UpperTrunk"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "UpperTrunk", linkDimensions["UpperTrunk_y"], None, None, "Y", "BOX", robot
+        "UpperTrunk", linkDimensions["UpperTrunk"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "UpperTrunk", linkDimensions["UpperTrunk_x"], None, None, "X", "BOX", robot
+        "UpperTrunk", linkDimensions["UpperTrunk"]["X"], None, None, "X", "BOX", robot
     )  # width
 
     # RIGHT SHOULDER
     setLinkLength(
         "RightShoulder",
         None,
-        linkDimensions["Shoulder_x"] / 2,
+        linkDimensions["Shoulder"]["X"] / 2,
         None,
         "Z",
         "CYLINDER",
@@ -73,9 +65,9 @@ def modifyLinkDimention(linkDimensions, robot):
     )
     setLinkLength(
         "RightShoulder",
-        linkDimensions["Shoulder_y"],
+        linkDimensions["Shoulder"]["Y"],
         None,
-        -linkDimensions["Shoulder_y"] / 2,
+        -linkDimensions["Shoulder"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -85,7 +77,7 @@ def modifyLinkDimention(linkDimensions, robot):
     setLinkLength(
         "LeftShoulder",
         None,
-        linkDimensions["Shoulder_x"] / 2,
+        linkDimensions["Shoulder"]["X"] / 2,
         None,
         "Z",
         "CYLINDER",
@@ -93,9 +85,9 @@ def modifyLinkDimention(linkDimensions, robot):
     )
     setLinkLength(
         "LeftShoulder",
-        linkDimensions["Shoulder_y"],
+        linkDimensions["Shoulder"]["Y"],
         None,
-        linkDimensions["Shoulder_y"] / 2,
+        linkDimensions["Shoulder"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -104,9 +96,9 @@ def modifyLinkDimention(linkDimensions, robot):
     # NECK
     setLinkLength(
         "Neck",
-        linkDimensions["Neck_z"],
-        linkDimensions["Neck_x"] / 2,
-        linkDimensions["Neck_z"] / 2,
+        linkDimensions["Neck"]["Z"],
+        linkDimensions["Neck"]["X"] / 2,
+        linkDimensions["Neck"]["Z"] / 2,
         "Z",
         "CYLINDER",
         robot,
@@ -116,19 +108,19 @@ def modifyLinkDimention(linkDimensions, robot):
     setLinkLength(
         "Head",
         None,
-        linkDimensions["Head_x"] / 2,
-        linkDimensions["Head_x"] / 2,
+        linkDimensions["Head"]["X"] / 2,
+        linkDimensions["Head"]["X"] / 2,
         "Z",
         "SPHERE",
         robot,
     )
 
-    # RIGHT UPPERARM
+    # RIGHT UPPER ARM
     setLinkLength(
         "RightUpperArm",
-        linkDimensions["UpperArm_y"],
-        linkDimensions["UpperArm_x"] / 2,
-        -linkDimensions["UpperArm_y"] / 2,
+        linkDimensions["UpperArm"]["Y"],
+        linkDimensions["UpperArm"]["X"] / 2,
+        -linkDimensions["UpperArm"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -137,9 +129,9 @@ def modifyLinkDimention(linkDimensions, robot):
     # RIGHT FOREARM
     setLinkLength(
         "RightForeArm",
-        linkDimensions["ForeArm_y"],
-        linkDimensions["ForeArm_x"] / 2,
-        -linkDimensions["ForeArm_y"] / 2,
+        linkDimensions["ForeArm"]["Y"],
+        linkDimensions["ForeArm"]["X"] / 2,
+        -linkDimensions["ForeArm"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -148,22 +140,26 @@ def modifyLinkDimention(linkDimensions, robot):
     # RIGHT HAND
     setLinkLength(
         "RightHand",
-        linkDimensions["Hand_y"],
+        linkDimensions["Hand"]["Y"],
         None,
-        -linkDimensions["Hand_y"] / 2,
+        -linkDimensions["Hand"]["Y"] / 2,
         "Y",
         "BOX",
         robot,
     )
-    setLinkLength("RightHand", linkDimensions["Hand_x"], None, None, "X", "BOX", robot)
-    setLinkLength("RightHand", linkDimensions["Hand_z"], None, None, "Z", "BOX", robot)
+    setLinkLength(
+        "RightHand", linkDimensions["Hand"]["X"], None, None, "X", "BOX", robot
+    )
+    setLinkLength(
+        "RightHand", linkDimensions["Hand"]["Z"], None, None, "Z", "BOX", robot
+    )
 
-    # LEFT UPPERARM
+    # LEFT UPPER ARM
     setLinkLength(
         "LeftUpperArm",
-        linkDimensions["UpperArm_y"],
-        linkDimensions["UpperArm_x"] / 2,
-        linkDimensions["UpperArm_y"] / 2,
+        linkDimensions["UpperArm"]["Y"],
+        linkDimensions["UpperArm"]["X"] / 2,
+        linkDimensions["UpperArm"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -172,9 +168,9 @@ def modifyLinkDimention(linkDimensions, robot):
     # LEFT FOREARM
     setLinkLength(
         "LeftForeArm",
-        linkDimensions["ForeArm_y"],
-        linkDimensions["ForeArm_x"] / 2,
-        linkDimensions["ForeArm_y"] / 2,
+        linkDimensions["ForeArm"]["Y"],
+        linkDimensions["ForeArm"]["X"] / 2,
+        linkDimensions["ForeArm"]["Y"] / 2,
         "Y",
         "CYLINDER",
         robot,
@@ -183,33 +179,37 @@ def modifyLinkDimention(linkDimensions, robot):
     # LEFT HAND
     setLinkLength(
         "LeftHand",
-        linkDimensions["Hand_y"],
+        linkDimensions["Hand"]["Y"],
         None,
-        linkDimensions["Hand_y"] / 2,
+        linkDimensions["Hand"]["Y"] / 2,
         "Y",
         "BOX",
         robot,
     )
-    setLinkLength("LeftHand", linkDimensions["Hand_x"], None, None, "X", "BOX", robot)
-    setLinkLength("LeftHand", linkDimensions["Hand_z"], None, None, "Z", "BOX", robot)
+    setLinkLength(
+        "LeftHand", linkDimensions["Hand"]["X"], None, None, "X", "BOX", robot
+    )
+    setLinkLength(
+        "LeftHand", linkDimensions["Hand"]["Z"], None, None, "Z", "BOX", robot
+    )
 
     # RIGHT THIGH
     setLinkLength(
         "RightUpperLeg",
-        linkDimensions["UpperLeg_z"],
-        linkDimensions["UpperLeg_x"] / 2,
-        -linkDimensions["UpperLeg_z"] / 2,
+        linkDimensions["UpperLeg"]["Z"],
+        linkDimensions["UpperLeg"]["X"] / 2,
+        -linkDimensions["UpperLeg"]["Z"] / 2,
         "Z",
         "CYLINDER",
         robot,
     )
 
-    # RIGHT LOWERLEG
+    # RIGHT LOWER LEG
     setLinkLength(
         "RightLowerLeg",
-        linkDimensions["LowerLeg_z"],
-        linkDimensions["LowerLeg_x"] / 2,
-        -linkDimensions["LowerLeg_z"] / 2,
+        linkDimensions["LowerLeg"]["Z"],
+        linkDimensions["LowerLeg"]["X"] / 2,
+        -linkDimensions["LowerLeg"]["Z"] / 2,
         "Z",
         "CYLINDER",
         robot,
@@ -218,52 +218,52 @@ def modifyLinkDimention(linkDimensions, robot):
     # RIGHT FOOT
     setLinkLength(
         "RightFoot",
-        linkDimensions["Foot_z"],
+        linkDimensions["Foot"]["Z"],
         None,
-        -linkDimensions["Foot_z"] / 2,
+        -linkDimensions["Foot"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "RightFoot", linkDimensions["Foot_y"], None, None, "Y", "BOX", robot
+        "RightFoot", linkDimensions["Foot"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
         "RightFoot",
-        linkDimensions["Foot_x"],
+        linkDimensions["Foot"]["X"],
         None,
-        abs((linkDimensions["LowerLeg_x"] / 2) - (linkDimensions["Foot_x"] / 2)),
+        abs((linkDimensions["LowerLeg"]["X"] / 2) - (linkDimensions["Foot"]["X"] / 2)),
         "X",
         "BOX",
         robot,
     )
 
     # RIGHT TOE
-    setLinkLength("RightToe", linkDimensions["Toe_z"], None, None, "Z", "BOX", robot)
+    setLinkLength("RightToe", linkDimensions["Toe"]["Z"], None, None, "Z", "BOX", robot)
     setLinkLength(
-        "RightToe", linkDimensions["Toe_y"], None, None, "Y", "BOX", robot
+        "RightToe", linkDimensions["Toe"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "RightToe", linkDimensions["Toe_x"], None, None, "X", "BOX", robot
-    )  # deep
+        "RightToe", linkDimensions["Toe"]["X"], None, None, "X", "BOX", robot
+    )  # depth
 
     # LEFT THIGH
     setLinkLength(
         "LeftUpperLeg",
-        linkDimensions["UpperLeg_z"],
-        linkDimensions["UpperLeg_x"] / 2,
-        -linkDimensions["UpperLeg_z"] / 2,
+        linkDimensions["UpperLeg"]["Z"],
+        linkDimensions["UpperLeg"]["X"] / 2,
+        -linkDimensions["UpperLeg"]["Z"] / 2,
         "Z",
         "CYLINDER",
         robot,
     )
 
-    # LEFT LOWERLEG
+    # LEFT LOWER LEG
     setLinkLength(
         "LeftLowerLeg",
-        linkDimensions["LowerLeg_z"],
-        linkDimensions["LowerLeg_x"] / 2,
-        -linkDimensions["LowerLeg_z"] / 2,
+        linkDimensions["LowerLeg"]["Z"],
+        linkDimensions["LowerLeg"]["X"] / 2,
+        -linkDimensions["LowerLeg"]["Z"] / 2,
         "Z",
         "CYLINDER",
         robot,
@@ -272,34 +272,34 @@ def modifyLinkDimention(linkDimensions, robot):
     # LEFT FOOT
     setLinkLength(
         "LeftFoot",
-        linkDimensions["Foot_z"],
+        linkDimensions["Foot"]["Z"],
         None,
-        -linkDimensions["Foot_z"] / 2,
+        -linkDimensions["Foot"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "LeftFoot", linkDimensions["Foot_y"], None, None, "Y", "BOX", robot
+        "LeftFoot", linkDimensions["Foot"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
         "LeftFoot",
-        linkDimensions["Foot_x"],
+        linkDimensions["Foot"]["X"],
         None,
-        abs((linkDimensions["LowerLeg_x"] / 2) - (linkDimensions["Foot_x"] / 2)),
+        abs((linkDimensions["LowerLeg"]["X"] / 2) - (linkDimensions["Foot"]["X"] / 2)),
         "X",
         "BOX",
         robot,
-    )  # deep
+    )  # depth
 
     # LEFT TOE
-    setLinkLength("LeftToe", linkDimensions["Toe_z"], None, None, "Z", "BOX", robot)
+    setLinkLength("LeftToe", linkDimensions["Toe"]["Z"], None, None, "Z", "BOX", robot)
     setLinkLength(
-        "LeftToe", linkDimensions["Toe_y"], None, None, "Y", "BOX", robot
+        "LeftToe", linkDimensions["Toe"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "LeftToe", linkDimensions["Toe_x"], None, None, "X", "BOX", robot
-    )  # deep
+        "LeftToe", linkDimensions["Toe"]["X"], None, None, "X", "BOX", robot
+    )  # depth
 
     return robot
 
@@ -309,454 +309,497 @@ def modifyLinkmass(linkMass, robot):
     # MASS MODIFICATION
     ##############################################################################################
 
+    # MASS PELVIS
     setMassPercentage("Pelvis", linkMass["Pelvis_mass"], "Z", robot)
+
+    # MASS LOWER TRUNK
     setMassPercentage("LowerTrunk", linkMass["LowerTrunk_mass"], "Z", robot)
+
+    # MASS UPPER TRUNK
     setMassPercentage("UpperTrunk", linkMass["UpperTrunk_mass"], "Z", robot)
 
+    # MASS RIGHT SHOULDER
     setMassPercentage("RightShoulder", linkMass["Shoulder_mass"], "Z", robot)
+
+    # MASS LEFT SHOULDER
     setMassPercentage("LeftShoulder", linkMass["Shoulder_mass"], "Z", robot)
 
+    # MASS NECK
     setMassPercentage("Neck", linkMass["Neck_mass"], "Z", robot)
+
+    # MASS HEAD
     setMassPercentage("Head", linkMass["Head_mass"], "Z", robot)
 
+    # MASS RIGHT UPPER ARM
     setMassPercentage("RightUpperArm", linkMass["UpperArm_mass"], "Z", robot)
+
+    # MASS LEFT UPPER ARM
     setMassPercentage("LeftUpperArm", linkMass["UpperArm_mass"], "Z", robot)
 
+    # MASS RIGHT FOREARM
     setMassPercentage("RightForeArm", linkMass["ForeArm_mass"], "Z", robot)
+
+    # MASS LEFT FOREARM
     setMassPercentage("LeftForeArm", linkMass["ForeArm_mass"], "Z", robot)
 
+    # MASS RIGHT HAND
     setMassPercentage("RightHand", linkMass["Hand_mass"], "Z", robot)
+
+    # MASS LEFT HAND
     setMassPercentage("LeftHand", linkMass["Hand_mass"], "Z", robot)
 
+    # MASS RIGHT UPPER LEG
     setMassPercentage("RightUpperLeg", linkMass["UpperLeg_mass"], "Z", robot)
+
+    # MASS LEFT UPPER LEG
     setMassPercentage("LeftUpperLeg", linkMass["UpperLeg_mass"], "Z", robot)
 
+    # MASS RIGHT LOWER LEG
     setMassPercentage("RightLowerLeg", linkMass["LowerLeg_mass"], "Z", robot)
+
+    # MASS LEFT LOWER LEG
     setMassPercentage("LeftLowerLeg", linkMass["LowerLeg_mass"], "Z", robot)
 
+    # MASS RIGHT FOOT
     setMassPercentage("RightFoot", linkMass["Foot_mass"], "Z", robot)
+
+    # MASS LEFT FOOT
     setMassPercentage("LeftFoot", linkMass["Foot_mass"], "Z", robot)
 
+    # MASS RIGHT TOE
     setMassPercentage("RightToe", linkMass["Toe_mass"], "Z", robot)
+
+    # MASS LEFT TOE
     setMassPercentage("LeftToe", linkMass["Toe_mass"], "Z", robot)
 
     return robot
 
 
-def modifyJointPosition(robot, jointPosition):
+def modifyJointPosition(jointPosition, robot):
     ##############################################################################################
     # JOINT MODIFICATION
     ##############################################################################################
 
     # JOINT PELVI-LowerTrunk
-    setJointPosition("jL5S1_rotx", jointPosition["jL5S1_z"], "Z", robot)
+    setJointPosition("jL5S1_rotx", jointPosition["jL5S1"]["Z"], "Z", robot)
 
     # JOINT LowerTrunk-UpperTrunk
-    setJointPosition("jT9T8_rotx", jointPosition["jT9T8_z"], "Z", robot)
+    setJointPosition("jT9T8_rotx", jointPosition["jT9T8"]["Z"], "Z", robot)
 
     # JOINT UpperTrunk-RightShoulder
     setJointPosition(
-        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder_z"], "Z", robot
+        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder_y"], "Y", robot
+        "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Y"], "Y", robot
     )
 
     # JOINT UpperTrunk-LeftShoulder
     setJointPosition(
-        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder_z"], "Z", robot
+        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder_y"], "Y", robot
+        "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Y"], "Y", robot
     )
 
     # JOINT UPPERTRUNK - NECK
-    setJointPosition("jT1C7_rotx", jointPosition["jT1C7_z"], "Z", robot)
+    setJointPosition("jT1C7_rotx", jointPosition["jT1C7"]["Z"], "Z", robot)
 
     # JOINT NECK - HEAD
-    setJointPosition("jC1Head_rotx", jointPosition["jC1Head_z"], "Z", robot)
+    setJointPosition("jC1Head_rotx", jointPosition["jC1Head"]["Z"], "Z", robot)
 
     # JOINT RIGHT SHOULDER
     setJointPosition(
-        "jRightShoulder_rotx", jointPosition["jRightShoulder_y"], "Y", robot
+        "jRightShoulder_rotx", jointPosition["jRightShoulder"]["Y"], "Y", robot
     )
 
     # JOINT RIGHT ELBOW
-    setJointPosition("jRightElbow_roty", jointPosition["jRightElbow_y"], "Y", robot)
+    setJointPosition("jRightElbow_roty", jointPosition["jRightElbow"]["Y"], "Y", robot)
 
     # JOINT RIGHT WRIST
-    setJointPosition("jRightWrist_rotx", jointPosition["jRightWrist_y"], "Y", robot)
+    setJointPosition("jRightWrist_rotx", jointPosition["jRightWrist"]["Y"], "Y", robot)
 
     # JOINT RIGHT HAND COM
-    setJointPosition("jRightHandCOM", jointPosition["jRightHandCOM_y"], "Y", robot)
+    setJointPosition("jRightHandCOM", jointPosition["jRightHandCOM"]["Y"], "Y", robot)
 
     # JOINT LEFT SHOULDER
-    setJointPosition("jLeftShoulder_rotx", jointPosition["jLeftShoulder_y"], "Y", robot)
+    setJointPosition(
+        "jLeftShoulder_rotx", jointPosition["jLeftShoulder"]["Y"], "Y", robot
+    )
 
     # JOINT LEFT ELBOW
-    setJointPosition("jLeftElbow_roty", jointPosition["jLeftElbow_y"], "Y", robot)
+    setJointPosition("jLeftElbow_roty", jointPosition["jLeftElbow"]["Y"], "Y", robot)
 
     # JOINT LEFT WRIST
-    setJointPosition("jLeftWrist_rotx", jointPosition["jLeftWrist_y"], "Y", robot)
+    setJointPosition("jLeftWrist_rotx", jointPosition["jLeftWrist"]["Y"], "Y", robot)
 
     # JOINT LEFT HAND COM
-    setJointPosition("jLeftHandCOM", jointPosition["jLeftHandCOM_y"], "Y", robot)
+    setJointPosition("jLeftHandCOM", jointPosition["jLeftHandCOM"]["Y"], "Y", robot)
 
     # JOINT RIGHT HIP
-    setJointPosition("jRightHip_rotx", jointPosition["jRightHip_y"], "Y", robot)
-    setJointPosition("jRightHip_rotx", jointPosition["jRightHip_z"], "Z", robot)
+    setJointPosition("jRightHip_rotx", jointPosition["jRightHip"]["Y"], "Y", robot)
+    setJointPosition("jRightHip_rotx", jointPosition["jRightHip"]["Z"], "Z", robot)
 
     # JOINT RIGHT KNEE
-    setJointPosition("jRightKnee_roty", jointPosition["jRightKnee_z"], "Z", robot)
+    setJointPosition("jRightKnee_roty", jointPosition["jRightKnee"]["Z"], "Z", robot)
 
     # JOINT RIGHT ANKLE
-    setJointPosition("jRightAnkle_rotx", jointPosition["jRightAnkle_z"], "Z", robot)
-    setJointPosition("jRightAnkle_rotx", jointPosition["jRightAnkle_x"], "X", robot)
+    setJointPosition("jRightAnkle_rotx", jointPosition["jRightAnkle"]["Z"], "Z", robot)
+    setJointPosition("jRightAnkle_rotx", jointPosition["jRightAnkle"]["X"], "X", robot)
 
     # JOINT RIGHT TOE
     setJointPosition(
-        "jRightBallFoot_roty", jointPosition["jRightBallFoot_x"], "X", robot
+        "jRightBallFoot_roty", jointPosition["jRightBallFoot"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightBallFoot_roty", jointPosition["jRightBallFoot_z"], "Z", robot
+        "jRightBallFoot_roty", jointPosition["jRightBallFoot"]["Z"], "Z", robot
     )
 
     # JOINT RIGHT FT SENSOR
-    setJointPosition("jRightBirken_roty", jointPosition["jRightBirken_x"], "X", robot)
-    setJointPosition("jRightBirken_roty", jointPosition["jRightBirken_z"], "Z", robot)
+    setJointPosition(
+        "jRightBirken_roty", jointPosition["jRightBirken"]["X"], "X", robot
+    )
+    setJointPosition(
+        "jRightBirken_roty", jointPosition["jRightBirken"]["Z"], "Z", robot
+    )
 
     # JOINT LEFT HIP
-    setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip_y"], "Y", robot)
-    setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip_z"], "Z", robot)
+    setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip"]["Y"], "Y", robot)
+    setJointPosition("jLeftHip_rotx", jointPosition["jLeftHip"]["Z"], "Z", robot)
 
     # JOINT LEFT KNEE
-    setJointPosition("jLeftKnee_roty", jointPosition["jLeftKnee_z"], "Z", robot)
+    setJointPosition("jLeftKnee_roty", jointPosition["jLeftKnee"]["Z"], "Z", robot)
 
     # JOINT LEFT ANKLE
-    setJointPosition("jLeftAnkle_rotx", jointPosition["jLeftAnkle_z"], "Z", robot)
-    setJointPosition("jLeftAnkle_rotx", jointPosition["jLeftAnkle_x"], "X", robot)
+    setJointPosition("jLeftAnkle_rotx", jointPosition["jLeftAnkle"]["Z"], "Z", robot)
+    setJointPosition("jLeftAnkle_rotx", jointPosition["jLeftAnkle"]["X"], "X", robot)
 
-    # JOINT RIGHT TOE
-    setJointPosition("jLeftBallFoot_roty", jointPosition["jLeftBallFoot_x"], "X", robot)
-    setJointPosition("jLeftBallFoot_roty", jointPosition["jLeftBallFoot_z"], "Z", robot)
+    # JOINT LEFT TOE
+    setJointPosition(
+        "jLeftBallFoot_roty", jointPosition["jLeftBallFoot"]["X"], "X", robot
+    )
+    setJointPosition(
+        "jLeftBallFoot_roty", jointPosition["jLeftBallFoot"]["Z"], "Z", robot
+    )
 
-    # JOINT RIGHT FT SENSOR
-    setJointPosition("jLeftBirken_roty", jointPosition["jLeftBirken_x"], "X", robot)
-    setJointPosition("jLeftBirken_roty", jointPosition["jLeftBirken_z"], "Z", robot)
+    # JOINT LEFT FT SENSOR
+    setJointPosition("jLeftBirken_roty", jointPosition["jLeftBirken"]["X"], "X", robot)
+    setJointPosition("jLeftBirken_roty", jointPosition["jLeftBirken"]["Z"], "Z", robot)
 
     return robot
 
 
-def modifyMuscleJointPosition(robot, jointMusclePosition):
+def modifyMuscleJointPosition(jointMusclePosition, robot):
     ##############################################################################################
     # MUSCLE FRAME
     ##############################################################################################
 
     # Biceps
     setJointPosition(
-        "jRightBicBrac_RUA", jointMusclePosition["jRightBicBrac_RUA_x"], "X", robot
+        "jRightBicBrac_RUA", jointMusclePosition["jRightBicBrac_RUA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightBicBrac_RUA", jointMusclePosition["jRightBicBrac_RUA_z"], "Z", robot
+        "jRightBicBrac_RUA", jointMusclePosition["jRightBicBrac_RUA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightBicBrac_RFA", jointMusclePosition["jRightBicBrac_RFA_x"], "X", robot
+        "jRightBicBrac_RFA", jointMusclePosition["jRightBicBrac_RFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightBicBrac_RFA", jointMusclePosition["jRightBicBrac_RFA_z"], "Z", robot
+        "jRightBicBrac_RFA", jointMusclePosition["jRightBicBrac_RFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftBicBrac_LUA", jointMusclePosition["jLeftBicBrac_LUA_x"], "X", robot
+        "jLeftBicBrac_LUA", jointMusclePosition["jLeftBicBrac_LUA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftBicBrac_LUA", jointMusclePosition["jLeftBicBrac_LUA_z"], "Z", robot
+        "jLeftBicBrac_LUA", jointMusclePosition["jLeftBicBrac_LUA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftBicBrac_LFA", jointMusclePosition["jLeftBicBrac_LFA_x"], "X", robot
+        "jLeftBicBrac_LFA", jointMusclePosition["jLeftBicBrac_LFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftBicBrac_LFA", jointMusclePosition["jLeftBicBrac_LFA_z"], "Z", robot
+        "jLeftBicBrac_LFA", jointMusclePosition["jLeftBicBrac_LFA"]["Z"], "Z", robot
     )
 
     # Triceps
     setJointPosition(
-        "jRightTricBrac_RUA", jointMusclePosition["jRightTricBrac_RUA_x"], "X", robot
+        "jRightTricBrac_RUA", jointMusclePosition["jRightTricBrac_RUA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightTricBrac_RUA", jointMusclePosition["jRightTricBrac_RUA_z"], "Z", robot
+        "jRightTricBrac_RUA", jointMusclePosition["jRightTricBrac_RUA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightTricBrac_RFA", jointMusclePosition["jRightTricBrac_RFA_x"], "X", robot
+        "jRightTricBrac_RFA", jointMusclePosition["jRightTricBrac_RFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightTricBrac_RFA", jointMusclePosition["jRightTricBrac_RFA_z"], "Z", robot
+        "jRightTricBrac_RFA", jointMusclePosition["jRightTricBrac_RFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftTricBrac_LUA", jointMusclePosition["jLeftTricBrac_LUA_x"], "X", robot
+        "jLeftTricBrac_LUA", jointMusclePosition["jLeftTricBrac_LUA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftTricBrac_LUA", jointMusclePosition["jLeftTricBrac_LUA_z"], "Z", robot
+        "jLeftTricBrac_LUA", jointMusclePosition["jLeftTricBrac_LUA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftTricBrac_LFA", jointMusclePosition["jLeftTricBrac_LFA_x"], "X", robot
+        "jLeftTricBrac_LFA", jointMusclePosition["jLeftTricBrac_LFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftTricBrac_LFA", jointMusclePosition["jLeftTricBrac_LFA_z"], "Z", robot
+        "jLeftTricBrac_LFA", jointMusclePosition["jLeftTricBrac_LFA"]["Z"], "Z", robot
     )
 
     # Flexor carpi radialis
     setJointPosition(
-        "jRightFlexCarp_RFA", jointMusclePosition["jRightFlexCarp_RFA_x"], "X", robot
+        "jRightFlexCarp_RFA", jointMusclePosition["jRightFlexCarp_RFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightFlexCarp_RFA", jointMusclePosition["jRightFlexCarp_RFA_z"], "Z", robot
+        "jRightFlexCarp_RFA", jointMusclePosition["jRightFlexCarp_RFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH_x"], "X", robot
+        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH_y"], "Y", robot
+        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH_z"], "Z", robot
+        "jRightFlexCarp_RH", jointMusclePosition["jRightFlexCarp_RH"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftFlexCarp_LFA", jointMusclePosition["jLeftFlexCarp_LFA_x"], "X", robot
+        "jLeftFlexCarp_LFA", jointMusclePosition["jLeftFlexCarp_LFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftFlexCarp_LFA", jointMusclePosition["jLeftFlexCarp_LFA_z"], "Z", robot
+        "jLeftFlexCarp_LFA", jointMusclePosition["jLeftFlexCarp_LFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH_x"], "X", robot
+        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH_y"], "Y", robot
+        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH_z"], "Z", robot
+        "jLeftFlexCarp_LH", jointMusclePosition["jLeftFlexCarp_LH"]["Z"], "Z", robot
     )
 
     # Extensor carpi radialis
     setJointPosition(
-        "jRightExtCarp_RFA", jointMusclePosition["jRightExtCarp_RFA_x"], "X", robot
+        "jRightExtCarp_RFA", jointMusclePosition["jRightExtCarp_RFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightExtCarp_RFA", jointMusclePosition["jRightExtCarp_RFA_z"], "Z", robot
+        "jRightExtCarp_RFA", jointMusclePosition["jRightExtCarp_RFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH_x"], "X", robot
+        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH_y"], "Y", robot
+        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH_z"], "Z", robot
+        "jRightExtCarp_RH", jointMusclePosition["jRightExtCarp_RH"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftExtCarp_LFA", jointMusclePosition["jLeftExtCarp_LFA_x"], "X", robot
+        "jLeftExtCarp_LFA", jointMusclePosition["jLeftExtCarp_LFA"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftExtCarp_LFA", jointMusclePosition["jLeftExtCarp_LFA_z"], "Z", robot
+        "jLeftExtCarp_LFA", jointMusclePosition["jLeftExtCarp_LFA"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH_x"], "X", robot
+        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH_y"], "Y", robot
+        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH_z"], "Z", robot
+        "jLeftExtCarp_LH", jointMusclePosition["jLeftExtCarp_LH"]["Z"], "Z", robot
     )
 
     # Erector spinae longissimus
     setJointPosition(
-        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT_x"], "X", robot
+        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT_y"], "Y", robot
+        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT_z"], "Z", robot
+        "jRightErSpin_RUT", jointMusclePosition["jRightErSpin_RUT"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightErSpin_RP", jointMusclePosition["jRightErSpin_RP_x"], "X", robot
+        "jRightErSpin_RP", jointMusclePosition["jRightErSpin_RP"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT_x"], "X", robot
+        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT_y"], "Y", robot
+        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT_z"], "Z", robot
+        "jLeftErSpin_LUT", jointMusclePosition["jLeftErSpin_LUT"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftErSpin_LP", jointMusclePosition["jLeftErSpin_LP_x"], "X", robot
+        "jLeftErSpin_LP", jointMusclePosition["jLeftErSpin_LP"]["X"], "X", robot
     )
 
     # Rectus abdominis
     setJointPosition(
-        "jRightRecAbd_RUT", jointMusclePosition["jRightRecAbd_RUT_x"], "X", robot
+        "jRightRecAbd_RUT", jointMusclePosition["jRightRecAbd_RUT"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightRecAbd_RUT", jointMusclePosition["jRightRecAbd_RUT_y"], "Y", robot
+        "jRightRecAbd_RUT", jointMusclePosition["jRightRecAbd_RUT"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightRecAbd_RP", jointMusclePosition["jRightRecAbd_RP_x"], "X", robot
+        "jRightRecAbd_RP", jointMusclePosition["jRightRecAbd_RP"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftRecAbd_LUT", jointMusclePosition["jLeftRecAbd_LUT_x"], "X", robot
+        "jLeftRecAbd_LUT", jointMusclePosition["jLeftRecAbd_LUT"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftRecAbd_LUT", jointMusclePosition["jLeftRecAbd_LUT_y"], "Y", robot
+        "jLeftRecAbd_LUT", jointMusclePosition["jLeftRecAbd_LUT"]["Y"], "Y", robot
     )
 
     # Biceps femoris
     setJointPosition(
-        "jRightBicFem_RUL", jointMusclePosition["jRightBicFem_RUL_x"], "X", robot
+        "jRightBicFem_RUL", jointMusclePosition["jRightBicFem_RUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightBicFem_RUL", jointMusclePosition["jRightBicFem_RUL_y"], "Y", robot
+        "jRightBicFem_RUL", jointMusclePosition["jRightBicFem_RUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightBicFem_RLL", jointMusclePosition["jRightBicFem_RLL_x"], "X", robot
+        "jRightBicFem_RLL", jointMusclePosition["jRightBicFem_RLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightBicFem_RLL", jointMusclePosition["jRightBicFem_RLL_y"], "Y", robot
+        "jRightBicFem_RLL", jointMusclePosition["jRightBicFem_RLL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftBicFem_LUL", jointMusclePosition["jLeftBicFem_LUL_x"], "X", robot
+        "jLeftBicFem_LUL", jointMusclePosition["jLeftBicFem_LUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftBicFem_LUL", jointMusclePosition["jLeftBicFem_LUL_y"], "Y", robot
+        "jLeftBicFem_LUL", jointMusclePosition["jLeftBicFem_LUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftBicFem_LLL", jointMusclePosition["jLeftBicFem_LLL_x"], "X", robot
+        "jLeftBicFem_LLL", jointMusclePosition["jLeftBicFem_LLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftBicFem_LLL", jointMusclePosition["jLeftBicFem_LLL_y"], "Y", robot
+        "jLeftBicFem_LLL", jointMusclePosition["jLeftBicFem_LLL"]["Y"], "Y", robot
     )
 
     # Rectus femoris
     setJointPosition(
-        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP_x"], "X", robot
+        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP_y"], "Y", robot
+        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP_z"], "Z", robot
+        "jRightRecFem_RP", jointMusclePosition["jRightRecFem_RP"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightRecFem_RLL", jointMusclePosition["jRightRecFem_RLL_x"], "X", robot
+        "jRightRecFem_RLL", jointMusclePosition["jRightRecFem_RLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightRecFem_RLL", jointMusclePosition["jRightRecFem_RLL_y"], "Y", robot
+        "jRightRecFem_RLL", jointMusclePosition["jRightRecFem_RLL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP_x"], "X", robot
+        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP_y"], "Y", robot
+        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP_z"], "Z", robot
+        "jLeftRecFem_LP", jointMusclePosition["jLeftRecFem_LP"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftRecFem_LLL", jointMusclePosition["jLeftRecFem_LLL_x"], "X", robot
+        "jLeftRecFem_LLL", jointMusclePosition["jLeftRecFem_LLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftRecFem_LLL", jointMusclePosition["jLeftRecFem_LLL_y"], "Y", robot
+        "jLeftRecFem_LLL", jointMusclePosition["jLeftRecFem_LLL"]["Y"], "Y", robot
     )
 
     # Tibialis anterior
     setJointPosition(
-        "jRightTibAnt_RLL", jointMusclePosition["jRightTibAnt_RLL_x"], "X", robot
+        "jRightTibAnt_RLL", jointMusclePosition["jRightTibAnt_RLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightTibAnt_RLL", jointMusclePosition["jRightTibAnt_RLL_y"], "Y", robot
+        "jRightTibAnt_RLL", jointMusclePosition["jRightTibAnt_RLL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightTibAnt_RF", jointMusclePosition["jRightTibAnt_RF_x"], "X", robot
+        "jRightTibAnt_RF", jointMusclePosition["jRightTibAnt_RF"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightTibAnt_RF", jointMusclePosition["jRightTibAnt_RF_y"], "Y", robot
+        "jRightTibAnt_RF", jointMusclePosition["jRightTibAnt_RF"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftTibAnt_LLL", jointMusclePosition["jLeftTibAnt_LLL_x"], "X", robot
+        "jLeftTibAnt_LLL", jointMusclePosition["jLeftTibAnt_LLL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftTibAnt_LLL", jointMusclePosition["jLeftTibAnt_LLL_y"], "Y", robot
+        "jLeftTibAnt_LLL", jointMusclePosition["jLeftTibAnt_LLL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftTibAnt_LF", jointMusclePosition["jLeftTibAnt_LF_x"], "X", robot
+        "jLeftTibAnt_LF", jointMusclePosition["jLeftTibAnt_LF"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftTibAnt_LF", jointMusclePosition["jLeftTibAnt_LF_y"], "Y", robot
+        "jLeftTibAnt_LF", jointMusclePosition["jLeftTibAnt_LF"]["Y"], "Y", robot
     )
 
     # Gastrocnemius medialis
     setJointPosition(
-        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL_x"], "X", robot
+        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL_y"], "Y", robot
+        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL_z"], "Z", robot
+        "jRightGasMed_RUL", jointMusclePosition["jRightGasMed_RUL"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF_z"], "Z", robot
+        "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF_x"], "X", robot
+        "jRightGasMed_RF", jointMusclePosition["jRightGasMed_RF"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL_x"], "X", robot
+        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL_y"], "Y", robot
+        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL_z"], "Z", robot
+        "jLeftGasMed_LUL", jointMusclePosition["jLeftGasMed_LUL"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF_z"], "Z", robot
+        "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF_x"], "X", robot
+        "jLeftGasMed_LF", jointMusclePosition["jLeftGasMed_LF"]["X"], "X", robot
     )
 
     # Gastrocnemius lateralis
     setJointPosition(
-        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL_x"], "X", robot
+        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL_y"], "Y", robot
+        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL_z"], "Z", robot
+        "jRightGasLat_RUL", jointMusclePosition["jRightGasLat_RUL"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF_z"], "Z", robot
+        "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF_x"], "X", robot
+        "jRightGasLat_RF", jointMusclePosition["jRightGasLat_RF"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL_x"], "X", robot
+        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL"]["X"], "X", robot
     )
     setJointPosition(
-        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL_y"], "Y", robot
+        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL"]["Y"], "Y", robot
     )
     setJointPosition(
-        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL_z"], "Z", robot
+        "jLeftGasLat_LUL", jointMusclePosition["jLeftGasLat_LUL"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF_z"], "Z", robot
+        "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF"]["Z"], "Z", robot
     )
     setJointPosition(
-        "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF_x"], "X", robot
+        "jLeftGasLat_LF", jointMusclePosition["jLeftGasLat_LF"]["X"], "X", robot
     )
+
 
     return robot

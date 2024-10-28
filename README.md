@@ -18,6 +18,8 @@ Therefore, the goal of the HMG is to develop an advanced human model that integr
 ## Dependencies 
 This library requires the following dependencies:
 
+- [``numpy``](https://github.com/numpy/numpy)
+- [``urchin``](https://github.com/fishbotics/urchin)
 - [``idyntree``](https://github.com/robotology/idyntree)
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
 
@@ -25,7 +27,7 @@ This library requires the following dependencies:
 
 Create and activate a brand new enviroment with the required dependencies:
 ```
-conda create -n hmgenv idyntree urdf-modifiers
+conda create -n hmgenv python numpy urchin idyntree urdf-modifiers
 conda activate hgmenv
 ```
 

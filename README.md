@@ -28,7 +28,7 @@ This library requires the following dependencies:
 Create and activate a brand new enviroment with the required dependencies:
 ```
 conda create -n hmgenv python numpy urchin idyntree urdf-modifiers
-conda activate hgmenv
+conda activate hmgenv
 ```
 
 ## Usage

@@ -18,30 +18,17 @@ Therefore, the goal of the HMG is to develop an advanced human model that integr
 ## Dependencies 
 This library requires the following dependencies:
 
+- [``numpy``](https://github.com/numpy/numpy)
+- [``urchin``](https://github.com/fishbotics/urchin)
 - [``idyntree``](https://github.com/robotology/idyntree)
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
-- [``urchin``](https://github.com/fishbotics/urchin.git) *(Note: the usage of `urchin` is a temporary step. Once the branch (`traversaro-patch-2`) is merged, it will be integrated into `urdf-modifiers`.)
 
 ## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
 
-- Create and activate a brand new enviroment
+Create and activate a brand new enviroment with the required dependencies:
 ```
-conda create -n name_new_env
-conda activate name_new_env
-```
-- Install `idyntree` following [these instructions](https://github.com/robotology/idyntree?tab=readme-ov-file#conda-recommended) [MATLAB bindings not required]
-- Install `urdf-modifiers`
-```
-git clone https://github.com/icub-tech-iit/urdf-modifiers.git
-cd urdf-modifiers
-pip install .
-```
-- Install `urchin`
-```
-git clone https://github.com/fishbotics/urchin.git
-cd urchin
-git checkout traversaro-patch-2
-pip install .
+conda create -n hmgenv python numpy urchin idyntree urdf-modifiers
+conda activate hmgenv
 ```
 
 ## Usage

@@ -15,6 +15,7 @@ import os
 import sys
 import idyntree.bindings as iDynTree
 from urdfModifiers.utils import *
+import re
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from src import *
@@ -41,6 +42,8 @@ URDF_MESHES_FILE_PATH = os.path.join(
     URDF_TEMPLATE_FILE_FOLDER,
     URDF_MESHES_FILE_FOLDER,
 )
+
+# URDF_MESHES_FILE_PATH = "package:/"
 
 URDF_FILE_FOLDER = "humanModels"
 URDF_FILE_NAME = input("\n[INPUT] Insert the model name: ") + ".urdf"
@@ -110,6 +113,25 @@ robot = updateRobotWithMeshAndMuscles(
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
 utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
 
+with open(URDF_FILE_PATH, "r") as file:
+    urdf_content = file.read()
+    
+def modify_mesh_line(match):
+    
+    filename = match.group(1)
+    scale_values = match.group(2)
+    
+    new_filename = "package://meshes/" + filename.split("\\")[-1]
+    
+    return f'<mesh filename="{new_filename}" scale="{scale_values}"/>'
+
+modified_urdf_content = re.sub(r'<mesh filename=".*?\\meshes\\(.*?)" scale="(.*?)"/>', modify_mesh_line, urdf_content)
+
+with open(URDF_FILE_PATH, "w") as file:
+    file.write(modified_urdf_content)
+    
+print("[OUTPUT] Model with \"package\" successfully created. \u2713")
+
 print("[OUTPUT] Model successfully created. \u2713")
 print("[OUTPUT] Model successfully saved. \u2713")
 print(
@@ -157,6 +179,33 @@ print(
 #################################################################
 # LOAD THE MODEL
 #################################################################
+
+package_value = os.getenv('package')
+
+if not package_value:
+    raise EnvironmentError("The environment variable 'package' is not set")
+
+with open(URDF_FILE_PATH, "r") as file:
+    urdf_content = file.read()
+    
+def modify_mesh_line2(match):
+    
+    filename = match.group(1)
+    scale_values = match.group(2)
+    
+    new_filename = f"{package_value}/" + filename.split("\\")[-1]
+    
+    return f'<mesh filename="{new_filename}" scale="{scale_values}"/>'
+
+modified_urdf_content = re.sub(r'<mesh filename=".*?//meshes/(.*?)" scale="(.*?)"/>', modify_mesh_line2, urdf_content)
+
+
+with open(URDF_FILE_PATH, "w") as file:
+    file.write(modified_urdf_content)
+
+print("[OUTPUT] Model with path successfully created. \u2713")
+
+
 
 dynComp = iDynTree.KinDynComputations()
 mdlLoader = iDynTree.ModelLoader()
@@ -263,3 +312,6 @@ if OPT_VISUALIZZATION_MODEL:
 
 if OPT_VISUALIZZATION_MEASUREOFCONTROL:
     measurementControl(linkMass, linkDimensions)
+
+
+

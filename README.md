@@ -41,7 +41,7 @@ cd human-model-generator/code
 - Generate the model by running `python main.py` 
 - The URDF model will be saved in the folder `models/humanModels`
 
-### Citing this work
+## Citing this work
 If you find this work useful, please use the following bibtex as a reference:
 
 ```

@@ -41,6 +41,21 @@ cd human-model-generator/code
 - Generate the model by running `python main.py` 
 - The URDF model will be saved in the folder `models/humanModels`
 
+### Citing this work
+If you find this work useful, please use the following bibtex as a reference:
+
+```
+@inproceedings{HMGsiamoc,
+	title = {An automatic anthropometric model generation tool for scalable human whole-body musculoskeletal modeling},
+	url = {https://doi.org/10.6092/unibo/amsacta/7898},
+	doi = {10.6092/unibo/amsacta/7898},
+	series = {Proceedings {SIAMOC}},
+	booktitle = {Proceedings {XXIV} Congresso {SIAMOC} 2024},
+	author = {Fiori, Lorenzo and Latella, Claudia and Tatarelli, Antonella and Pucci, Daniele},
+	date = {2024}
+}
+```
+
 ## License
 The meshes for the links are derived from the [Blendswap model](https://blendswap.com/blend/11604) under the [CC-BY license](https://creativecommons.org/share-your-work/cclicenses/), whereas the meshes for the muscles are derived from [BodyParts3D](https://lifesciencedb.jp/bp3d/?lng=en) and [Blendswap](https://blendswap.com/blend/26915), both under the [CC-BY-SA license](https://creativecommons.org/licenses/by-sa/2.0/deed.en).
 All the meshes were trimmed, morphed, and totally or partially reconstructed to achieve the desired shape and topology.

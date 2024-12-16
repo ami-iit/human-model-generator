@@ -16,6 +16,7 @@ import sys
 import idyntree.bindings as iDynTree
 from urdfModifiers.utils import *
 import re
+import resolve_robotics_uri_py
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from src import *
@@ -180,10 +181,9 @@ print(
 # LOAD THE MODEL
 #################################################################
 
-package_value = os.getenv('package')
 
-if not package_value:
-    raise EnvironmentError("The environment variable 'package' is not set")
+directory_meshes_path = resolve_robotics_uri_py.resolve_robotics_uri("package://code/models/humanModelTemplate/meshes/Head.stl")
+local_meshes_path = os.path.dirname(directory_meshes_path)
 
 with open(URDF_FILE_PATH, "r") as file:
     urdf_content = file.read()
@@ -193,7 +193,7 @@ def modify_mesh_line2(match):
     filename = match.group(1)
     scale_values = match.group(2)
     
-    new_filename = f"{package_value}/" + filename.split("\\")[-1]
+    new_filename = f"{local_meshes_path}/" + filename.split("\\")[-1]
     
     return f'<mesh filename="{new_filename}" scale="{scale_values}"/>'
 

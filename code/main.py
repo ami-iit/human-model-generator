@@ -17,6 +17,7 @@ import idyntree.bindings as iDynTree
 from urdfModifiers.utils import *
 import re
 import resolve_robotics_uri_py
+from urchin import URDF
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from src import *
@@ -111,25 +112,37 @@ robot = updateRobotWithMeshAndMuscles(
     OPT_COLOR_MUSCLE_MESH,
 )
 
+print("Robot links: ", len(robot.links))
+print("Robot joints: ", len(robot.joints))
+print("URDF File Path: ", URDF_FILE_PATH)
+
+human_name = robot.name
+human_links = robot.links
+human_joints = robot.joints
+
+human = URDF(name=human_name, links=human_links, joints=human_joints)
+human.save(URDF_FILE_NAME)
+
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
-utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
+# utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
 
-with open(URDF_FILE_PATH, "r") as file:
-    urdf_content = file.read()
-    
-def modify_mesh_line(match):
-    
-    filename = match.group(1)
-    scale_values = match.group(2)
-    
-    new_filename = "package://meshes/" + filename.split("\\")[-1]
-    
-    return f'<mesh filename="{new_filename}" scale="{scale_values}"/>'
 
-modified_urdf_content = re.sub(r'<mesh filename=".*?\\meshes\\(.*?)" scale="(.*?)"/>', modify_mesh_line, urdf_content)
+# with open(URDF_FILE_PATH, "r") as file:
+#     urdf_content = file.read()
+    
+# def modify_mesh_line(match):
+    
+#     filename = match.group(1)
+#     scale_values = match.group(2)
+    
+#     new_filename = "package://meshes/" + filename.split("\\")[-1]
+    
+#     return f'<mesh filename="{new_filename}" scale="{scale_values}"/>'
 
-with open(URDF_FILE_PATH, "w") as file:
-    file.write(modified_urdf_content)
+# modified_urdf_content = re.sub(r'<mesh filename=".*?\\meshes\\(.*?)" scale="(.*?)"/>', modify_mesh_line, urdf_content)
+
+# with open(URDF_FILE_PATH, "w") as file:
+#     file.write(modified_urdf_content)
     
 print("[OUTPUT] Model with \"package\" successfully created. \u2713")
 

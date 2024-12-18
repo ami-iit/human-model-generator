@@ -63,9 +63,10 @@ def updateRobotWithMeshAndMuscles(
                 name=link_name,
                 geometry=Geometry(
                     mesh=Mesh(
-                        filename=os.path.join(mesh_folder, f"{link_name}.stl"),
+                        # filename=os.path.join(mesh_folder, f"{link_name}.stl"),
+                        filename = "package://meshes/" + f"{link_name}.stl",
                         scale=[scale["X"], scale["Y"], scale["Z"]],
-                        combine=False,
+                        combine=False, lazy_filename=True
                     )
                 ),
                 origin=original_origin,
@@ -82,7 +83,8 @@ def updateRobotWithMeshAndMuscles(
                     name=muscle,
                     geometry=Geometry(
                         mesh=Mesh(
-                            filename=os.path.join(mesh_folder, f"{muscle}.stl"),
+                            # filename=os.path.join(mesh_folder, f"{muscle}.stl"),
+                            filename="package://meshes/" + f"{muscle}.stl", lazy_filename=True,
                             scale=[
                                 muscle_scale["X"],
                                 muscle_scale["Y"],

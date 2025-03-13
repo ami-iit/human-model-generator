@@ -40,13 +40,50 @@ def createScalingParamMesh(scalingParam, meshLinksName, mesh_name_mapping):
     return scalingParamMesh
 
 
-def updateRobotWithMeshAndMuscles(
+
+def updateRobotWithMuscles(
     scalingParamMesh,
     map_link_to_muscles,
     mesh_folder,
     robot,
-    OPT_COLOR_LINK_MESH,
     OPT_COLOR_MUSCLE_MESH,
+):
+
+    robot.materials.clear()
+
+    for link in robot.links:
+        link_name = link.name
+        if link_name in map_link_to_muscles:
+            original_visual = link.visuals[0]
+            original_origin = original_visual.origin
+            muscles = map_link_to_muscles[link_name]
+            for muscle in muscles:
+                muscle_scale = scalingParamMesh[link_name]
+                muscle_visual = Visual(
+                    name=muscle,
+                    geometry=Geometry(
+                        mesh=Mesh(
+                            filename=os.path.join(mesh_folder, f"{muscle}.stl"),
+                            scale=[
+                                muscle_scale["X"],
+                                muscle_scale["Y"],
+                                muscle_scale["Z"],
+                            ],
+                            combine=False,
+                        )
+                    ),
+                    origin=original_origin,
+                    material=Material(name="muscle", color=OPT_COLOR_MUSCLE_MESH),
+                )
+                link.visuals.append(muscle_visual)
+
+    return robot
+
+def updateRobotWithMesh(
+    scalingParamMesh,
+    mesh_folder,
+    robot,
+    OPT_COLOR_LINK_MESH,
 ):
 
     robot.materials.clear()
@@ -73,27 +110,42 @@ def updateRobotWithMeshAndMuscles(
             )
             link.visuals = []
             link.visuals.append(visual)
+            
+    return robot
 
-        if link_name in map_link_to_muscles:
-            muscles = map_link_to_muscles[link_name]
-            for muscle in muscles:
-                muscle_scale = scalingParamMesh[link_name]
-                muscle_visual = Visual(
-                    name=muscle,
-                    geometry=Geometry(
-                        mesh=Mesh(
-                            filename=os.path.join(mesh_folder, f"{muscle}.stl"),
-                            scale=[
-                                muscle_scale["X"],
-                                muscle_scale["Y"],
-                                muscle_scale["Z"],
-                            ],
-                            combine=False,
-                        )
-                    ),
-                    origin=original_origin,
-                    material=Material(name="muscle", color=OPT_COLOR_MUSCLE_MESH),
-                )
-                link.visuals.append(muscle_visual)
 
+def updateRobotWithBones(
+    scalingParamMesh,
+    map_link_to_spinal_cord,
+    URDF_MESHES_FILE_PATH,
+    robot,
+    OPT_COLOR_BONES_MESH,
+):
+    robot.materials.clear()
+
+    for link in robot.links:
+        link_name = link.name
+        
+        if link_name in map_link_to_spinal_cord:
+            bone = map_link_to_spinal_cord.get(link_name)
+            bone_scale = scalingParamMesh[link_name]
+            original_visual = link.visuals[0]
+            original_origin = original_visual.origin
+            
+            bone_visual = Visual(
+                name=bone,
+                geometry=Geometry(
+                    mesh=Mesh(
+                        filename=os.path.join(URDF_MESHES_FILE_PATH, f"{bone}.stl"),
+                        scale=[bone_scale["X"], bone_scale["Y"], bone_scale["Z"]],
+                        combine=False,
+                    )
+                ),
+                origin=original_origin,
+                material=Material(name="bone", color=OPT_COLOR_BONES_MESH),
+            )
+            link.visuals.append(bone_visual)
+            # link.visuals.pop(0)
+            
+    
     return robot

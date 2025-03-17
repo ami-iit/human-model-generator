@@ -274,6 +274,9 @@ if OPT_VISUALIZZATION_MODEL:
     viz.camera().animator().enableMouseControl(True)
 
     viz.addModel(mdlLoader.model(), "ModelVisualizer")
+    # modelViz = viz.modelViz("ModelVisualizer")
+    # modelViz.setModelColor(iDynTree.ColorViz(0.4, 0.4, 0.4, 0.5))
+    
 
     gravity = [0.0, 0.0, -9.81]
     quaternion_idyn = iDynTree.Vector4([1, 0, 0, 0])

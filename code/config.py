@@ -14,9 +14,9 @@ OPT_VISUALIZATION_SPINALCORD = True  # 'True' or 'False
 
 
 
-OPT_COLOR_LINK_MESH = [0.9922, 0.8667, 0.7922, 0.1]
-OPT_COLOR_MUSCLE_MESH = [0.9922, 0.8667, 0.7922, 0.1]
-OPT_COLOR_SPINALCORD_MESH = [1.0, 1.0, 1.0, 1.0]
+OPT_COLOR_LINK_MESH = [0.9922, 0.8667, 0.7922, 1.0]
+OPT_COLOR_MUSCLE_MESH = [0.9922, 0.8667, 0.7922, 1.0]
+OPT_COLOR_SPINALCORD_MESH = [0.9922, 0.8667, 0.7922, 1.0]
 
 
 """ ANTHROPOMETRIC MEASUREMENTS"""
@@ -29,12 +29,9 @@ m = 59.0
 from src import linkDimensions
 
 linkDimensions["Neck"]["X"] = linkDimensions["Neck"]["Y"] = 0.1003184713
-linkDimensions["T8"]["X"] = 0.06
-linkDimensions["T12"]["X"] = 0.06
-linkDimensions["L3"]["X"] = 0.06
-linkDimensions["L5"]["X"] = 0.06
+linkDimensions["T8"]["X"] = linkDimensions["T12"]["X"] = linkDimensions["L3"]["X"] = linkDimensions["L5"]["X"] = 0.06
 linkDimensions["Pelvis"]["X"] = 0.225
-linkDimensions["Shoulder"]["X"] = linkDimensions["Shoulder"]["Z"] = 0.115
+linkDimensions["Shoulder"]["Z"] = 0.115
 linkDimensions["UpperArm"]["X"] = linkDimensions["UpperArm"]["Z"] = 0.0923566879
 linkDimensions["ForeArm"]["X"] = linkDimensions["ForeArm"]["Z"] = 0.0700636942675159
 linkDimensions["Hand"]["Z"] = 0.025

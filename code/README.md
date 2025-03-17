@@ -25,7 +25,8 @@ Below are the parameters that can be manually modified to configure the model. T
 ## How to measure:
 Ensure to follow these guidelines carefully to obtain accurate measurements for configuring the model correctly.
 
-### Neck
+### Neck 
+
 ![DSC06733-Enhanced-NR](https://github.com/user-attachments/assets/462c778c-62e2-423c-a258-e70337086599)
 To measure the neck diameter, first measure the neck circumference at the base of the neck using a measuring tape. Then, calculate the diameter using the formula:
 
@@ -45,14 +46,14 @@ To determine the shoulder height, position yourself in a T-pose and measure the 
 ![DSC06756-Enhanced-NR](https://github.com/user-attachments/assets/c352de44-5d55-4d0b-9ce6-c49a2368474b)
 
 
-### Upper Arm and Forearm
+### Upper Arm and Forearm 
 ![DSC06750-Enhanced-NR](https://github.com/user-attachments/assets/4502fff4-948d-4b0e-8547-cd14a8d4e6cd)
 ![DSC06753-Enhanced-NR](https://github.com/user-attachments/assets/175b7286-d4e3-44ad-b1a0-5e343a70213c)
 Measure the circumference of the upper arm and forearm. Then, calculate the diameter using:
 
 $d = \frac{\text{circumference}}{3.14}$
 
-### Hand
+### Hand 
 Refer to the image to see how to measure hand width and height.
 ![DSC06784-Enhanced-NR](https://github.com/user-attachments/assets/9f9dc0c3-941d-44cf-b2b7-41a428d54aa8)
 ![DSC06778-Enhanced-NR](https://github.com/user-attachments/assets/cfa03a50-a5d5-4a78-9136-43bdddaedb8d)

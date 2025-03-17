@@ -4,10 +4,11 @@ The Human Model Generator (HMG) models the human musculoskeletal system as a rig
 
 To provide a clearer view of the model created, below are two images.
 The first image highlights the meshes of the links and muscles, showing the general structure of the musculoskeletal system: 
-![Progetto senza titolo (1)](https://github.com/user-attachments/assets/41c92839-3f1c-4390-a721-5de80bca9496)
+![Adobe Express - file](https://github.com/user-attachments/assets/77644cde-a191-478c-a6fa-6bbf9e8d2c61)
 
 The second image emphasizes the meshes of the spinal cord, from the pelvis to the neck, with a transparency effect applied to better distinguish this component within the model:
-![Progetto senza titolo (2)](https://github.com/user-attachments/assets/498d9e4d-b485-4102-82d2-5e5220c84696)
+![Adobe Express - file (1)](https://github.com/user-attachments/assets/e60464be-d354-461b-b5c7-cfdada3df1eb)
+
 
 
  ## References

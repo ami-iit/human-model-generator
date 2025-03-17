@@ -26,42 +26,43 @@ Below are the parameters that can be manually modified to configure the model. T
 Ensure to follow these guidelines carefully to obtain accurate measurements for configuring the model correctly.
 
 ### Neck
-![Neck Measurement](path/to/neck_image.jpg)
-To measure the neck diameter, first measure the neck circumference using a measuring tape. Then, calculate the diameter using the formula:
+![DSC06733-Enhanced-NR](https://github.com/user-attachments/assets/462c778c-62e2-423c-a258-e70337086599)
+To measure the neck diameter, first measure the neck circumference at the base of the neck using a measuring tape. Then, calculate the diameter using the formula:
 
 $d = \frac{\text{circumference}}{3.14}$
 
 ### Trunk Depth
-![Trunk Measurement](path/to/trunk_image.jpg)
-To measure the trunk depth, use the following formula:
-
-$ X = \frac{0.6 \times \text{depth}}{0.19} $
+![DSC06762-Enhanced-NR](https://github.com/user-attachments/assets/46ca71b0-409a-4279-a8f5-2e8e66544773)
+To measure the depth of the trunk links, first measure the trunk depth at the level of the mesosternum. Then, perform the following operation:
+$X = \frac{0.6 \times \text{depth}}{0.19}$
 
 ### Pelvis
-![Pelvis Measurement](path/to/pelvis_image.jpg)
-Refer to the image to see how to measure the pelvis depth.
+![DSC06769-Enhanced-NR](https://github.com/user-attachments/assets/a9af5a2a-f6b5-4f4f-93b6-fa03a7ec48cc)
+You can refer to the image for guidance on how to measure the pelvis depth. To do so, measure it at the height of the hip.
 
-### Shoulder Width
-![Shoulder Measurement](path/to/shoulder_image.jpg)
-To determine the shoulder width, first measure the total trunk width. Then, compute the shoulder width using:
+### Shoulder Height
+To determine the shoulder height, position yourself in a T-pose and measure the distance as shown in the figure:
+![DSC06756-Enhanced-NR](https://github.com/user-attachments/assets/c352de44-5d55-4d0b-9ce6-c49a2368474b)
 
-$ \text{Shoulder}[Z] = \frac{\text{trunk width}}{3} $
 
 ### Upper Arm and Forearm
-![Upper Arm Measurement](path/to/upper_arm_image.jpg)
-![Forearm Measurement](path/to/forearm_image.jpg)
+![DSC06750-Enhanced-NR](https://github.com/user-attachments/assets/4502fff4-948d-4b0e-8547-cd14a8d4e6cd)
+![DSC06753-Enhanced-NR](https://github.com/user-attachments/assets/175b7286-d4e3-44ad-b1a0-5e343a70213c)
 Measure the circumference of the upper arm and forearm. Then, calculate the diameter using:
 
 $d = \frac{\text{circumference}}{3.14}$
 
 ### Hand
 Refer to the image to see how to measure hand width and height.
-![Hand Measurement](path/to/hand_image.jpg)
+![DSC06784-Enhanced-NR](https://github.com/user-attachments/assets/9f9dc0c3-941d-44cf-b2b7-41a428d54aa8)
+![DSC06778-Enhanced-NR](https://github.com/user-attachments/assets/cfa03a50-a5d5-4a78-9136-43bdddaedb8d)
+
 
 ### Upper Leg and Lower Leg
-![Upper Leg Measurement](path/to/upper_leg_image.jpg)
-![Lower Leg Measurement](path/to/lower_leg_image.jpg)
-Measure the circumference of the upper leg and lower leg. Then, compute the diameter as:
+![DSC06789-Enhanced-NR](https://github.com/user-attachments/assets/4bb6365b-5f1c-4c9a-be70-114835850823)
+![DSC06801-Enhanced-NR](https://github.com/user-attachments/assets/eae2b492-dcbd-43c2-9ae4-0c7a64c47d70)
+
+Measure the circumference of the upper leg and lower leg. For the upper leg, measure the circumference at mid-thigh. For the lower leg, measure the circumference at mid-calf. Then, compute the diameter as:
 
 $d = \frac{\text{circumference}}{3.14}$
 

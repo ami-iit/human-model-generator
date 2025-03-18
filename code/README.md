@@ -25,45 +25,20 @@ Below are the parameters that can be manually modified to configure the model. T
 ## How to measure:
 Ensure to follow these guidelines carefully to obtain accurate measurements for configuring the model correctly.
 
-### Neck
-![Neck Measurement](path/to/neck_image.jpg)
-To measure the neck diameter, first measure the neck circumference using a measuring tape. Then, calculate the diameter using the formula:
+![Neck](https://github.com/user-attachments/assets/956a0e95-e0f5-4947-ac4b-a1a08a11a04a)
 
-$d = \frac{\text{circumference}}{3.14}$
+![Neck (1)](https://github.com/user-attachments/assets/988fc378-c929-4dcb-9eaa-a4e9381f1a01)
 
-### Trunk Depth
-![Trunk Measurement](path/to/trunk_image.jpg)
-To measure the trunk depth, use the following formula:
+![Neck (2)](https://github.com/user-attachments/assets/5a194839-7902-42c8-a628-4299d0b95dc6)
 
-$ X = \frac{0.6 \times \text{depth}}{0.19} $
+![Neck (3)](https://github.com/user-attachments/assets/8eb5ecf9-917d-4331-8104-c55cfc1e2157)
 
-### Pelvis
-![Pelvis Measurement](path/to/pelvis_image.jpg)
-Refer to the image to see how to measure the pelvis depth.
+![Neck (4)](https://github.com/user-attachments/assets/017c068d-af08-4e0c-8685-84332ceeb6d0)
 
-### Shoulder Width
-![Shoulder Measurement](path/to/shoulder_image.jpg)
-To determine the shoulder width, first measure the total trunk width. Then, compute the shoulder width using:
+![Neck (5)](https://github.com/user-attachments/assets/7f3d53d7-2503-4159-8808-07521d563ea4)
 
-$ \text{Shoulder}[Z] = \frac{\text{trunk width}}{3} $
+![Neck (6)](https://github.com/user-attachments/assets/34fd78ca-86b8-4ea3-99f6-c8fe10d2827d)
 
-### Upper Arm and Forearm
-![Upper Arm Measurement](path/to/upper_arm_image.jpg)
-![Forearm Measurement](path/to/forearm_image.jpg)
-Measure the circumference of the upper arm and forearm. Then, calculate the diameter using:
-
-$d = \frac{\text{circumference}}{3.14}$
-
-### Hand
-Refer to the image to see how to measure hand width and height.
-![Hand Measurement](path/to/hand_image.jpg)
-
-### Upper Leg and Lower Leg
-![Upper Leg Measurement](path/to/upper_leg_image.jpg)
-![Lower Leg Measurement](path/to/lower_leg_image.jpg)
-Measure the circumference of the upper leg and lower leg. Then, compute the diameter as:
-
-$d = \frac{\text{circumference}}{3.14}$
 
 
 

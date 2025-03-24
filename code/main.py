@@ -75,7 +75,7 @@ robot, gazebo_plugin_text = utils.load_robot_and_gazebo_plugins(
 # LINK
 #################################################################
 linkDimensions = scaleLink(H, linkDimensions)
-robot = modifyLinkDimention(linkDimensions, robot)
+robot = modifyLinkDimension(linkDimensions, robot)
 #################################################################
 # MASS
 #################################################################
@@ -98,14 +98,37 @@ scalingParam = getScalingParam(linkDimensions, linkDimensions_norm)
 scalingParamMesh = createScalingParamMesh(
     scalingParam, meshLinksName, mesh_name_mapping
 )
-robot = updateRobotWithMeshAndMuscles(
+
+if OPT_VISUALIZATION_MESH:
+    robot = updateRobotWithMesh(
+        scalingParamMesh,
+        URDF_MESHES_FILE_PATH,
+        robot,
+        OPT_COLOR_LINK_MESH,
+    )
+        
+    if OPT_VISUALIZATION_MUSCLES:
+        robot = updateRobotWithMuscles(
+            scalingParamMesh,
+            map_link_to_muscles,
+            URDF_MESHES_FILE_PATH,
+            robot,
+            OPT_COLOR_MUSCLE_MESH,
+        )
+    
+if OPT_VISUALIZATION_SPINALCORD:
+    robot = updateRobotWithBones(
     scalingParamMesh,
-    map_link_to_muscles,
+    map_link_to_spinal_cord,
     URDF_MESHES_FILE_PATH,
     robot,
-    OPT_COLOR_LINK_MESH,
-    OPT_COLOR_MUSCLE_MESH,
+    OPT_COLOR_SPINALCORD_MESH,
 )
+
+
+
+
+
 
 # Write URDF to a new file, also adding back the previously removed <gazebo> tags
 utils.write_urdf_to_file(robot, URDF_FILE_PATH, gazebo_plugin_text)
@@ -118,9 +141,11 @@ print(
         round(
             linkMass["Head_mass"]
             + linkMass["Neck_mass"]
-            + linkMass["UpperTrunk_mass"]
+            + linkMass["T8_mass"]
+            + linkMass["T12_mass"]
+            + linkMass["L3_mass"]
+            + linkMass["L5_mass"]
             + (linkMass["Shoulder_mass"] * 2)
-            + linkMass["LowerTrunk_mass"]
             + linkMass["Pelvis_mass"]
             + (linkMass["UpperArm_mass"] * 2)
             + (linkMass["ForeArm_mass"] * 2)
@@ -128,7 +153,8 @@ print(
             + (linkMass["UpperLeg_mass"] * 2)
             + (linkMass["LowerLeg_mass"] * 2)
             + (linkMass["Foot_mass"] * 2)
-            + (linkMass["Toe_mass"] * 2),
+            + (linkMass["Toe_mass"] * 2)
+            + (linkMass["Heel_mass"] * 2),
             2,
         )
     ),
@@ -141,8 +167,10 @@ print(
         round(
             linkDimensions["Head"]["Z"]
             + linkDimensions["Neck"]["Z"]
-            + linkDimensions["UpperTrunk"]["Z"]
-            + linkDimensions["LowerTrunk"]["Z"]
+            + linkDimensions["T8"]["Z"]
+            + linkDimensions["T12"]["Z"]
+            + linkDimensions["L3"]["Z"]
+            + linkDimensions["L5"]["Z"]
             + linkDimensions["Pelvis"]["Z"]
             + linkDimensions["UpperLeg"]["Z"]
             + linkDimensions["LowerLeg"]["Z"]
@@ -246,6 +274,9 @@ if OPT_VISUALIZZATION_MODEL:
     viz.camera().animator().enableMouseControl(True)
 
     viz.addModel(mdlLoader.model(), "ModelVisualizer")
+    # modelViz = viz.modelViz("ModelVisualizer")
+    # modelViz.setModelColor(iDynTree.ColorViz(0.4, 0.4, 0.4, 0.5))
+    
 
     gravity = [0.0, 0.0, -9.81]
     quaternion_idyn = iDynTree.Vector4([1, 0, 0, 0])

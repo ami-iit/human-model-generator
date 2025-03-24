@@ -5,7 +5,7 @@
 from applyScaling import *
 
 
-def modifyLinkDimention(linkDimensions, robot):
+def modifyLinkDimension(linkDimensions, robot):
     ##############################################################################################
     # LINK MODIFICATION
     ##############################################################################################
@@ -19,39 +19,74 @@ def modifyLinkDimention(linkDimensions, robot):
         "Pelvis", linkDimensions["Pelvis"]["X"], None, None, "X", "BOX", robot
     )  # width
 
-    # LOWER TRUNK
+    # L5
     setLinkLength(
-        "LowerTrunk",
-        linkDimensions["LowerTrunk"]["Z"],
+        "L5",
+        linkDimensions["L5"]["Z"],
         None,
-        linkDimensions["LowerTrunk"]["Z"] / 2,
+        linkDimensions["L5"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "LowerTrunk", linkDimensions["LowerTrunk"]["Y"], None, None, "Y", "BOX", robot
+        "L5", linkDimensions["L5"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "LowerTrunk", linkDimensions["LowerTrunk"]["X"], None, None, "X", "BOX", robot
+        "L5", linkDimensions["L5"]["X"], None, None, "X", "BOX", robot
     )  # width
-
-    # UPPER TRUNK
+    
+    # L3
     setLinkLength(
-        "UpperTrunk",
-        linkDimensions["UpperTrunk"]["Z"],
+        "L3",
+        linkDimensions["L3"]["Z"],
         None,
-        linkDimensions["UpperTrunk"]["Z"] / 2,
+        linkDimensions["L3"]["Z"] / 2,
         "Z",
         "BOX",
         robot,
     )
     setLinkLength(
-        "UpperTrunk", linkDimensions["UpperTrunk"]["Y"], None, None, "Y", "BOX", robot
+        "L3", linkDimensions["L3"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
-        "UpperTrunk", linkDimensions["UpperTrunk"]["X"], None, None, "X", "BOX", robot
+        "L3", linkDimensions["L3"]["X"], None, None, "X", "BOX", robot
     )  # width
+    
+    # T12
+    setLinkLength(
+        "T12",
+        linkDimensions["T12"]["Z"],
+        None,
+        linkDimensions["T12"]["Z"] / 2,
+        "Z",
+        "BOX",
+        robot,
+    )
+    setLinkLength(
+        "T12", linkDimensions["T12"]["Y"], None, None, "Y", "BOX", robot
+    )  # width
+    setLinkLength(
+        "T12", linkDimensions["T12"]["X"], None, None, "X", "BOX", robot
+    )  # width
+    
+    # T8
+    setLinkLength(
+        "T8",
+        linkDimensions["T8"]["Z"],
+        None,
+        linkDimensions["T8"]["Z"] / 2,
+        "Z",
+        "BOX",
+        robot,
+    )
+    setLinkLength(
+        "T8", linkDimensions["T8"]["Y"], None, None, "Y", "BOX", robot
+    )  # width
+    setLinkLength(
+        "T8", linkDimensions["T8"]["X"], None, None, "X", "BOX", robot
+    )  # width
+    
 
     # RIGHT SHOULDER
     setLinkLength(
@@ -239,12 +274,21 @@ def modifyLinkDimention(linkDimensions, robot):
     )
 
     # RIGHT TOE
-    setLinkLength("RightToe", linkDimensions["Toe"]["Z"], None, None, "Z", "BOX", robot)
+    setLinkLength("RightToe", linkDimensions["Toe"]["Z"], None, linkDimensions["Foot"]["Z"] / 2, "Z", "BOX", robot)
     setLinkLength(
         "RightToe", linkDimensions["Toe"]["Y"], None, None, "Y", "BOX", robot
     )  # width
     setLinkLength(
         "RightToe", linkDimensions["Toe"]["X"], None, None, "X", "BOX", robot
+    )  # depth
+    
+    # RIGHT HEEL
+    setLinkLength("RightHeel", linkDimensions["Heel"]["Z"], None, linkDimensions["Foot"]["Z"] / 2, "Z", "BOX", robot)
+    setLinkLength(
+        "RightHeel", linkDimensions["Heel"]["Y"], None, None, "Y", "BOX", robot
+    )  # width
+    setLinkLength(
+        "RightHeel", linkDimensions["Heel"]["X"], None, None, "X", "BOX", robot
     )  # depth
 
     # LEFT THIGH
@@ -293,7 +337,7 @@ def modifyLinkDimention(linkDimensions, robot):
     )  # depth
 
     # LEFT TOE
-    setLinkLength("LeftToe", linkDimensions["Toe"]["Z"], None, None, "Z", "BOX", robot)
+    setLinkLength("LeftToe", linkDimensions["Toe"]["Z"], None, linkDimensions["Foot"]["Z"] / 2, "Z", "BOX", robot)
     setLinkLength(
         "LeftToe", linkDimensions["Toe"]["Y"], None, None, "Y", "BOX", robot
     )  # width
@@ -301,6 +345,15 @@ def modifyLinkDimention(linkDimensions, robot):
         "LeftToe", linkDimensions["Toe"]["X"], None, None, "X", "BOX", robot
     )  # depth
 
+    # LEFT HEEL
+    setLinkLength("LeftHeel", linkDimensions["Heel"]["Z"], None, linkDimensions["Foot"]["Z"] / 2, "Z", "BOX", robot)
+    setLinkLength(
+        "LeftHeel", linkDimensions["Heel"]["Y"], None, None, "Y", "BOX", robot
+    )  # width
+    setLinkLength(
+        "LeftHeel", linkDimensions["Heel"]["X"], None, None, "X", "BOX", robot
+    )  # depth
+    
     return robot
 
 
@@ -311,12 +364,18 @@ def modifyLinkmass(linkMass, robot):
 
     # MASS PELVIS
     setMassPercentage("Pelvis", linkMass["Pelvis_mass"], "Z", robot)
-
-    # MASS LOWER TRUNK
-    setMassPercentage("LowerTrunk", linkMass["LowerTrunk_mass"], "Z", robot)
-
-    # MASS UPPER TRUNK
-    setMassPercentage("UpperTrunk", linkMass["UpperTrunk_mass"], "Z", robot)
+    
+    # MASS L5
+    setMassPercentage("L5", linkMass["L5_mass"], "Z", robot)
+    
+    # MASS L3
+    setMassPercentage("L3", linkMass["L3_mass"], "Z", robot)
+    
+    # MASS T12
+    setMassPercentage("T12", linkMass["T12_mass"], "Z", robot)
+    
+    # MASS T8
+    setMassPercentage("T8", linkMass["T8_mass"], "Z", robot)
 
     # MASS RIGHT SHOULDER
     setMassPercentage("RightShoulder", linkMass["Shoulder_mass"], "Z", robot)
@@ -368,9 +427,15 @@ def modifyLinkmass(linkMass, robot):
 
     # MASS RIGHT TOE
     setMassPercentage("RightToe", linkMass["Toe_mass"], "Z", robot)
+    
+    # MASS RIGHT HEEL
+    setMassPercentage("RightHeel", linkMass["Heel_mass"], "Z", robot)
 
     # MASS LEFT TOE
     setMassPercentage("LeftToe", linkMass["Toe_mass"], "Z", robot)
+    
+    # MASS LEFT HEEL
+    setMassPercentage("LeftHeel", linkMass["Heel_mass"], "Z", robot)
 
     return robot
 
@@ -380,13 +445,19 @@ def modifyJointPosition(jointPosition, robot):
     # JOINT MODIFICATION
     ##############################################################################################
 
-    # JOINT PELVI-LowerTrunk
+    # JOINT Pelvis-L5
     setJointPosition("jL5S1_rotx", jointPosition["jL5S1"]["Z"], "Z", robot)
+    
+    # JOINT L5-L3
+    setJointPosition("jL4L3_rotx", jointPosition["jL4L3"]["Z"], "Z", robot)
+    
+    # JOINT L3-T12
+    setJointPosition("jL1T12_rotx", jointPosition["jL1T12"]["Z"], "Z", robot)
 
-    # JOINT LowerTrunk-UpperTrunk
+    # JOINT T12-T8
     setJointPosition("jT9T8_rotx", jointPosition["jT9T8"]["Z"], "Z", robot)
 
-    # JOINT UpperTrunk-RightShoulder
+    # JOINT T8-RightShoulder
     setJointPosition(
         "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Z"], "Z", robot
     )
@@ -394,7 +465,7 @@ def modifyJointPosition(jointPosition, robot):
         "jC7RightShoulder_rotx", jointPosition["jC7RightShoulder"]["Y"], "Y", robot
     )
 
-    # JOINT UpperTrunk-LeftShoulder
+    # JOINT T8-LeftShoulder
     setJointPosition(
         "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Z"], "Z", robot
     )
@@ -402,7 +473,7 @@ def modifyJointPosition(jointPosition, robot):
         "jC7LeftShoulder_rotx", jointPosition["jC7LeftShoulder"]["Y"], "Y", robot
     )
 
-    # JOINT UPPERTRUNK - NECK
+    # JOINT T8 - NECK
     setJointPosition("jT1C7_rotx", jointPosition["jT1C7"]["Z"], "Z", robot)
 
     # JOINT NECK - HEAD
@@ -454,6 +525,14 @@ def modifyJointPosition(jointPosition, robot):
     setJointPosition(
         "jRightBallFoot_roty", jointPosition["jRightBallFoot"]["Z"], "Z", robot
     )
+    
+    # JOINT RIGHT HEEL
+    setJointPosition(
+        "jRightHeel_roty", jointPosition["jRightHeel"]["X"], "X", robot
+    )
+    setJointPosition(
+        "jRightHeel_roty", jointPosition["jRightHeel"]["Z"], "Z", robot
+    )
 
     # JOINT RIGHT FT SENSOR
     setJointPosition(
@@ -480,6 +559,14 @@ def modifyJointPosition(jointPosition, robot):
     )
     setJointPosition(
         "jLeftBallFoot_roty", jointPosition["jLeftBallFoot"]["Z"], "Z", robot
+    )
+    
+    # JOINT LEFT HEEL
+    setJointPosition(
+        "jLeftHeel_roty", jointPosition["jLeftHeel"]["X"], "X", robot
+    )
+    setJointPosition(
+        "jLeftHeel_roty", jointPosition["jLeftHeel"]["Z"], "Z", robot
     )
 
     # JOINT LEFT FT SENSOR

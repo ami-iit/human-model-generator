@@ -119,8 +119,12 @@ def scaleJoint(linkDimensions, jointPosition):
     jointPosition["jRightWrist"]["X"] = 0
     jointPosition["jRightWrist"]["Y"] = -linkDimensions["ForeArm"]["Y"]
 
+    palm_ratio = 0.45
+    palm_length = palm_ratio * linkDimensions["Hand"]["Y"]
+    finger_reach = linkDimensions["Hand"]["Y"] - palm_length
+
     jointPosition["jRightHandCOM"]["X"] = 0
-    jointPosition["jRightHandCOM"]["Y"] = -linkDimensions["Hand"]["Y"] / 2
+    jointPosition["jRightHandCOM"]["Y"] = -palm_length / 2
 
     jointPosition["jLeftShoulder"]["X"] = 0
     jointPosition["jLeftShoulder"]["Y"] = linkDimensions["T8"]["Y"]
@@ -132,7 +136,69 @@ def scaleJoint(linkDimensions, jointPosition):
     jointPosition["jLeftWrist"]["Y"] = linkDimensions["ForeArm"]["Y"]
 
     jointPosition["jLeftHandCOM"]["X"] = 0
-    jointPosition["jLeftHandCOM"]["Y"] = linkDimensions["Hand"]["Y"] / 2
+    jointPosition["jLeftHandCOM"]["Y"] = palm_length / 2
+
+    def set_finger_kinematics(prefix, sign_y, sign_x):
+        hand_x = linkDimensions["Hand"]["X"]
+        hand_z = linkDimensions["Hand"]["Z"]
+
+        index_len = 0.92 * finger_reach
+        middle_len = 1.00 * finger_reach
+        ring_len = 0.94 * finger_reach
+        pinkie_len = 0.82 * finger_reach
+        thumb_len = 0.70 * finger_reach
+
+        # Finger roots on distal palm edge, spread across the full palm width.
+        jointPosition[f"{prefix}_index_add"]["X"] = sign_x * 0.34 * hand_x
+        jointPosition[f"{prefix}_index_add"]["Y"] = sign_y * palm_length
+        jointPosition[f"{prefix}_index_add"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_middle_prox"]["X"] = sign_x * 0.11 * hand_x
+        jointPosition[f"{prefix}_middle_prox"]["Y"] = sign_y * palm_length
+        jointPosition[f"{prefix}_middle_prox"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_ring_prox"]["X"] = sign_x * -0.11 * hand_x
+        jointPosition[f"{prefix}_ring_prox"]["Y"] = sign_y * palm_length
+        jointPosition[f"{prefix}_ring_prox"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_pinkie_prox"]["X"] = sign_x * -0.34 * hand_x
+        jointPosition[f"{prefix}_pinkie_prox"]["Y"] = sign_y * palm_length
+        jointPosition[f"{prefix}_pinkie_prox"]["Z"] = 0.0
+
+        # Thumb base: lateral to the palm (outside palm width) and proximal.
+        jointPosition[f"{prefix}_thumb_add"]["X"] = sign_x * 0.56 * hand_x
+        jointPosition[f"{prefix}_thumb_add"]["Y"] = sign_y * (0.14 * palm_length)
+        jointPosition[f"{prefix}_thumb_add"]["Z"] = 0.02 * hand_z
+
+        # Intra-finger segments.
+        jointPosition[f"{prefix}_index_prox"]["X"] = 0.0
+        jointPosition[f"{prefix}_index_prox"]["Y"] = sign_y * (0.45 * index_len)
+        jointPosition[f"{prefix}_index_prox"]["Z"] = 0.0
+        jointPosition[f"{prefix}_index_dist"]["X"] = 0.0
+        jointPosition[f"{prefix}_index_dist"]["Y"] = sign_y * (0.33 * index_len)
+        jointPosition[f"{prefix}_index_dist"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_middle_dist"]["X"] = 0.0
+        jointPosition[f"{prefix}_middle_dist"]["Y"] = sign_y * (0.55 * middle_len)
+        jointPosition[f"{prefix}_middle_dist"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_ring_dist"]["X"] = 0.0
+        jointPosition[f"{prefix}_ring_dist"]["Y"] = sign_y * (0.55 * ring_len)
+        jointPosition[f"{prefix}_ring_dist"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_pinkie_dist"]["X"] = 0.0
+        jointPosition[f"{prefix}_pinkie_dist"]["Y"] = sign_y * (0.55 * pinkie_len)
+        jointPosition[f"{prefix}_pinkie_dist"]["Z"] = 0.0
+
+        jointPosition[f"{prefix}_thumb_prox"]["X"] = sign_x * 0.03 * hand_x
+        jointPosition[f"{prefix}_thumb_prox"]["Y"] = sign_y * (0.36 * thumb_len)
+        jointPosition[f"{prefix}_thumb_prox"]["Z"] = 0.0
+        jointPosition[f"{prefix}_thumb_dist"]["X"] = 0.0
+        jointPosition[f"{prefix}_thumb_dist"]["Y"] = sign_y * (0.28 * thumb_len)
+        jointPosition[f"{prefix}_thumb_dist"]["Z"] = 0.0
+
+    set_finger_kinematics("r", sign_y=-1.0, sign_x=1.0)
+    set_finger_kinematics("l", sign_y=1.0, sign_x=-1.0)
 
     jointPosition["jRightHip"]["X"] = 0
     jointPosition["jRightHip"]["Y"] = -(

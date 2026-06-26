@@ -244,9 +244,9 @@ def modifyLinkDimension(linkDimensions, robot):
         "ring_2": 0.45 * 0.94 * finger_reach,
         "pinkie_1": 0.55 * 0.75 * finger_reach,
         "pinkie_2": 0.45 * 0.75 * finger_reach,
-        "thumb_1": 0.45 * 0.70 * finger_reach,
-        "thumb_2": 0.32 * 0.70 * finger_reach,
-        "thumb_3": 0.23 * 0.70 * finger_reach,
+        "thumb_1": 0.15 * 0.70 * finger_reach,
+        "thumb_2": 0.40 * 0.70 * finger_reach,
+        "thumb_3": 0.40 * 0.70 * finger_reach,
     }
 
     def resize_finger_links(side_prefix, sign_y):

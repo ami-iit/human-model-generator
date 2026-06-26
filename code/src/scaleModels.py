@@ -190,11 +190,11 @@ def scaleJoint(linkDimensions, jointPosition):
         jointPosition[f"{prefix}_pinkie_dist"]["Y"] = sign_y * (0.55 * pinkie_len)
         jointPosition[f"{prefix}_pinkie_dist"]["Z"] = 0.0
 
-        jointPosition[f"{prefix}_thumb_prox"]["X"] = sign_x * 0.03 * hand_x
-        jointPosition[f"{prefix}_thumb_prox"]["Y"] = sign_y * (0.36 * thumb_len)
+        jointPosition[f"{prefix}_thumb_prox"]["X"] = 0.0
+        jointPosition[f"{prefix}_thumb_prox"]["Y"] = sign_y * (0.15 * thumb_len)
         jointPosition[f"{prefix}_thumb_prox"]["Z"] = 0.0
         jointPosition[f"{prefix}_thumb_dist"]["X"] = 0.0
-        jointPosition[f"{prefix}_thumb_dist"]["Y"] = sign_y * (0.28 * thumb_len)
+        jointPosition[f"{prefix}_thumb_dist"]["Y"] = sign_y * (0.40 * thumb_len)
         jointPosition[f"{prefix}_thumb_dist"]["Z"] = 0.0
 
     set_finger_kinematics("r", sign_y=-1.0, sign_x=1.0)

@@ -149,19 +149,19 @@ def scaleJoint(linkDimensions, jointPosition):
         thumb_len = 0.70 * finger_reach
 
         # Finger roots on distal palm edge, spread across the full palm width.
-        jointPosition[f"{prefix}_index_add"]["X"] = sign_x * 0.34 * hand_x
+        jointPosition[f"{prefix}_index_add"]["X"] = sign_x * 0.40 * hand_x
         jointPosition[f"{prefix}_index_add"]["Y"] = sign_y * palm_length
         jointPosition[f"{prefix}_index_add"]["Z"] = 0.0
 
-        jointPosition[f"{prefix}_middle_prox"]["X"] = sign_x * 0.11 * hand_x
+        jointPosition[f"{prefix}_middle_prox"]["X"] = sign_x * 0.13 * hand_x
         jointPosition[f"{prefix}_middle_prox"]["Y"] = sign_y * palm_length
         jointPosition[f"{prefix}_middle_prox"]["Z"] = 0.0
 
-        jointPosition[f"{prefix}_ring_prox"]["X"] = sign_x * -0.11 * hand_x
+        jointPosition[f"{prefix}_ring_prox"]["X"] = sign_x * -0.13 * hand_x
         jointPosition[f"{prefix}_ring_prox"]["Y"] = sign_y * palm_length
         jointPosition[f"{prefix}_ring_prox"]["Z"] = 0.0
 
-        jointPosition[f"{prefix}_pinkie_prox"]["X"] = sign_x * -0.34 * hand_x
+        jointPosition[f"{prefix}_pinkie_prox"]["X"] = sign_x * -0.40 * hand_x
         jointPosition[f"{prefix}_pinkie_prox"]["Y"] = sign_y * palm_length
         jointPosition[f"{prefix}_pinkie_prox"]["Z"] = 0.0
 

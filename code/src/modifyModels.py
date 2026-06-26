@@ -253,11 +253,11 @@ def modifyLinkDimension(linkDimensions, robot):
         for key, length in finger_lengths.items():
             link_name = f"{side_prefix}_hand_{key}"
             if "thumb" in key:
-                x_size = 0.20 * linkDimensions["Hand"]["X"]
+                x_size = 0.22 * linkDimensions["Hand"]["X"]
             elif "pinkie" in key:
-                x_size = 0.14 * linkDimensions["Hand"]["X"]
+                x_size = 0.17 * linkDimensions["Hand"]["X"]
             else:
-                x_size = 0.16 * linkDimensions["Hand"]["X"]
+                x_size = 0.19 * linkDimensions["Hand"]["X"]
 
             z_size = 0.55 * linkDimensions["Hand"]["Z"]
 

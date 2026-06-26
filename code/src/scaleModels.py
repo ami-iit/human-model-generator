@@ -145,7 +145,7 @@ def scaleJoint(linkDimensions, jointPosition):
         index_len = 0.92 * finger_reach
         middle_len = 1.00 * finger_reach
         ring_len = 0.94 * finger_reach
-        pinkie_len = 0.82 * finger_reach
+        pinkie_len = 0.75 * finger_reach
         thumb_len = 0.70 * finger_reach
 
         # Finger roots on distal palm edge, spread across the full palm width.

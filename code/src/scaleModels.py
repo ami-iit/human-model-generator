@@ -198,7 +198,7 @@ def scaleJoint(linkDimensions, jointPosition):
         jointPosition[f"{prefix}_thumb_dist"]["Z"] = 0.0
 
     set_finger_kinematics("r", sign_y=-1.0, sign_x=1.0)
-    set_finger_kinematics("l", sign_y=1.0, sign_x=-1.0)
+    set_finger_kinematics("l", sign_y=1.0, sign_x=1.0)
 
     jointPosition["jRightHip"]["X"] = 0
     jointPosition["jRightHip"]["Y"] = -(

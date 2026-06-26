@@ -166,8 +166,8 @@ def scaleJoint(linkDimensions, jointPosition):
         jointPosition[f"{prefix}_pinkie_prox"]["Z"] = 0.0
 
         # Thumb base: lateral to the palm (outside palm width) and proximal.
-        jointPosition[f"{prefix}_thumb_add"]["X"] = sign_x * 0.56 * hand_x
-        jointPosition[f"{prefix}_thumb_add"]["Y"] = sign_y * (0.14 * palm_length)
+        jointPosition[f"{prefix}_thumb_add"]["X"] = sign_x * 0.46 * hand_x
+        jointPosition[f"{prefix}_thumb_add"]["Y"] = sign_y * (0.10 * palm_length)
         jointPosition[f"{prefix}_thumb_add"]["Z"] = 0.02 * hand_z
 
         # Intra-finger segments.
@@ -191,7 +191,7 @@ def scaleJoint(linkDimensions, jointPosition):
         jointPosition[f"{prefix}_pinkie_dist"]["Z"] = 0.0
 
         jointPosition[f"{prefix}_thumb_prox"]["X"] = 0.0
-        jointPosition[f"{prefix}_thumb_prox"]["Y"] = sign_y * (0.15 * thumb_len)
+        jointPosition[f"{prefix}_thumb_prox"]["Y"] = sign_y * (0.20 * thumb_len)
         jointPosition[f"{prefix}_thumb_prox"]["Z"] = 0.0
         jointPosition[f"{prefix}_thumb_dist"]["X"] = 0.0
         jointPosition[f"{prefix}_thumb_dist"]["Y"] = sign_y * (0.40 * thumb_len)

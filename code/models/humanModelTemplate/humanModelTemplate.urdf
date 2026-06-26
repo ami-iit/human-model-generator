@@ -1295,8 +1295,8 @@
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_thumb_add" type="revolute">
-        <origin xyz="0.02337486325639067 0.0030000000000002802 -0.034523838473554336" rpy="0 0 -0.75"/>
-        <axis xyz="0 0 1"/>
+        <origin xyz="0.02337486325639067 0.0030000000000002802 -0.034523838473554336" rpy="0.0 0.0 1.4"/>
+        <axis xyz="1 0 0"/>
         <parent link="RightHand"/>
         <child link="r_hand_thumb_1"/>
         <limit lower="0" upper="1.7453292519943295" effort="30" velocity="1.0"/>
@@ -1304,10 +1304,10 @@
     </joint>
     <joint name="r_thumb_prox" type="revolute">
         <origin xyz="0.03807465449956041 0.0034691095803252303 -0.003601744803549689" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 0 1"/>
         <parent link="r_hand_thumb_1"/>
         <child link="r_hand_thumb_2"/>
-        <limit lower="0.06335545184739416" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="-1.43117" upper="0.0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_thumb_dist" type="revolute">

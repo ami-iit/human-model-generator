@@ -1441,12 +1441,12 @@
         <axis xyz="0 0 1"/>
         <parent link="LeftHand"/>
         <child link="l_hand_index_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_middle_prox" type="revolute">
         <origin xyz="0.009599999999999831 -0.0015000000000003344 -0.10299999999999979" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="LeftHand"/>
         <child link="l_hand_middle_1"/>
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
@@ -1454,7 +1454,7 @@
     </joint>
     <joint name="l_pinkie_prox" type="revolute">
         <origin xyz="-0.035982322249527375 -0.0023883158589563247 -0.09206560929209864" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="LeftHand"/>
         <child link="l_hand_pinkie_1"/>
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
@@ -1462,7 +1462,7 @@
     </joint>
     <joint name="l_ring_prox" type="revolute">
         <origin xyz="-0.015417755558120076 -0.0018498137284708727 -0.09788067183884427" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="LeftHand"/>
         <child link="l_hand_ring_1"/>
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
@@ -1494,7 +1494,7 @@
     </joint>
     <joint name="l_ring_dist" type="revolute">
         <origin xyz="4.336808689942018e-18 -0.0015000000000000568 -0.03999999999999998" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="l_hand_ring_1"/>
         <child link="l_hand_ring_2"/>
         <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
@@ -1502,7 +1502,7 @@
     </joint>
     <joint name="l_pinkie_dist" type="revolute">
         <origin xyz="3.469446951953614e-18 -0.0014999999959518229 -0.03500000000409326" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="l_hand_pinkie_1"/>
         <child link="l_hand_pinkie_2"/>
         <limit lower="0.04852015320544236" upper="1.7763961126798287" effort="30" velocity="1.0"/>
@@ -1510,7 +1510,7 @@
     </joint>
     <joint name="l_middle_dist" type="revolute">
         <origin xyz="-3.122502256758253e-17 -0.0015000000000000568 -0.040000000000000036" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="l_hand_middle_1"/>
         <child link="l_hand_middle_2"/>
         <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
@@ -1518,7 +1518,7 @@
     </joint>
     <joint name="l_index_prox" type="revolute">
         <origin xyz="0.009192533317427629 1.3877787807814457e-16 -0.030713451316238316" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="l_hand_index_1"/>
         <child link="l_hand_index_2"/>
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
@@ -1526,7 +1526,7 @@
     </joint>
     <joint name="l_index_dist" type="revolute">
         <origin xyz="2.7755575615628914e-17 -0.0015000000000000568 -0.039999999999999925" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <parent link="l_hand_index_2"/>
         <child link="l_hand_index_3"/>
         <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>

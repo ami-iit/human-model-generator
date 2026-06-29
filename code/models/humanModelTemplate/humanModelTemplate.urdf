@@ -1297,7 +1297,7 @@
         <axis xyz="0 0 1"/>
         <parent link="RightHand"/>
         <child link="r_hand_index_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+            <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_middle_add" type="revolute">
@@ -1305,7 +1305,7 @@
         <axis xyz="0 0 1"/>
         <parent link="RightHand"/>
         <child link="r_hand_middle_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
         <joint name="r_ring_add" type="revolute">
@@ -1313,7 +1313,7 @@
         <axis xyz="0 0 1"/>
         <parent link="RightHand"/>
         <child link="r_hand_ring_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+            <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_pinkie_add" type="revolute">
@@ -1321,7 +1321,7 @@
         <axis xyz="0 0 1"/>
         <parent link="RightHand"/>
         <child link="r_hand_pinkie_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_index_prox" type="revolute">
@@ -1495,7 +1495,7 @@
         <axis xyz="0 0 1"/>
         <parent link="LeftHand"/>
         <child link="l_hand_index_1"/>
-        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_middle_add" type="revolute">
@@ -1503,7 +1503,7 @@
         <axis xyz="0 0 1"/>
         <parent link="LeftHand"/>
         <child link="l_hand_middle_1"/>
-        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_ring_add" type="revolute">
@@ -1511,7 +1511,7 @@
         <axis xyz="0 0 1"/>
         <parent link="LeftHand"/>
         <child link="l_hand_ring_1"/>
-        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_pinkie_add" type="revolute">
@@ -1519,7 +1519,7 @@
         <axis xyz="0 0 1"/>
         <parent link="LeftHand"/>
         <child link="l_hand_pinkie_1"/>
-        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
+        <limit lower="-0.2617993877991494" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_index_prox" type="revolute">

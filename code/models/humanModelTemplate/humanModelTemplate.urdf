@@ -474,10 +474,13 @@
     <link name="r_hand_index_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_middle_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_middle_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
-    <link name="r_hand_pinkie_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
-    <link name="r_hand_pinkie_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="r_hand_middle_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_ring_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_ring_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="r_hand_ring_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>    
+    <link name="r_hand_pinkie_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="r_hand_pinkie_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="r_hand_pinkie_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_thumb_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_thumb_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_thumb_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
@@ -619,10 +622,13 @@
     <link name="l_hand_index_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_middle_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_middle_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
-    <link name="l_hand_pinkie_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
-    <link name="l_hand_pinkie_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="l_hand_middle_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_ring_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_ring_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="l_hand_ring_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>    
+    <link name="l_hand_pinkie_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="l_hand_pinkie_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
+    <link name="l_hand_pinkie_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_thumb_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_thumb_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_thumb_3"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
@@ -1262,38 +1268,6 @@
 ##############################################################################
 # RIGHT HAND FINGERS (ergoCub-like naming)
 ##############################################################################
-    <joint name="r_index_add" type="revolute">
-        <origin xyz="0.022499999999999756 0.0015000000000003344 -0.06859999999999983" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <parent link="RightHand"/>
-        <child link="r_hand_index_1"/>
-        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="r_middle_prox" type="revolute">
-        <origin xyz="0.009600000000000192 0.0015000000000006675 -0.1029999999999997" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="RightHand"/>
-        <child link="r_hand_middle_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="r_pinkie_prox" type="revolute">
-        <origin xyz="-0.03598268094316618 0.0023777595791096284 -0.0920682813194636" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="RightHand"/>
-        <child link="r_hand_pinkie_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="r_ring_prox" type="revolute">
-        <origin xyz="-0.01541775555811984 0.0018498137284709282 -0.09788067183884414" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="RightHand"/>
-        <child link="r_hand_ring_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
     <joint name="r_thumb_add" type="revolute">
         <origin xyz="0.02337486325639067 0.0030000000000002802 -0.034523838473554336" rpy="0.0 0.0 1.4"/>
         <axis xyz="1 0 0"/>
@@ -1318,28 +1292,36 @@
         <limit lower="0" upper="1.7763961126798287" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="r_ring_dist" type="revolute">
-        <origin xyz="2.8275992658421956e-16 -0.0014999999970887745 -0.04000000000010917" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="r_hand_ring_1"/>
-        <child link="r_hand_ring_2"/>
-        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <joint name="r_index_add" type="revolute">
+        <origin xyz="0.022499999999999756 0.0015000000000003344 -0.06859999999999983" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="RightHand"/>
+        <child link="r_hand_index_1"/>
+        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="r_pinkie_dist" type="revolute">
-        <origin xyz="2.8102520310824275e-16 -0.0015141933068321678 -0.03499938883222847" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="r_hand_pinkie_1"/>
-        <child link="r_hand_pinkie_2"/>
-        <limit lower="0.04852015320544236" upper="1.7763961126798287" effort="30" velocity="1.0"/>
+    <joint name="r_middle_add" type="revolute">
+        <origin xyz="0.009600000000000192 0.0015000000000006675 -0.1029999999999997" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="RightHand"/>
+        <child link="r_hand_middle_1"/>
+        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="r_middle_dist" type="revolute">
-        <origin xyz="3.469446951953614e-16 -0.0014999999953827503 -0.04000000000017301" rpy="0 0 0"/>
-        <axis xyz="1 0 0"/>
-        <parent link="r_hand_middle_1"/>
-        <child link="r_hand_middle_2"/>
-        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <joint name="r_ring_add" type="revolute">
+        <origin xyz="-0.01541775555811984 0.0018498137284709282 -0.09788067183884414" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="RightHand"/>
+        <child link="r_hand_ring_1"/>
+        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="r_pinkie_add" type="revolute">
+        <origin xyz="-0.03598268094316618 0.0023777595791096284 -0.0920682813194636" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="RightHand"/>
+        <child link="r_hand_pinkie_1"/>
+        <limit lower="0" upper="0.2617993877991494" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_index_prox" type="revolute">
@@ -1350,12 +1332,60 @@
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="r_index_dist" type="revolute">
+        <joint name="r_middle_prox" type="revolute">
+        <origin xyz="0.009600000000000192 0.0015000000000006675 -0.1029999999999997" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_middle_1"/>
+        <child link="r_hand_middle_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+        <joint name="r_ring_prox" type="revolute">
+        <origin xyz="-0.01541775555811984 0.0018498137284709282 -0.09788067183884414" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_ring_1"/>
+        <child link="r_hand_ring_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="r_pinkie_prox" type="revolute">
+        <origin xyz="-0.03598268094316618 0.0023777595791096284 -0.0920682813194636" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_pinkie_1"/>
+        <child link="r_hand_pinkie_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+        <joint name="r_index_dist" type="revolute">
         <origin xyz="4.440892098500626e-16 -0.0014999999999996683 -0.039999999999999925" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <parent link="r_hand_index_2"/>
         <child link="r_hand_index_3"/>
         <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+        <joint name="r_middle_dist" type="revolute">
+        <origin xyz="3.469446951953614e-16 -0.0014999999953827503 -0.04000000000017301" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_middle_2"/>
+        <child link="r_hand_middle_3"/>
+        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="r_ring_dist" type="revolute">
+        <origin xyz="2.8275992658421956e-16 -0.0014999999970887745 -0.04000000000010917" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_ring_2"/>
+        <child link="r_hand_ring_3"/>
+        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="r_pinkie_dist" type="revolute">
+        <origin xyz="2.8102520310824275e-16 -0.0015141933068321678 -0.03499938883222847" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <parent link="r_hand_pinkie_2"/>
+        <child link="r_hand_pinkie_3"/>
+        <limit lower="0.04852015320544236" upper="1.7763961126798287" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
 ##############################################################################
@@ -1436,38 +1466,6 @@
 ##############################################################################
 # LEFT HAND FINGERS (ergoCub-like naming)
 ##############################################################################
-    <joint name="l_index_add" type="revolute">
-        <origin xyz="0.022499999999999958 -0.0015000000000005842 -0.06859999999999963" rpy="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <parent link="LeftHand"/>
-        <child link="l_hand_index_1"/>
-        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="l_middle_prox" type="revolute">
-        <origin xyz="0.009599999999999831 -0.0015000000000003344 -0.10299999999999979" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="LeftHand"/>
-        <child link="l_hand_middle_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="l_pinkie_prox" type="revolute">
-        <origin xyz="-0.035982322249527375 -0.0023883158589563247 -0.09206560929209864" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="LeftHand"/>
-        <child link="l_hand_pinkie_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
-    <joint name="l_ring_prox" type="revolute">
-        <origin xyz="-0.015417755558120076 -0.0018498137284708727 -0.09788067183884427" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="LeftHand"/>
-        <child link="l_hand_ring_1"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
-        <dynamics damping="2" friction="0"/>
-    </joint>
     <joint name="l_thumb_add" type="revolute">
         <origin xyz="0.023374863256390876 -0.003000000000000086 -0.03452383847355481" rpy="0 0 -1.4"/>
         <axis xyz="-1 0 0"/>
@@ -1492,28 +1490,36 @@
         <limit lower="-1.7763961126798287" upper="0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="l_ring_dist" type="revolute">
-        <origin xyz="4.336808689942018e-18 -0.0015000000000000568 -0.03999999999999998" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="l_hand_ring_1"/>
-        <child link="l_hand_ring_2"/>
-        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+    <joint name="l_index_add" type="revolute">
+        <origin xyz="0.022499999999999958 -0.0015000000000005842 -0.06859999999999963" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="LeftHand"/>
+        <child link="l_hand_index_1"/>
+        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="l_pinkie_dist" type="revolute">
-        <origin xyz="3.469446951953614e-18 -0.0014999999959518229 -0.03500000000409326" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="l_hand_pinkie_1"/>
-        <child link="l_hand_pinkie_2"/>
-        <limit lower="0.04852015320544236" upper="1.7763961126798287" effort="30" velocity="1.0"/>
+    <joint name="l_middle_add" type="revolute">
+        <origin xyz="0.009599999999999831 -0.0015000000000003344 -0.10299999999999979" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="LeftHand"/>
+        <child link="l_hand_middle_1"/>
+        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
-    <joint name="l_middle_dist" type="revolute">
-        <origin xyz="-3.122502256758253e-17 -0.0015000000000000568 -0.040000000000000036" rpy="0 0 0"/>
-        <axis xyz="-1 0 0"/>
-        <parent link="l_hand_middle_1"/>
-        <child link="l_hand_middle_2"/>
-        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+    <joint name="l_ring_add" type="revolute">
+        <origin xyz="-0.015417755558120076 -0.0018498137284708727 -0.09788067183884427" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="LeftHand"/>
+        <child link="l_hand_ring_1"/>
+        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="l_pinkie_add" type="revolute">
+        <origin xyz="-0.035982322249527375 -0.0023883158589563247 -0.09206560929209864" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <parent link="LeftHand"/>
+        <child link="l_hand_pinkie_1"/>
+        <limit lower="-0.2617993877991494" upper="0" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_index_prox" type="revolute">
@@ -1521,6 +1527,30 @@
         <axis xyz="-1 0 0"/>
         <parent link="l_hand_index_1"/>
         <child link="l_hand_index_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="l_middle_prox" type="revolute">
+        <origin xyz="0.009599999999999831 -0.0015000000000003344 -0.10299999999999979" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_middle_1"/>
+        <child link="l_hand_middle_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+        <joint name="l_ring_prox" type="revolute">
+        <origin xyz="-0.015417755558120076 -0.0018498137284708727 -0.09788067183884427" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_ring_1"/>
+        <child link="l_hand_ring_2"/>
+        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="l_pinkie_prox" type="revolute">
+        <origin xyz="-0.035982322249527375 -0.0023883158589563247 -0.09206560929209864" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_pinkie_1"/>
+        <child link="l_hand_pinkie_2"/>
         <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
@@ -1532,6 +1562,31 @@
         <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
+    <joint name="l_middle_dist" type="revolute">
+        <origin xyz="-3.122502256758253e-17 -0.0015000000000000568 -0.040000000000000036" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_middle_2"/>
+        <child link="l_hand_middle_3"/>
+        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="l_ring_dist" type="revolute">
+        <origin xyz="4.336808689942018e-18 -0.0015000000000000568 -0.03999999999999998" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_ring_2"/>
+        <child link="l_hand_ring_3"/>
+        <limit lower="0" upper="1.7165313193364231" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+    <joint name="l_pinkie_dist" type="revolute">
+        <origin xyz="3.469446951953614e-18 -0.0014999999959518229 -0.03500000000409326" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <parent link="l_hand_pinkie_2"/>
+        <child link="l_hand_pinkie_3"/>
+        <limit lower="0.04852015320544236" upper="1.7763961126798287" effort="30" velocity="1.0"/>
+        <dynamics damping="2" friction="0"/>
+    </joint>
+
 ##############################################################################
 # RIGHT HIP
 ##############################################################################

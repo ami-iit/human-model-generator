@@ -55,6 +55,19 @@ def scaleLink(H, linkDimensions):
     linkDimensions["Heel"]["X"] = linkDimensions["Foot"]["X"] / 100
     linkDimensions["Heel"]["Y"] = linkDimensions["Foot"]["Y"]
     linkDimensions["Heel"]["Z"] = linkDimensions["Foot"]["Z"] 
+
+    # Finger phalanx dimensions — scale uniformly with the hand length
+    finger_types = [
+        "hand_index_1", "hand_index_2", "hand_index_3",
+        "hand_middle_1", "hand_middle_2", "hand_middle_3",
+        "hand_ring_1", "hand_ring_2", "hand_ring_3",
+        "hand_pinkie_1", "hand_pinkie_2", "hand_pinkie_3",
+        "hand_thumb_1", "hand_thumb_2", "hand_thumb_3",
+    ]
+    for ft in finger_types:
+        linkDimensions[ft]["X"] = linkDimensions["Hand"]["Y"]
+        linkDimensions[ft]["Y"] = linkDimensions["Hand"]["Y"]
+        linkDimensions[ft]["Z"] = linkDimensions["Hand"]["Y"]
     
     
     

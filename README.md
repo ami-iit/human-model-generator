@@ -7,8 +7,13 @@ The movement of the human body is made possible through the synergistic action o
 Musculoskeletal models offer a valuable approximation of the human anatomy and they are used extensively in fields like biomechanics, robotics, and computer simulations to study and mimic human movement. Muscle modeling is essential for a comprehensive understanding of human movement. This involves the simulation of the behavior of muscles, including their activation patterns, force production, and interaction with the skeletal system. Accurate muscle models can predict how whole-body movement and performance are affected by changes in muscle strength, coordination, and fatigue. However, for a more accurate representation, additional data is required to customize models for different subjects, such as inertial parameters of body segments and anthropometric measurements.
 For a more accurate representation of the human torso, the model was designed by following the spinal cord, dividing it into four areas made up of a series of vertebrae. The four links were constructed by first selecting the vertebrae to highlight and then building the links based on a [table](link alla tabella) that defines the length of each vertebra in proportion to the total length of the spinal cord.
 Therefore, the goal of the HMG is to develop an advanced human model that integrates both skeletal and muscular information. This model not only includes detailed anatomical and inertial data, but it is also scalable to accommodate the specific features of each human subject. The HMG also incorporates meshes for both the links and muscles, which are modeled to enhance the visual and physical representation of the human body. Additionally, to fully visualize the model, meshes for the spinal cord were added, extending from the pelvis to the neck.
+The model also includes articulated fingers on both hands: 5 fingers per hand, 3 phalanges per finger.
 
-![22 links (1)](https://github.com/user-attachments/assets/13402460-d29d-4040-b83a-a9c25f058eff)
+
+
+
+
+![Human model overview](https://github.com/user-attachments/assets/13402460-d29d-4040-b83a-a9c25f058eff)
 
 
 ## Dependencies 

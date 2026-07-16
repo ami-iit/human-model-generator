@@ -13,7 +13,8 @@ The model also includes articulated fingers on both hands: 5 fingers per hand, 3
 
 
 
-![Human model overview](https://github.com/user-attachments/assets/13402460-d29d-4040-b83a-a9c25f058eff)
+<img width="1240" height="987" alt="human-model-generator" src="https://github.com/user-attachments/assets/4f605451-9a75-465a-8cf3-a971e12074c2" />
+
 
 
 ## Dependencies 

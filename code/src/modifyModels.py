@@ -6,6 +6,9 @@ from applyScaling import *
 
 
 def modifyLinkDimension(linkDimensions, robot):
+    palm_ratio = 0.45
+    palm_length = palm_ratio * linkDimensions["Hand"]["Y"]
+
     ##############################################################################################
     # LINK MODIFICATION
     ##############################################################################################
@@ -175,9 +178,9 @@ def modifyLinkDimension(linkDimensions, robot):
     # RIGHT HAND
     setLinkLength(
         "RightHand",
-        linkDimensions["Hand"]["Y"],
+        palm_length,
         None,
-        -linkDimensions["Hand"]["Y"] / 2,
+        -palm_length / 2,
         "Y",
         "BOX",
         robot,
@@ -214,9 +217,9 @@ def modifyLinkDimension(linkDimensions, robot):
     # LEFT HAND
     setLinkLength(
         "LeftHand",
-        linkDimensions["Hand"]["Y"],
+        palm_length,
         None,
-        linkDimensions["Hand"]["Y"] / 2,
+        palm_length / 2,
         "Y",
         "BOX",
         robot,
@@ -227,6 +230,46 @@ def modifyLinkDimension(linkDimensions, robot):
     setLinkLength(
         "LeftHand", linkDimensions["Hand"]["Z"], None, None, "Z", "BOX", robot
     )
+
+    # FINGERS (visible phalanges)
+    finger_reach = linkDimensions["Hand"]["Y"] - palm_length
+
+    finger_lengths = {
+        "index_1": 0.45 * 0.92 * finger_reach,
+        "index_2": 0.33 * 0.92 * finger_reach,
+        "index_3": 0.22 * 0.92 * finger_reach,
+        "middle_1": 0.45 * finger_reach,
+        "middle_2": 0.33 * finger_reach,
+        "middle_3": 0.22 * finger_reach,
+        "ring_1": 0.45 * 0.94 * finger_reach,
+        "ring_2": 0.33 * 0.94 * finger_reach,
+        "ring_3": 0.22 * 0.94 * finger_reach,
+        "pinkie_1": 0.45 * 0.75 * finger_reach,
+        "pinkie_2": 0.33 * 0.75 * finger_reach,
+        "pinkie_3": 0.22 * 0.75 * finger_reach,
+        "thumb_1": 0.20 * 0.70 * finger_reach,
+        "thumb_2": 0.40 * 0.70 * finger_reach,
+        "thumb_3": 0.40 * 0.70 * finger_reach,
+    }
+
+    def resize_finger_links(side_prefix, sign_y):
+        for key, length in finger_lengths.items():
+            link_name = f"{side_prefix}_hand_{key}"
+            if "thumb" in key:
+                x_size = 0.22 * linkDimensions["Hand"]["X"]
+            elif "pinkie" in key:
+                x_size = 0.17 * linkDimensions["Hand"]["X"]
+            else:
+                x_size = 0.19 * linkDimensions["Hand"]["X"]
+
+            z_size = 0.55 * linkDimensions["Hand"]["Z"]
+
+            setLinkLength(link_name, length, None, sign_y * length / 2, "Y", "BOX", robot)
+            setLinkLength(link_name, x_size, None, None, "X", "BOX", robot)
+            setLinkLength(link_name, z_size, None, None, "Z", "BOX", robot)
+
+    resize_finger_links("r", -1.0)
+    resize_finger_links("l", 1.0)
 
     # RIGHT THIGH
     setLinkLength(
@@ -493,6 +536,29 @@ def modifyJointPosition(jointPosition, robot):
     # JOINT RIGHT HAND COM
     setJointPosition("jRightHandCOM", jointPosition["jRightHandCOM"]["Y"], "Y", robot)
 
+    # JOINT RIGHT HAND FINGERS
+    right_fingers = [
+        "r_index_add",
+        "r_index_prox",
+        "r_index_dist",
+        "r_middle_add",
+        "r_middle_prox",
+        "r_middle_dist",
+        "r_ring_add",
+        "r_ring_prox",
+        "r_ring_dist",
+        "r_pinkie_add",
+        "r_pinkie_prox",
+        "r_pinkie_dist",
+        "r_thumb_add",
+        "r_thumb_prox",
+        "r_thumb_dist",
+    ]
+    for joint_name in right_fingers:
+        setJointPosition(joint_name, jointPosition[joint_name]["X"], "X", robot)
+        setJointPosition(joint_name, jointPosition[joint_name]["Y"], "Y", robot)
+        setJointPosition(joint_name, jointPosition[joint_name]["Z"], "Z", robot)
+
     # JOINT LEFT SHOULDER
     setJointPosition(
         "jLeftShoulder_rotx", jointPosition["jLeftShoulder"]["Y"], "Y", robot
@@ -506,6 +572,29 @@ def modifyJointPosition(jointPosition, robot):
 
     # JOINT LEFT HAND COM
     setJointPosition("jLeftHandCOM", jointPosition["jLeftHandCOM"]["Y"], "Y", robot)
+
+    # JOINT LEFT HAND FINGERS
+    left_fingers = [
+        "l_index_add",
+        "l_index_prox",
+        "l_index_dist",
+        "l_middle_add",
+        "l_middle_prox",
+        "l_middle_dist",
+        "l_ring_add",
+        "l_ring_prox",
+        "l_ring_dist",
+        "l_pinkie_add",
+        "l_pinkie_prox",
+        "l_pinkie_dist",
+        "l_thumb_add",
+        "l_thumb_prox",
+        "l_thumb_dist",
+    ]
+    for joint_name in left_fingers:
+        setJointPosition(joint_name, jointPosition[joint_name]["X"], "X", robot)
+        setJointPosition(joint_name, jointPosition[joint_name]["Y"], "Y", robot)
+        setJointPosition(joint_name, jointPosition[joint_name]["Z"], "Z", robot)
 
     # JOINT RIGHT HIP
     setJointPosition("jRightHip_rotx", jointPosition["jRightHip"]["Y"], "Y", robot)

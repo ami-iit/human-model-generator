@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "human-model-generator"
+version = "2.1.0"
+description = "Generate anthropometric human whole-body models in URDF format"
+readme = "README.md"
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "urchin",
+    "idyntree",
+    "urdf-modifiers",
+]
+
+[project.scripts]
+hmg-generate = "humanmodelgenerator.generate:main"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+humanmodelgenerator = ["models/**/*"]

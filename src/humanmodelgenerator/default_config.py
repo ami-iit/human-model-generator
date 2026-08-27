@@ -6,7 +6,8 @@
 import numpy as np
 
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
-OPT_VISUALIZZATION_MODEL = True  # 'True' or 'False
+# Disabled by default: this is the bundled headless config used when no user config.py is found in the CWD
+OPT_VISUALIZZATION_MODEL = False  # 'True' or 'False
 OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False
 OPT_VISUALIZATION_MESH = True  # 'True' or 'False
 OPT_VISUALIZATION_MUSCLES = True  # 'True' or 'False

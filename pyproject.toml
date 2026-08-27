@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-hmg-generate = "humanmodelgenerator.generate:main"
+hmg-generate = "humanmodelgenerator.cli:main"
 
 [project.optional-dependencies]
 test = ["pytest"]

@@ -2,9 +2,6 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-""" OPTIONS"""
-import numpy as np
-
 OPT_CHECK_CONSISTENCY_MODEL = True  # 'True' or 'False
 OPT_VISUALIZZATION_MODEL = True  # 'True' or 'False
 OPT_VISUALIZZATION_MEASUREOFCONTROL = False  # 'True' or 'False

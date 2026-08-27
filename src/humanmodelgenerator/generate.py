@@ -11,16 +11,15 @@
 """
 
 import copy
-import importlib
+import dataclasses
 import importlib.resources
 import os
-import sys
 
 import idyntree.bindings as iDynTree
 import numpy as np
 from urdfModifiers.utils import *
 
-from . import default_config
+from .config import Config, DEFAULT_CONFIG
 from .checkModel import isPositiveDefinite, linkPhysicallyConsistence
 from .generateSyntheticData import genSynthRandMov
 from .modelControl import measurementControl
@@ -55,20 +54,22 @@ URDF_TEMPLATE_FILE_NAME = "humanModelTemplate.urdf"
 URDF_MESHES_FILE_FOLDER = "meshes"
 
 
-def _load_config():
-    """Prefer a user config.py found in the current working directory over the bundled default."""
-    sys.path.insert(0, os.getcwd())
-    try:
-        return importlib.import_module("config")
-    except ModuleNotFoundError:
-        return default_config
-    finally:
-        sys.path.pop(0)
+def generate_model(
+    model_name: str,
+    config: Config = DEFAULT_CONFIG,
+    output_dir: str | None = None,
+    link_dimension_overrides: dict | None = None,
+    **overrides,
+) -> str:
+    """Generate a scaled human URDF model; returns the path of the written file.
 
-
-def main(model_name: str | None = None) -> str:
-    """Generate a scaled human URDF model; returns the path of the written file."""
-    config = _load_config()
+    Pure library entry point: no interactive prompts, no filesystem-based config discovery.
+    `overrides` are applied on top of `config` (see `dataclasses.replace`), e.g. H=1.8, m=75.
+    `link_dimension_overrides` optionally overrides individual link X/Y/Z anthropometric dimensions,
+    e.g. {"Neck": {"X": 0.32}}.
+    """
+    if overrides:
+        config = dataclasses.replace(config, **overrides)
 
     models_dir = importlib.resources.files("humanmodelgenerator") / "models"
     urdf_template_file_path = str(
@@ -76,11 +77,10 @@ def main(model_name: str | None = None) -> str:
     )
     urdf_meshes_file_path = str(models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_MESHES_FILE_FOLDER)
 
-    if model_name is None:
-        model_name = input("\n[INPUT] Insert the model name: ")
     urdf_file_name = model_name + ".urdf"
 
-    output_dir = os.path.join(os.getcwd(), "humanModels")
+    if output_dir is None:
+        output_dir = os.path.join(os.getcwd(), "humanModels")
     os.makedirs(output_dir, exist_ok=True)
     urdf_file_path = os.path.join(output_dir, urdf_file_name)
 
@@ -91,11 +91,15 @@ def main(model_name: str | None = None) -> str:
         urdf_template_file_path, dummy_file
     )
 
-    # deep-copy shared package-level dicts so repeated main() calls don't accumulate mutations
+    # deep-copy shared package-level dicts so repeated generate_model() calls don't accumulate mutations
     #################################################################
     # LINK
     #################################################################
-    local_link_dimensions = scaleLink(config.H, copy.deepcopy(linkDimensions))
+    local_link_dimensions = copy.deepcopy(linkDimensions)
+    if link_dimension_overrides:
+        for link_name, axes in link_dimension_overrides.items():
+            local_link_dimensions[link_name].update(axes)
+    local_link_dimensions = scaleLink(config.H, local_link_dimensions)
     robot = modifyLinkDimension(local_link_dimensions, robot)
     #################################################################
     # MASS
@@ -299,7 +303,3 @@ def main(model_name: str | None = None) -> str:
         measurementControl(local_link_mass, local_link_dimensions)
 
     return urdf_file_path
-
-
-if __name__ == "__main__":
-    main()

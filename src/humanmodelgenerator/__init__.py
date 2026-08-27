@@ -4,6 +4,7 @@
 
 # src/__init__.py
 
+from .config import Config, DEFAULT_CONFIG
 from .modifyModels import *
 from .scaleModels import *
 from .modelControl import *
@@ -14,19 +15,20 @@ from .modifyMeshModels import *
 
 """ HUMAN MODEL PART"""
 
+# X/Z values below are manually-measured anthropometric inputs (not derivable from H); Y/Z-from-H are filled in by scaleLink().
 linkDimensions = {
-    "Neck": {"X": None, "Y": None, "Z": None},
-    "T8": {"X": None, "Y": None, "Z": None},
-    "T12": {"X": None, "Y": None, "Z": None},
-    "L3": {"X": None, "Y": None, "Z": None},
-    "L5": {"X": None, "Y": None, "Z": None},
-    "Pelvis": {"X": None, "Y": None, "Z": None},
-    "Shoulder": {"X": None, "Y": None, "Z": None},
-    "UpperArm": {"X": None, "Y": None, "Z": None},
-    "ForeArm": {"X": None, "Y": None, "Z": None},
-    "Hand": {"X": None, "Y": None, "Z": None},
-    "UpperLeg": {"X": None, "Y": None, "Z": None},
-    "LowerLeg": {"X": None, "Y": None, "Z": None},
+    "Neck": {"X": 0.320, "Y": 0.320, "Z": None},
+    "T8": {"X": 0.190, "Y": None, "Z": None},
+    "T12": {"X": 0.190, "Y": None, "Z": None},
+    "L3": {"X": 0.190, "Y": None, "Z": None},
+    "L5": {"X": 0.190, "Y": None, "Z": None},
+    "Pelvis": {"X": 0.225, "Y": None, "Z": None},
+    "Shoulder": {"X": None, "Y": None, "Z": 0.115},
+    "UpperArm": {"X": 0.280, "Y": None, "Z": 0.280},
+    "ForeArm": {"X": 0.220, "Y": None, "Z": 0.220},
+    "Hand": {"X": 0.085, "Y": None, "Z": 0.025},
+    "UpperLeg": {"X": 0.470, "Y": 0.470, "Z": None},
+    "LowerLeg": {"X": 0.340, "Y": 0.340, "Z": None},
     "Head": {"X": None, "Y": None, "Z": None},
     "Foot": {"X": None, "Y": None, "Z": None},
     "Toe": {"X": None, "Y": None, "Z": None},
@@ -443,3 +445,7 @@ map_link_to_spinal_cord = {
     "L5": "L5_SpinalCord",
     "Pelvis": "Pelvis_SpinalCord",
 }
+
+# imported last: generate.py depends on the dicts defined above
+from .generate import generate_model
+

@@ -25,23 +25,21 @@ This library requires the following dependencies:
 - [``idyntree``](https://github.com/robotology/idyntree)
 - [``urdf-modifiers``](https://github.com/icub-tech-iit/urdf-modifiers)
 
-## Installation with [conda](https://docs.conda.io/en/latest/) (recommended)
+## Installation with [pixi](https://pixi.sh/)
 
-Create and activate a brand new enviroment with the required dependencies:
 ```
-conda create -n hmgenv python numpy urchin idyntree urdf-modifiers
-conda activate hmgenv
+git clone https://github.com/gbionics/human-model-generator.git
+cd human-model-generator
+pixi install
 ```
 
 ## Usage
+
 ```
-git clone https://github.com/ami-iit/human-model-generator.git
-cd human-model-generator/code
+pixi run hmg-generate
 ```
-- Open the file `config.py` with a text editor
-- Manually modify the parameters according to the human subject anthropometric measurements (see [this file](https://github.com/ami-iit/human-model-generator/tree/main/code#readme))
-- Generate the model by running `python main.py` 
-- The URDF model will be saved in the folder `models/humanModels`
+
+Run `pixi run hmg-generate --help` to see all available options (e.g. passing a model name or a custom config file directly).
 
 ## Citing this work
 If you find this work useful, please use the following bibtex as a reference:

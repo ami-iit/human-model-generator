@@ -59,6 +59,7 @@ def generate_model(
     config: Config = DEFAULT_CONFIG,
     output_dir: str | None = None,
     link_dimension_overrides: dict | None = None,
+    mesh_package_prefix: str | None = None,
     **overrides,
 ) -> str:
     """Generate a scaled human URDF model; returns the path of the written file.
@@ -67,6 +68,8 @@ def generate_model(
     `overrides` are applied on top of `config` (see `dataclasses.replace`), e.g. H=1.8, m=75.
     `link_dimension_overrides` optionally overrides individual link X/Y/Z anthropometric dimensions,
     e.g. {"Neck": {"X": 0.32}}.
+    `mesh_package_prefix`, if set, replaces the local meshes folder with `<prefix>/meshes`
+    in the mesh filenames written to the URDF (e.g. "package://human-gazebo/meshes").
     """
     if overrides:
         config = dataclasses.replace(config, **overrides)
@@ -75,7 +78,10 @@ def generate_model(
     urdf_template_file_path = str(
         models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_TEMPLATE_FILE_NAME
     )
-    urdf_meshes_file_path = str(models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_MESHES_FILE_FOLDER)
+    if mesh_package_prefix:
+        urdf_meshes_file_path = f"{mesh_package_prefix}/{URDF_MESHES_FILE_FOLDER}"
+    else:
+        urdf_meshes_file_path = str(models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_MESHES_FILE_FOLDER)
 
     urdf_file_name = model_name + ".urdf"
 

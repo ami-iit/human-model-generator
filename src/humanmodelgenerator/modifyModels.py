@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-from applyScaling import *
+from .applyScaling import *
 
 
 def modifyLinkDimension(linkDimensions, robot):

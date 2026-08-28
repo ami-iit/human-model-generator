@@ -3,3 +3,7 @@ __pycache__/
 humanModels/
 syntheticData/
 *~
+*.egg-info/
+build/
+dist/
+.pixi/

@@ -467,7 +467,7 @@
         </visual>
     </link>
 ##############################################################################
-# RIGHT HAND FINGERS (ergoCub-like naming)
+# RIGHT HAND FINGERS 
 ##############################################################################
     <link name="r_hand_index_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="r_hand_index_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
@@ -615,7 +615,7 @@
         </visual>
     </link>
 ##############################################################################
-# LEFT HAND FINGERS (ergoCub-like naming)
+# LEFT HAND FINGERS 
 ##############################################################################
     <link name="l_hand_index_1"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
     <link name="l_hand_index_2"><inertial><mass value="1e-5"/><origin xyz="0 0 0" rpy="0 0 0" /><inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/></inertial><visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></visual><collision><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="1 1 1"/></geometry></collision></link>
@@ -1266,7 +1266,7 @@
         <axis xyz="0 0 0" />
     </joint>
 ##############################################################################
-# RIGHT HAND FINGERS (ergoCub-like naming)
+# RIGHT HAND FINGERS 
 ##############################################################################
     <joint name="r_thumb_add" type="revolute">
         <origin xyz="0.02337486325639067 0.0030000000000002802 -0.034523838473554336" rpy="0.0 0.0 1.4"/>
@@ -1329,7 +1329,7 @@
         <axis xyz="1 0 0"/>
         <parent link="r_hand_index_1"/>
         <child link="r_hand_index_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
         <joint name="r_middle_prox" type="revolute">
@@ -1337,7 +1337,7 @@
         <axis xyz="1 0 0"/>
         <parent link="r_hand_middle_1"/>
         <child link="r_hand_middle_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
         <joint name="r_ring_prox" type="revolute">
@@ -1345,7 +1345,7 @@
         <axis xyz="1 0 0"/>
         <parent link="r_hand_ring_1"/>
         <child link="r_hand_ring_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="r_pinkie_prox" type="revolute">
@@ -1353,7 +1353,7 @@
         <axis xyz="1 0 0"/>
         <parent link="r_hand_pinkie_1"/>
         <child link="r_hand_pinkie_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
         <joint name="r_index_dist" type="revolute">
@@ -1464,7 +1464,7 @@
         <axis xyz="0 0 0" />
     </joint>
 ##############################################################################
-# LEFT HAND FINGERS (ergoCub-like naming)
+# LEFT HAND FINGERS 
 ##############################################################################
     <joint name="l_thumb_add" type="revolute">
         <origin xyz="0.023374863256390876 -0.003000000000000086 -0.03452383847355481" rpy="0 0 -1.4"/>
@@ -1527,7 +1527,7 @@
         <axis xyz="-1 0 0"/>
         <parent link="l_hand_index_1"/>
         <child link="l_hand_index_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_middle_prox" type="revolute">
@@ -1535,7 +1535,7 @@
         <axis xyz="-1 0 0"/>
         <parent link="l_hand_middle_1"/>
         <child link="l_hand_middle_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
         <joint name="l_ring_prox" type="revolute">
@@ -1543,7 +1543,7 @@
         <axis xyz="-1 0 0"/>
         <parent link="l_hand_ring_1"/>
         <child link="l_hand_ring_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_pinkie_prox" type="revolute">
@@ -1551,7 +1551,7 @@
         <axis xyz="-1 0 0"/>
         <parent link="l_hand_pinkie_1"/>
         <child link="l_hand_pinkie_2"/>
-        <limit lower="0.10035643198967395" upper="1.710422666954443" effort="30" velocity="1.0"/>
+        <limit lower="0.0" upper="1.710422666954443" effort="30" velocity="1.0"/>
         <dynamics damping="2" friction="0"/>
     </joint>
     <joint name="l_index_dist" type="revolute">
@@ -2642,4 +2642,3 @@
         <axis xyz="0 0 0" />  
     </joint>
 </robot>
-  

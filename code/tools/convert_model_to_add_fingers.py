@@ -68,8 +68,15 @@ def _has_existing_fingers(root: ET.Element) -> bool:
 
 def _default_template_path() -> str:
     here = os.path.dirname(os.path.abspath(__file__))
-    code_root = os.path.dirname(here)
-    return os.path.join(code_root, "models", "humanModelTemplate", "humanModelTemplate.urdf")
+    repo_root = os.path.dirname(os.path.dirname(here))
+    return os.path.join(
+        repo_root,
+        "src",
+        "humanmodelgenerator",
+        "models",
+        "humanModelTemplate",
+        "humanModelTemplate.urdf",
+    )
 
 
 def _clean_template_text(raw_text: str) -> str:

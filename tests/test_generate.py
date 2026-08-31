@@ -21,3 +21,15 @@ def test_generate_creates_valid_urdf(tmp_path):
 
     # Well-formed XML smoke check
     ET.fromstring(content)
+
+
+def test_generate_uses_mesh_package_prefix(tmp_path):
+    urdf_file_path = generate_model(
+        "test_model",
+        output_dir=str(tmp_path),
+        mesh_package_prefix="package://human-gazebo",
+    )
+
+    content = pathlib.Path(urdf_file_path).read_text()
+    assert "package://human-gazebo/meshes" in content
+    assert str(tmp_path) not in content.replace(urdf_file_path, "")

@@ -22,6 +22,9 @@ LEFT_PREFIX = "l_hand_"
 REQUIRED_HAND_LINKS = {"RightHand", "LeftHand"}
 DEFAULT_HAND_DIMS = {"X": 0.085, "Y": 0.17982, "Z": 0.025}
 MESH_PACKAGE_PREFIX = "package://human-gazebo/meshesSpinalCord"
+# Matches OPT_COLOR_LINK_MESH used by the main generator pipeline.
+DEFAULT_LINK_MATERIAL_NAME = "Link"
+DEFAULT_LINK_COLOR = "0.9922 0.8667 0.7922 1.0"
 
 
 FINGER_LENGTH_FACTORS = {
@@ -228,6 +231,16 @@ def _ensure_visual_mesh(link: ET.Element, mesh_package_prefix: str) -> None:
 
     mesh.set("filename", f"{mesh_package_prefix}/meshes/{name}.stl")
     mesh.set("scale", "1. 1. 1.")
+
+    # Without a material, viewers render the mesh black instead of skin-colored.
+    material = visual.find("material")
+    if material is None:
+        material = ET.SubElement(visual, "material")
+        material.set("name", DEFAULT_LINK_MATERIAL_NAME)
+    color = material.find("color")
+    if color is None:
+        color = ET.SubElement(material, "color")
+    color.set("rgba", DEFAULT_LINK_COLOR)
 
 
 def _infer_hand_dimensions(input_root: ET.Element) -> dict[str, float]:

@@ -41,6 +41,14 @@ pixi run hmg-generate
 
 Run `pixi run hmg-generate --help` to see all available options (e.g. passing a model name or a custom config file directly).
 
+By default, the generated URDF references mesh files using their local absolute path on disk. To reference meshes via a ROS package instead (e.g. for deployment on another machine or in Gazebo), pass `-m/--mesh-package-prefix`:
+
+```
+pixi run hmg-generate -n my_model -m package://human-gazebo
+```
+
+The final mesh path directory is `<argument>/meshes`, e.g. `package://human-gazebo/meshes/Head.stl`.
+
 ## Citing this work
 If you find this work useful, please use the following bibtex as a reference:
 

@@ -68,8 +68,15 @@ def _has_existing_fingers(root: ET.Element) -> bool:
 
 def _default_template_path() -> str:
     here = os.path.dirname(os.path.abspath(__file__))
-    code_root = os.path.dirname(here)
-    return os.path.join(code_root, "models", "humanModelTemplate", "humanModelTemplate.urdf")
+    repo_root = os.path.dirname(os.path.dirname(here))
+    return os.path.join(
+        repo_root,
+        "src",
+        "humanmodelgenerator",
+        "models",
+        "humanModelTemplate",
+        "humanModelTemplate.urdf",
+    )
 
 
 def _clean_template_text(raw_text: str) -> str:
@@ -193,7 +200,7 @@ def _update_collision_box_size(link: ET.Element, x_size: float, y_size: float, z
     box.set("size", size_text)
 
 
-def _ensure_visual_mesh(link: ET.Element) -> None:
+def _ensure_visual_mesh(link: ET.Element, mesh_package_prefix: str) -> None:
     name = link.get("name", "")
     if not name:
         return
@@ -219,7 +226,7 @@ def _ensure_visual_mesh(link: ET.Element) -> None:
     if mesh is None:
         mesh = ET.SubElement(geometry, "mesh")
 
-    mesh.set("filename", f"{MESH_PACKAGE_PREFIX}/{name}.stl")
+    mesh.set("filename", f"{mesh_package_prefix}/meshes/{name}.stl")
     mesh.set("scale", "1. 1. 1.")
 
 
@@ -289,7 +296,7 @@ def _finger_link_dimensions(hand_dims: dict[str, float]) -> dict[str, dict[str, 
     return dimensions
 
 
-def _apply_finger_link_scaling(link: ET.Element, hand_dims: dict[str, float]) -> None:
+def _apply_finger_link_scaling(link: ET.Element, hand_dims: dict[str, float], mesh_package_prefix: str) -> None:
     name = link.get("name", "")
     if name.startswith(RIGHT_PREFIX):
         finger_key = name[len(RIGHT_PREFIX):]
@@ -304,7 +311,7 @@ def _apply_finger_link_scaling(link: ET.Element, hand_dims: dict[str, float]) ->
     if dims is None:
         return
 
-    _ensure_visual_mesh(link)
+    _ensure_visual_mesh(link, mesh_package_prefix)
 
     y_offset = sign_y * dims["Y"] / 2.0
     _update_collision_box_size(link, dims["X"], dims["Y"], dims["Z"])
@@ -407,7 +414,12 @@ def _append_before_robot_end(original_text: str, xml_block: str) -> str:
     return f"{prefix}\n\n{xml_block}\n{suffix}\n"
 
 
-def convert_model(input_urdf: str, output_urdf: str, template_urdf: str) -> tuple[int, int] | None:
+def convert_model(
+    input_urdf: str,
+    output_urdf: str,
+    template_urdf: str,
+    mesh_package_prefix: str = MESH_PACKAGE_PREFIX,
+) -> tuple[int, int] | None:
     with open(input_urdf, "r", encoding="utf-8") as stream:
         input_text = stream.read()
 
@@ -437,7 +449,7 @@ def convert_model(input_urdf: str, output_urdf: str, template_urdf: str) -> tupl
     for link in finger_links:
         name = link.get("name")
         if name not in existing_link_names:
-            _apply_finger_link_scaling(link, hand_dims)
+            _apply_finger_link_scaling(link, hand_dims, mesh_package_prefix)
             added_link_xml.append(ET.tostring(link, encoding="unicode"))
             existing_link_names.add(name)
             added_links += 1
@@ -510,6 +522,16 @@ def _build_parser() -> argparse.ArgumentParser:
         default=_default_template_path(),
         help="Path to the v2.0.0 template URDF.",
     )
+    parser.add_argument(
+        "-m",
+        "--mesh-package-prefix",
+        dest="mesh_package_prefix",
+        default=MESH_PACKAGE_PREFIX,
+        help=(
+            "Package prefix used for finger mesh filenames. The final mesh "
+            "path directory is <--mesh-package-prefix>/meshes."
+        ),
+    )
     return parser
 
 
@@ -534,6 +556,7 @@ def main() -> None:
         input_urdf=input_urdf,
         output_urdf=output_urdf,
         template_urdf=template_urdf,
+        mesh_package_prefix=args.mesh_package_prefix,
     )
 
     if result is None:

@@ -26,12 +26,26 @@ def main(argv: list[str] | None = None) -> int:
         dest="output_dir",
         help="Directory to write the URDF file to (default: ./humanModels)",
     )
+    parser.add_argument(
+        "-m",
+        "--mesh-package-prefix",
+        dest="mesh_package_prefix",
+        help=(
+            "Package prefix used for mesh filenames in the generated URDF. The final mesh "
+            "path directory is <argument>/meshes (default: local absolute path to the built-in meshes)"
+        ),
+    )
     args = parser.parse_args(argv)
 
     model_name = args.model_name or input("\n[INPUT] Insert the model name: ")
     config = load_config_from_path(args.config_path) if args.config_path else DEFAULT_CONFIG
 
-    generate_model(model_name, config=config, output_dir=args.output_dir)
+    generate_model(
+        model_name,
+        config=config,
+        output_dir=args.output_dir,
+        mesh_package_prefix=args.mesh_package_prefix,
+    )
     return 0
 
 

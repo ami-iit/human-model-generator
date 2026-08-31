@@ -14,6 +14,7 @@ import copy
 import dataclasses
 import importlib.resources
 import os
+import pathlib
 
 import idyntree.bindings as iDynTree
 import numpy as np
@@ -59,6 +60,7 @@ def generate_model(
     config: Config = DEFAULT_CONFIG,
     output_dir: str | None = None,
     link_dimension_overrides: dict | None = None,
+    mesh_package_prefix: str | None = None,
     **overrides,
 ) -> str:
     """Generate a scaled human URDF model; returns the path of the written file.
@@ -67,6 +69,10 @@ def generate_model(
     `overrides` are applied on top of `config` (see `dataclasses.replace`), e.g. H=1.8, m=75.
     `link_dimension_overrides` optionally overrides individual link X/Y/Z anthropometric dimensions,
     e.g. {"Neck": {"X": 0.32}}.
+    `mesh_package_prefix`, if set, replaces the local meshes folder with `<prefix>/meshes`
+    in the mesh filenames written to the URDF (e.g. "package://human-gazebo/meshes"). The
+    substitution is applied to the final file only, after iDynTree has loaded the real local
+    mesh path for consistency checks/visualization.
     """
     if overrides:
         config = dataclasses.replace(config, **overrides)
@@ -75,7 +81,10 @@ def generate_model(
     urdf_template_file_path = str(
         models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_TEMPLATE_FILE_NAME
     )
-    urdf_meshes_file_path = str(models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_MESHES_FILE_FOLDER)
+    # Forward slashes regardless of OS, to match the "/"-joined mesh filenames written into the URDF
+    urdf_meshes_file_path = (
+        models_dir / URDF_TEMPLATE_FILE_FOLDER / URDF_MESHES_FILE_FOLDER
+    ).as_posix()
 
     urdf_file_name = model_name + ".urdf"
 
@@ -301,5 +310,13 @@ def generate_model(
 
     if config.OPT_VISUALIZZATION_MEASUREOFCONTROL:
         measurementControl(local_link_mass, local_link_dimensions)
+
+    # Swap in the package mesh prefix now that iDynTree no longer needs to resolve real files
+    if mesh_package_prefix:
+        urdf_file = pathlib.Path(urdf_file_path)
+        content = urdf_file.read_text().replace(
+            urdf_meshes_file_path, f"{mesh_package_prefix}/{URDF_MESHES_FILE_FOLDER}"
+        )
+        urdf_file.write_text(content)
 
     return urdf_file_path
